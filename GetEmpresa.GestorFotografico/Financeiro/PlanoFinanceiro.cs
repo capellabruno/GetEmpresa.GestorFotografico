@@ -24,12 +24,12 @@ namespace GetEmpresa.GestorFotografico.Domain.Financeiro
             set { _dividaCliente = value; }
         }
 
-        private IList<Cobranca> _cobrancas;
+        private Gerencial.ClientePortal _clientePai;
 
-        public virtual IList<Cobranca> Cobrancas
+        public virtual Gerencial.ClientePortal ClientePai
         {
-            get { return _cobrancas; }
-            set { _cobrancas = value; }
+            get { return _clientePai; }
+            set { _clientePai = value; }
         }
 
     }

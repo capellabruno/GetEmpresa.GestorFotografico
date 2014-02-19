@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
-  <class name="GetEmpresa.GestorFotografico.Domain.Cliente.Cliente, GetEmpresa.GestorFotografico.Domain" table="Cliente" lazy="false">
+  <class name="GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" table="ClientePortal" lazy="false">
 
-    <id name="Id" column="IdCliente" unsaved-value="null">
+    <id name="Id" column="IdClientePortal" unsaved-value="null">
       <generator class="identity"></generator>
     </id>
-
+    
     <property name="Nome" column="Nome" />
     <property name="Email" column="Email" />
     <property name="Endereco" column="Endereco" />
@@ -17,7 +17,6 @@
     <property name="Documento" column="Documento" />
     <property name="Telefone" column="Telefone" />
     <property name="Ativo" column="Ativo" />
-    <many-to-one name="ClientePai" column="IdClientePortal" class="GetEmpresa.GestorFotografico.Domina.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" />
-
+   
   </class>
 </hibernate-mapping>

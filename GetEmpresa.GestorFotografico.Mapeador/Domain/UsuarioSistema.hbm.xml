@@ -14,7 +14,7 @@
     <property name="DataAlteracao" column="DataAlteracao" />
     <property name="Ativo" column="Ativo" />
     <many-to-one name="Grupo" column="IdGrupoUsuario" class="GetEmpresa.GestorFotografico.Domain.Usuario.GrupoUsuario, GetEmpresa.GestorFotografico.Domain" />
-    <many-to-one name="ClienteUtilizador" column="IdUsuario" class="GetEmpresa.GestorFotografico.Domina.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" />
+    <many-to-one name="ClienteUtilizador" column="IdClientePortal" class="GetEmpresa.GestorFotografico.Domina.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" />
  
   </class>
 </hibernate-mapping>

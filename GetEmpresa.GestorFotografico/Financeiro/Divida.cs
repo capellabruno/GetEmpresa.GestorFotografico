@@ -78,5 +78,13 @@ namespace GetEmpresa.GestorFotografico.Domain.Financeiro
             get { return _jurosMes; }
             set { _jurosMes = value; }
         }
+
+        private Cliente.Cliente _clienteCobranca;
+
+        public virtual Cliente.Cliente ClienteCobranca
+        {
+            get { return _clienteCobranca; }
+            set { _clienteCobranca = value; }
+        }
     }
 }
