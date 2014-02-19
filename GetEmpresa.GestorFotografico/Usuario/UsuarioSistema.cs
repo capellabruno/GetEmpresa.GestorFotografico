@@ -66,5 +66,13 @@ namespace GetEmpresa.GestorFotografico.Domain.Usuario
             set { _grupo = value; }
         }
 
+        private Gerencial.ClientePortal _clienteUtilizador;
+
+        public virtual Gerencial.ClientePortal ClienteUtilizador
+        {
+            get { return _clienteUtilizador; }
+            set { _clienteUtilizador = value; }
+        }
+
     }
 }

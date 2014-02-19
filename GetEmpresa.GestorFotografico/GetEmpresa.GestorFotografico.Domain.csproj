@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="Contrato\ContratoFotografo.cs" />
     <Compile Include="Contrato\ItemContrato.cs" />
     <Compile Include="Financeiro\Cobranca.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Financeiro\Pagamento.cs" />
     <Compile Include="Financeiro\PlanoFinanceiro.cs" />
     <Compile Include="Financeiro\ResponsavelFinanceiro.cs" />
+    <Compile Include="Gerencial\ClientePortal.cs" />
     <Compile Include="Gerencial\TipoContrato.cs" />
     <Compile Include="Gerencial\TipoEnsaio.cs" />
     <Compile Include="Gerencial\TipoItemContrato.cs" />
@@ -58,7 +60,6 @@
     <Compile Include="Usuario\UsuarioSistema.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cliente\" />
     <Folder Include="Orcamento\" />
     <Folder Include="Portifolio\" />
   </ItemGroup>

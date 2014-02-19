@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="GetEmpresa.GestorFotografico.Domain.Usuario.UsuarioSistema, GetEmpresa.GestorFotografico.Domain" table="Usuario" lazy="false">
+
+    <id name="Id" column="IdUsuario" unsaved-value="null">
+      <generator class="identity"></generator>
+    </id>
+    
+    <property name="Nome" column="Nome" />
+    <property name="LoginAcesso" column="LoginAcesso" />
+    <property name="SenhaAcesso" column="SenhaAcesso" />
+    <property name="DataCriacao" column="DataCriacao" insert="true" update="false" />
+    <property name="DataTrocaSenha" column="DataTrocaSenha" />
+    <property name="DataAlteracao" column="DataAlteracao" />
+    <property name="Ativo" column="Ativo" />
+    <many-to-one name="Grupo" column="IdGrupoUsuario" class="GetEmpresa.GestorFotografico.Domain.Usuario.GrupoUsuario, GetEmpresa.GestorFotografico.Domain" />
+    <many-to-one name="ClienteUtilizador" column="IdUsuario" class="GetEmpresa.GestorFotografico.Domina.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" />
+ 
+  </class>
+</hibernate-mapping>
