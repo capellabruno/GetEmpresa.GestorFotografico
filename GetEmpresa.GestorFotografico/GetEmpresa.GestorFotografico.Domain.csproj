@@ -55,14 +55,13 @@
     <Compile Include="Gerencial\TipoItemContrato.cs" />
     <Compile Include="Gerencial\TipoPessoa.cs" />
     <Compile Include="Gerencial\TipoPlanoFinanceiro.cs" />
+    <Compile Include="Orcamento\Orcamento.cs" />
+    <Compile Include="Portifolio\Portifolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario\GrupoUsuario.cs" />
     <Compile Include="Usuario\UsuarioSistema.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Orcamento\" />
-    <Folder Include="Portifolio\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
