@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GetEmpresa.GestorFotografico.Domain.Orcamento
 {
-    class Orcamento
+    public class Orcamento
     {
     }
 }
