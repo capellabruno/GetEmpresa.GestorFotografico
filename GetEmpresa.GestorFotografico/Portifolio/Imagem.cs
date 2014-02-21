@@ -57,5 +57,15 @@ namespace GetEmpresa.GestorFotografico.Domain.Portifolio
             get { return _comentarios; }
             set { _comentarios = value; }
         }
+
+        private Portifolio _protifolioPai;
+
+        public virtual Portifolio ProtifolioPai
+        {
+            get { return _protifolioPai; }
+            set { _protifolioPai = value; }
+        }
+
+
     }
 }
