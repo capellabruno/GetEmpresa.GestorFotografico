@@ -47,32 +47,33 @@
   <ItemGroup>
     <Folder Include="Config\" />
     <Folder Include="Dal\" />
+    <Folder Include="Domain\Orcamento\" />
     <Folder Include="Negoc\" />
     <Folder Include="Web\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Cliente.hbm.xml" />
+    <EmbeddedResource Include="Domain\Cliente\Cliente.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\GrupoUsuario.hbm.xml" />
+    <EmbeddedResource Include="Domain\UsuarioAndGerencial\GrupoUsuario.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\UsuarioSistema.hbm.xml" />
+    <EmbeddedResource Include="Domain\UsuarioAndGerencial\UsuarioSistema.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\ClientePortal.hbm.xml" />
+    <EmbeddedResource Include="Domain\UsuarioAndGerencial\ClientePortal.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Domain\ContratoFotografo.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Portifolio.hbm.xml" />
+    <EmbeddedResource Include="Domain\Portifolio\Portifolio.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Imagem.hbm.xml" />
+    <EmbeddedResource Include="Domain\Portifolio\Imagem.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Comentario.hbm.xml" />
+    <EmbeddedResource Include="Domain\Portifolio\Comentario.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
