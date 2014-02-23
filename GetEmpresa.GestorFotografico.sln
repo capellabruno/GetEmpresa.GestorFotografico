@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Dao", "GetEmpres
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Negoc", "GetEmpresa.Negoc\GetEmpresa.Negoc.csproj", "{DECD4EDC-C8F5-4DFB-97FB-ADC4120A8E16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Payment", "GetEmpresa.Payment\GetEmpresa.Payment.csproj", "{B220EE54-CFD8-4E60-A7B4-7E67F42D5C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste.Payment", "Teste.Payment\Teste.Payment.csproj", "{A21B8989-CB61-4012-A906-2AF08F75F4CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{DECD4EDC-C8F5-4DFB-97FB-ADC4120A8E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DECD4EDC-C8F5-4DFB-97FB-ADC4120A8E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DECD4EDC-C8F5-4DFB-97FB-ADC4120A8E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B220EE54-CFD8-4E60-A7B4-7E67F42D5C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B220EE54-CFD8-4E60-A7B4-7E67F42D5C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B220EE54-CFD8-4E60-A7B4-7E67F42D5C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B220EE54-CFD8-4E60-A7B4-7E67F42D5C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21B8989-CB61-4012-A906-2AF08F75F4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21B8989-CB61-4012-A906-2AF08F75F4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21B8989-CB61-4012-A906-2AF08F75F4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21B8989-CB61-4012-A906-2AF08F75F4CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
