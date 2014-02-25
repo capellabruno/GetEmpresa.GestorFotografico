@@ -41,6 +41,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer\ClienteDao.cs" />
+    <Compile Include="Developer\ClientePortalDao.cs" />
+    <Compile Include="Developer\CobrancaDao.cs" />
+    <Compile Include="Developer\ComentarioDao.cs" />
+    <Compile Include="Developer\ContratoDao.cs" />
+    <Compile Include="Developer\UsuarioDao.cs" />
+    <Compile Include="Developer\ResponsavelFinanceiroDao.cs" />
+    <Compile Include="Developer\PortifolioDao.cs" />
+    <Compile Include="Developer\PlanoFinanceiroDao.cs" />
+    <Compile Include="Developer\PagamentoDao.cs" />
+    <Compile Include="Developer\OrcamentoDao.cs" />
+    <Compile Include="Developer\ItemContratoDao.cs" />
+    <Compile Include="Developer\ImagemDao.cs" />
+    <Compile Include="Developer\GrupoUsuarioDao.cs" />
+    <Compile Include="Developer\DividaDao.cs" />
+    <Compile Include="Interface\IClientePortalDao.cs" />
+    <Compile Include="Interface\IClienteDao.cs" />
+    <Compile Include="Interface\IContratoDao.cs" />
+    <Compile Include="Interface\IUsuarioDao.cs" />
+    <Compile Include="Interface\IGrupoUsuarioDao.cs" />
+    <Compile Include="Interface\IItemContratoDao.cs" />
+    <Compile Include="Interface\IPagamentoDao.cs" />
+    <Compile Include="Interface\IDividaDao.cs" />
+    <Compile Include="Interface\ICobrancaDao.cs" />
+    <Compile Include="Interface\IOrcamentoDao.cs" />
+    <Compile Include="Interface\IPlanoFinanceiroDao.cs" />
+    <Compile Include="Interface\IComentarioDao.cs" />
+    <Compile Include="Interface\IImagemDao.cs" />
+    <Compile Include="Interface\IPortifolioDao.cs" />
+    <Compile Include="Interface\IResponsavelFinanceiroDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,10 +83,7 @@
       <Name>GetEmpresa.GestorFotografico.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Developer\" />
-    <Folder Include="Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

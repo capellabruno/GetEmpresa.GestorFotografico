@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <object id="ClienteDao" type="GetEmpresa.Dao.Developer.ClienteDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ClientePortalDao" type="GetEmpresa.Dao.Developer.ClientePortalDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="CobrancaDao" type="GetEmpresa.Dao.Developer.CobrancaDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ComentarioDao" type="GetEmpresa.Dao.Developer.ComentarioDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ContratoDao" type="GetEmpresa.Dao.Developer.ContratoDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="DividaDao" type="GetEmpresa.Dao.Developer.DividaDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="GrupoUsuarioDao" type="GetEmpresa.Dao.Developer.GrupoUsuarioDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ImagemDao" type="GetEmpresa.Dao.Developer.ImagemDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ItemContratoDao" type="GetEmpresa.Dao.Developer.ItemContratoDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="OrcamentoDao" type="GetEmpresa.Dao.Developer.OrcamentoDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="PagamentoDao" type="GetEmpresa.Dao.Developer.PagamentoDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="PlanoFinanceiroDao" type="GetEmpresa.Dao.Developer.PlanoFinanceiroDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="PortifolioDao" type="GetEmpresa.Dao.Developer.PortifolioDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="ResponsavelFinanceiroDao" type="GetEmpresa.Dao.Developer.ResponsavelFinanceiroDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="UsuarioDao" type="GetEmpresa.Dao.Developer.UsuarioDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+</objects>

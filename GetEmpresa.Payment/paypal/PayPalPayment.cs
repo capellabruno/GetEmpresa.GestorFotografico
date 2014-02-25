@@ -14,5 +14,8 @@ namespace GetEmpresa.Payment.paypal
 {
     public class PayPalPayment
     {
+        public void INIT() {
+            
+        }
     }
 }
