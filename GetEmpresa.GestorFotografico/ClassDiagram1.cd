@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Cliente.Cliente" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACIAYAgiQAACAEBAFAAICAAAkAAAICAAAAAiEIWAE=</HashCode>
+      <FileName>Cliente\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Contrato.ContratoFotografo" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAABAAAAAAAICAARgAQAAAAABAAAAAAAAAAAAEAQ=</HashCode>
+      <FileName>Contrato\ContratoFotografo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Contrato.ItemContrato" Collapsed="true">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAACAABgAAAAAQABAAAIAAAAAAAAAAQ=</HashCode>
+      <FileName>Contrato\ItemContrato.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Financeiro.Cobranca" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACDAAQABAhAAASAABgAAgAAAAAAACgBEAAwAAIEAA=</HashCode>
+      <FileName>Financeiro\Cobranca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Financeiro.Divida" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAACAAAABCRACBAUEAAAAAAAgAgAIAAAgQIIAA=</HashCode>
+      <FileName>Financeiro\Divida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Financeiro.Pagamento" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACCAAAAIAAAAgAAAABAAAAAAAAAABAAAAAAAABAAAA=</HashCode>
+      <FileName>Financeiro\Pagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Financeiro.PlanoFinanceiro" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAwAAgAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Financeiro\PlanoFinanceiro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Financeiro.ResponsavelFinanceiro" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACIAIAgAQAACAEBABAAICAAAkAAAICAAAAAiEIUAA=</HashCode>
+      <FileName>Financeiro\ResponsavelFinanceiro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACIAIAgCQAACAEBAFAAICAAAkAAAICAAAAAiEIWAE=</HashCode>
+      <FileName>Gerencial\ClientePortal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Orcamento.Orcamento" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAACACAQAAAQJABBAAAAAAIAAAAIACBAESAAE=</HashCode>
+      <FileName>Orcamento\Orcamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Portifolio.Comentario" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAACAAJgBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Portifolio\Comentario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Portifolio.Imagem" Collapsed="true">
+    <Position X="8.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAyIAAAAAAIgAAAAABAAEIAAAAAQAQAACAAAAEABAQ=</HashCode>
+      <FileName>Portifolio\Imagem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Portifolio.Portifolio" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAIACAABgAAAAAACAIAAAAAAAAAAAEEA=</HashCode>
+      <FileName>Portifolio\Portifolio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Usuario.GrupoUsuario" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAAAAAAAAAAAFAAAAAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>Usuario\GrupoUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GetEmpresa.GestorFotografico.Domain.Usuario.UsuarioSistema" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCCAAAAEAAAAgACgAFgCAAAAAAABIgAIgAAAAAACAA=</HashCode>
+      <FileName>Usuario\UsuarioSistema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="GetEmpresa.GestorFotografico.Domain.Gerencial.TipoContrato" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAgAAAA=</HashCode>
+      <FileName>Gerencial\TipoContrato.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GetEmpresa.GestorFotografico.Domain.Gerencial.TipoEnsaio" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAEAAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAgAAAA=</HashCode>
+      <FileName>Gerencial\TipoEnsaio.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GetEmpresa.GestorFotografico.Domain.Gerencial.TipoItemContrato" Collapsed="true">
+    <Position X="6.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAA=</HashCode>
+      <FileName>Gerencial\TipoItemContrato.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GetEmpresa.GestorFotografico.Domain.Gerencial.TipoPessoa" Collapsed="true">
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAABQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gerencial\TipoPessoa.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GetEmpresa.GestorFotografico.Domain.Gerencial.TipoPlanoFinanceiro" Collapsed="true">
+    <Position X="3.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAQAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gerencial\TipoPlanoFinanceiro.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

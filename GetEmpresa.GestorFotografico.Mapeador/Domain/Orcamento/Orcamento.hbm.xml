@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="GetEmpresa.GestorFotografico.Domain.Orcamento.Orcamento, GetEmpresa.GestorFotografico.Domain" table="Orcamento" lazy="false">
+
+    <id name="Id" column="IdOrcamento" unsaved-value="null">
+      <generator class="identity"></generator>
+    </id>
+
+    <property name="Mensagem" column="Mensagem" />
+    <property name="DataCriacao" column="DataCriacao" />
+
+  </class>
+</hibernate-mapping>
