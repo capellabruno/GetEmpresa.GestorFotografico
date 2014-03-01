@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="bcash\BCashPayment.cs" />
     <Compile Include="pagseguro\EnumCurrency.cs" />
+    <Compile Include="pagseguro\IPagSeguroPayment.cs" />
+    <Compile Include="pagseguro\PagSeguroCredential.cs" />
     <Compile Include="pagseguro\PagSeguroException.cs" />
     <Compile Include="pagseguro\PagSeguroRequest.cs" />
     <Compile Include="pagseguro\PagSeguroPayment.cs" />
