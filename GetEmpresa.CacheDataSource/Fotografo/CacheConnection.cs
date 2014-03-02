@@ -11,7 +11,7 @@ using System.Data;
 
 namespace GetEmpresa.CacheDataSource.Fotografo
 {
-    public class CacheConnection
+    public class CacheConnection : GetEmpresa.CacheDataSource.Fotografo.ICacheConnection
     {
         protected MySqlCommand _command;
         protected MySqlConnection _connection;
@@ -103,7 +103,20 @@ namespace GetEmpresa.CacheDataSource.Fotografo
                 _command.CommandType = CommandType.Text;
                 _command.Connection = this._connection;
 
+                DataTable _datableResult = new DataTable("Result");
+                _datableResult.Load(_command.ExecuteReader());
 
+                List<DataTable> _retorno = new List<DataTable>();
+
+                foreach (DataRow row in _datableResult.Rows)
+                {
+                    DataTable dt;
+
+                    dt = this.GetData(row[0].ToString());
+
+                    _retorno.Add(dt);
+                }
+                return _retorno.ToArray();
             }
             catch (Exception ex)
             {
@@ -117,10 +130,61 @@ namespace GetEmpresa.CacheDataSource.Fotografo
 
         public List<string> ExistsModificateData()
         {
-            return null;
+            try
+            {                
+                this.OpenConnection();
+
+                _command = new MySqlCommand();
+
+                _command.CommandText = "SELECT distinct `Table` FROM updateondatabase WHERE UpdateSystem = 0";
+                _command.CommandTimeout = 90000;
+                _command.CommandType = CommandType.Text;
+                _command.Connection = this._connection;
+               
+
+                DataTable _table = new DataTable("Result");
+                _table.Load(_command.ExecuteReader());
+
+                List<String> _retorno = new List<string>();
+
+                foreach (DataRow row in _table.Rows)
+                    _retorno.Add(row[0].ToString());
+
+                return _retorno;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                this.CloseConnetion();
+            }
         }
 
-        public void SetUpdateData(string _tableName) { }
+        public void SetUpdateDataOnUpdate(string _tableName) {
+            try
+            {
+                DataTable _table = new DataTable(_tableName);
+                this.OpenConnection();
+
+                _command = new MySqlCommand();
+
+                _command.CommandText = "update updateondatabase set UpdateSystem=1 where `Table` ='" + _tableName + "' and UpdateSystem = 0";
+                _command.CommandTimeout = 90000;
+                _command.CommandType = CommandType.Text;
+                _command.Connection = this._connection;
+                _command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                this.CloseConnetion();
+            }
+        }
 
     }
 }
