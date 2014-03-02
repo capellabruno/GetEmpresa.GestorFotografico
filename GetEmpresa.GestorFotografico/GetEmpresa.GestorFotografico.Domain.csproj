@@ -47,8 +47,8 @@
     <Compile Include="Financeiro\Cobranca.cs" />
     <Compile Include="Financeiro\Divida.cs" />
     <Compile Include="Financeiro\Pagamento.cs" />
-    <Compile Include="Financeiro\PlanoFinanceiro.cs" />
     <Compile Include="Financeiro\ResponsavelFinanceiro.cs" />
+    <Compile Include="Gerencial\Client.cs" />
     <Compile Include="Gerencial\ClientePortal.cs" />
     <Compile Include="Gerencial\TipoContrato.cs" />
     <Compile Include="Gerencial\TipoEnsaio.cs" />

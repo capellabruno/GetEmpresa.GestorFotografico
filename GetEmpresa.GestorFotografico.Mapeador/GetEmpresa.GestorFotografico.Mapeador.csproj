@@ -61,9 +61,6 @@
     <EmbeddedResource Include="Domain\UsuarioAndGerencial\UsuarioSistema.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\UsuarioAndGerencial\ClientePortal.hbm.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Domain\ContratoFotografo.hbm.xml" />
   </ItemGroup>
   <ItemGroup>

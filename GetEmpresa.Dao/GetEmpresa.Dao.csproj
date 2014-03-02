@@ -49,7 +49,6 @@
     <Compile Include="Developer\UsuarioDao.cs" />
     <Compile Include="Developer\ResponsavelFinanceiroDao.cs" />
     <Compile Include="Developer\PortifolioDao.cs" />
-    <Compile Include="Developer\PlanoFinanceiroDao.cs" />
     <Compile Include="Developer\PagamentoDao.cs" />
     <Compile Include="Developer\OrcamentoDao.cs" />
     <Compile Include="Developer\ItemContratoDao.cs" />
@@ -66,7 +65,6 @@
     <Compile Include="Interface\IDividaDao.cs" />
     <Compile Include="Interface\ICobrancaDao.cs" />
     <Compile Include="Interface\IOrcamentoDao.cs" />
-    <Compile Include="Interface\IPlanoFinanceiroDao.cs" />
     <Compile Include="Interface\IComentarioDao.cs" />
     <Compile Include="Interface\IImagemDao.cs" />
     <Compile Include="Interface\IPortifolioDao.cs" />

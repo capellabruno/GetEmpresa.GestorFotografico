@@ -57,13 +57,7 @@ namespace GetEmpresa.GestorFotografico.Domain.Financeiro
             get { return _dataInicialCobranca; }
             set { _dataInicialCobranca = value; }
         }
-        private ResponsavelFinanceiro _responsavelFinanc;
 
-        public virtual ResponsavelFinanceiro ResponsavelFinanc
-        {
-            get { return _responsavelFinanc; }
-            set { _responsavelFinanc = value; }
-        }
         private decimal _valorCobranca;
 
         public virtual decimal ValorCobranca

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GetEmpresa.GestorFotografico.Domain.Financeiro
+namespace GetEmpresa.CacheDataSource.Fotografo
 {
-    public class ResponsavelFinanceiro : Gerencial.Client
+    public class CacheControlDataSource : CacheConnection
     {
 
     }

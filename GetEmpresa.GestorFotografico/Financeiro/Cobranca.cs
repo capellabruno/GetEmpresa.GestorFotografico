@@ -78,6 +78,6 @@ namespace GetEmpresa.GestorFotografico.Domain.Financeiro
             get { return _resposanvel; }
             set { _resposanvel = value; }
         }
-       
+               
     }
 }

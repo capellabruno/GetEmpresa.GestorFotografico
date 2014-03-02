@@ -24,12 +24,12 @@ namespace GetEmpresa.GestorFotografico.Domain.Portifolio
             set { _dataCriacao = value; }
         }
 
-        private Cliente.Cliente _clienteEnsaio;
+        private Gerencial.ClientePortal _cliente;
 
-        public virtual Cliente.Cliente ClienteEnsaio
+        public virtual Gerencial.ClientePortal Cliente
         {
-            get { return _clienteEnsaio; }
-            set { _clienteEnsaio = value; }
+            get { return _cliente; }
+            set { _cliente = value; }
         }
 
         private IList<Imagem> _imagens;
