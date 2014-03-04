@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="TesteCacheConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GetEmpresa.CacheDataSource\GetEmpresa.CacheDataSource.csproj">
