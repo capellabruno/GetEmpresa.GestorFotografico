@@ -9,6 +9,9 @@ using System.Web.Util;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Data;
+using Spring;
+using Spring.Context;
+using Spring.Context.Support;
 
 
 namespace GetEmpresa.CacheDataSource.Fotografo
@@ -24,27 +27,42 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             set { _cacheConnection = value; }
         }
 
+        private DataSet _dataSource;
+
+        public DataSet CacheApplicationDataSource
+        {
+            get {
+                if (HttpContext.Current != null && HttpContext.Current.Application["DataSourceBaseCurrentContext"] != null)
+                {
+                    _dataSource = (DataSet)HttpContext.Current.Application["DataSourceBaseCurrentContext"];
+                }
+
+                return _dataSource; 
+            }
+        }
+
         public void CreateCacheDataSource()
         {
-
+   
             DataSet ds = null;
-            DataTable[] _dts;          
-
-            if (HttpContext.Current.Application["DataSourceBaseCurrentContext"] != null)
+            DataTable[] _dts;
+            if (HttpContext.Current != null)
             {
-                ds = (DataSet)HttpContext.Current.Application["DataSourceBaseCurrentContext"];
+                if (HttpContext.Current.Application["DataSourceBaseCurrentContext"] != null)
+                {
+                    ds = (DataSet)HttpContext.Current.Application["DataSourceBaseCurrentContext"];
+                }
+                else
+                {
+                    ds = new DataSet();
+                    _dts = this.CacheConnection.GetAllData();
+                    ds.Tables.AddRange(_dts);
+                }
+
+                this.UpdateCacheControl(ref ds);
+
+                HttpContext.Current.Application["DataSourceBaseCurrentContext"] = ds;
             }
-            else
-            {
-                ds = new DataSet();
-                _dts = this.CacheConnection.GetAllData();
-                ds.Tables.AddRange(_dts);
-            }
-
-            this.UpdateCacheControl(ref ds);
-
-            HttpContext.Current.Application["DataSourceBaseCurrentContext"] = ds;
-
         }
 
         public void UpdateCacheControl(ref DataSet ds)
@@ -76,5 +94,55 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             return _dt;
         }
 
+        private void NecessaryUpdate()
+        {
+            DataSet ds = this.CacheApplicationDataSource;
+            this.UpdateCacheControl(ref ds);
+            HttpContext.Current.Application["DataSourceBaseCurrentContext"] = ds;
+        }
+
+        public DataRow BuscarPorCodigo(long _codigo, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            throw new NotImplementedException();
+        }
+
+        public DataRow BuscarPorCodigo(string _codigo, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            throw new NotImplementedException();
+        }
+
+        public DataRow BuscarPorCodigo(decimal _codigo, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            throw new NotImplementedException();
+        }
+
+        public DataRow BuscarPorCodigo(int _codigo, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            throw new NotImplementedException();
+        }
+
+        public DataRow[] BuscarPorNomeLike(string _nome, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            throw new NotImplementedException();
+        }
+
+        public DataRow[] BuscarPorLike(IList<CacheControlDomain> _paramSearch, string _tableName)
+        {
+            this.NecessaryUpdate();
+
+            IList<CacheControlDomain> _searchParams = new List<CacheControlDomain>();
+
+            return null;
+        }
     }
 }

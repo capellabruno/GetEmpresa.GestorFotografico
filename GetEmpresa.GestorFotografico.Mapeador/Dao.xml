@@ -46,10 +46,6 @@
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="PlanoFinanceiroDao" type="GetEmpresa.Dao.Developer.PlanoFinanceiroDao, GetEmpresa.Dao">
-    <property name="SessionFactory" ref="SessionFactory"/>
-  </object>
-
   <object id="PortifolioDao" type="GetEmpresa.Dao.Developer.PortifolioDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>

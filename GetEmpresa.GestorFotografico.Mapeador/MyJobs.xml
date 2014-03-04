@@ -10,15 +10,14 @@
   </object>
 
   <object type="Spring.Scheduling.Quartz.SchedulerFactoryObject, Spring.Scheduling.Quartz">
-    <property name="JobType" value  ="GetEmpresa.ExecuteJobs.JobCacheControler, GetEmpresa.ExecuteJobs" />
     <property name="triggers">
       <list>
-        <ref object="CacheControlerUpdateTrigger" />
+        
       </list>
     </property>
   </object>
 
-
+<!--
   <object id="CacheControlerUpdate" type="Spring.Scheduling.Quartz.MethodInvokingJobDetailFactoryObject, Spring.Scheduling.Quartz">
     <property name="TargetObject" ref="JobCacheControler" />
     <property name="TargetMethod" value="UpdateCacheControler" />
@@ -26,7 +25,7 @@
 
   <object id="CacheControlerUpdateTrigger" type="Spring.Scheduling.Quartz.CronTriggerObject, Spring.Scheduling.Quartz">
     <property name="JobDetail" ref="CacheControlerUpdate" />
-    <property name="CronExpressionString" value="0 0/2 * * * ?" />
+    <property name="CronExpressionString" value="0 0/1 * 1/1 * ? *" />
   </object>
-
+-->
 </objects>
