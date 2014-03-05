@@ -28,7 +28,7 @@ namespace GetEmpresa.Negoc
 
         private Dao.Interface.IClientePortalDao _clientePortal;
 
-        public Dao.Interface.IClientePortalDao ClientePortal
+        public Dao.Interface.IClientePortalDao ClientePortalDao
         {
             get { return _clientePortal; }
             set { _clientePortal = value; }
@@ -47,12 +47,30 @@ namespace GetEmpresa.Negoc
         [Transaction(ReadOnly = false)]
         public void IncluirClienteFotografo(ref GestorFotografico.Domain.Cliente.Cliente _cliente)
         {
+            if (_cliente.ClientePai == null)
+            {
+                throw new Exception("Cliente responsavel não foi informado");
+            }
 
+            this.ClienteDao.Incluir(ref _cliente);
+
+            this.CacheControlDataSource.InsertControlCacheUpdate(_tableCache);
         }
 
         [Transaction(ReadOnly = false)]
         public void IncluirClientePortal(ref GestorFotografico.Domain.Gerencial.ClientePortal _cliente)
         {
+            GestorFotografico.Domain.Gerencial.ClientePortal _nCliente = _cliente;
+            if (_cliente == null)
+            {
+                throw new Exception("Cliente não foi informado");
+            }
+
+            this.ClientePortalDao.Incluir(ref _nCliente);
+
+            _cliente = _nCliente;
+            
+            this.CacheControlDataSource.InsertControlCacheUpdate(_tableCache);
 
         }
 

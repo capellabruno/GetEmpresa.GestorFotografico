@@ -144,5 +144,11 @@ namespace GetEmpresa.CacheDataSource.Fotografo
 
             return null;
         }
+
+
+        public void InsertControlCacheUpdate(string _tableName)
+        {
+            this.CacheConnection.InsertControlDataOnUpdate(_tableName);
+        }
     }
 }

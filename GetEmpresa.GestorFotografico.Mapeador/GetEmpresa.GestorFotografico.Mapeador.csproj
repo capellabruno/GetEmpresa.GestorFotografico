@@ -47,10 +47,7 @@
     <Compile Include="fake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Domain\" />
-    <Folder Include="Negoc\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Dao.xml" />
   </ItemGroup>
@@ -67,7 +64,16 @@
     <EmbeddedResource Include="Job.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Web\Negoc.xml" />
+    <EmbeddedResource Include="Negoc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InjectionTest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Cliente.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Web.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

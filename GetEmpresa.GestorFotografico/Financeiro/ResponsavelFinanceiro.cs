@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GetEmpresa.GestorFotografico.Domain.Financeiro
 {
-    public class ResponsavelFinanceiro : Gerencial.Client
+    public class ResponsavelFinanceiro : Gerencial.Pessoa
     {
 
     }

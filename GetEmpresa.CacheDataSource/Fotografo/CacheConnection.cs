@@ -186,5 +186,30 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             }
         }
 
+        public void InsertControlDataOnUpdate(string _tableName)
+        {
+            try
+            {
+                DataTable _table = new DataTable(_tableName);
+                this.OpenConnection();
+
+                _command = new MySqlCommand();
+
+                _command.CommandText = "insert into updateondatabase (`Table`) values ('" + _tableName + "')";
+                _command.CommandTimeout = 90000;
+                _command.CommandType = CommandType.Text;
+                _command.Connection = this._connection;
+                _command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                this.CloseConnetion();
+            }
+        }
+
     }
 }

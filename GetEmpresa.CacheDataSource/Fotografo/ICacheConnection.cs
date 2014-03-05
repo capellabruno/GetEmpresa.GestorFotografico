@@ -7,5 +7,6 @@ namespace GetEmpresa.CacheDataSource.Fotografo
         System.Data.DataTable[] GetAllData();
         System.Data.DataTable GetData(string _tableName);
         void SetUpdateDataOnUpdate(string _tableName);
+        void InsertControlDataOnUpdate(string _tableName);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GetEmpresa.GestorFotografico.Domain.Gerencial
 {
-    public class ClientePortal : Client
+    public class ClientePortal : Pessoa
     {
       
     
