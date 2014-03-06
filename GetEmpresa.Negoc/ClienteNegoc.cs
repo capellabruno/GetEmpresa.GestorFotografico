@@ -42,7 +42,7 @@ namespace GetEmpresa.Negoc
             set { _cacheControlDataSource = value; }
         }
 
-        private string _tableCache = "ClientePortal";
+        private string _tableCache = "PessoaPortal";
 
         [Transaction(ReadOnly = false)]
         public void IncluirClienteFotografo(ref GestorFotografico.Domain.Cliente.Cliente _cliente)
@@ -54,7 +54,6 @@ namespace GetEmpresa.Negoc
 
             this.ClienteDao.Incluir(ref _cliente);
 
-            this.CacheControlDataSource.InsertControlCacheUpdate(_tableCache);
         }
 
         [Transaction(ReadOnly = false)]
@@ -70,8 +69,6 @@ namespace GetEmpresa.Negoc
 
             _cliente = _nCliente;
             
-            this.CacheControlDataSource.InsertControlCacheUpdate(_tableCache);
-
         }
 
         public GestorFotografico.Domain.Cliente.Cliente BuscarClienteFotografoPorID(long _codigo) {

@@ -14,19 +14,23 @@ namespace Web
             // To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
             // you must update this site. For more information visit http://go.microsoft.com/fwlink/?LinkID=252166
 
-            //OAuthWebSecurity.RegisterMicrosoftClient(
-            //    clientId: "",
-            //    clientSecret: "");
+            OAuthWebSecurity.RegisterMicrosoftClient(
+                clientId: "000000004C111967",
+                clientSecret: "jrqrJ33BmKtAlkN6mXe3-mwPRIeBXGv2");
 
-            //OAuthWebSecurity.RegisterTwitterClient(
-            //    consumerKey: "",
-            //    consumerSecret: "");
+            OAuthWebSecurity.RegisterLinkedInClient(
+                    consumerKey: "770977ih4ut1iz",
+                    consumerSecret: "kNAAPNgFUbuHMZIx");
+
+            OAuthWebSecurity.RegisterTwitterClient(
+                consumerKey: "jDDA2lMRdVtGjcUKDlCgw",
+                consumerSecret: "HtnaGulcf6ErkGElGqF9ZLrgbJbUWDEx8WRFkf6W7jQ");
 
             //OAuthWebSecurity.RegisterFacebookClient(
             //    appId: "",
             //    appSecret: "");
 
-            //OAuthWebSecurity.RegisterGoogleClient();
+            OAuthWebSecurity.RegisterGoogleClient();
         }
     }
 }
