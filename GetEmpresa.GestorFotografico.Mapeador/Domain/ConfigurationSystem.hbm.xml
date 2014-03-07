@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem, GetEmpresa.GestorFotografico.Domain" table="PortalConfiguration" abstract="false">
+
+    <id name="Id" column="IdPortalConfiguration" unsaved-value="null">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Facebook" column="Facebook" />
+    <property name="Twiter" column="Twiter" />
+    <property name="GooglePlus" column="GooglePlus" />
+    <property name="FormaPagamento" column="FormaPagamento" />
+    <property name="CodigoBanco" column="CodigoBanco" />
+    <property name="NomeBanco" column="NomeBanco" />
+    <property name="Agencia" column="Agencia" />
+    <property name="DigitoAgencia" column="DigitoAgencia" />
+    <property name="ContaBanco" column="ContaBanco" />
+    <property name="DigitoConta" column="DigitoConta" />
+    <property name="EmailPagSeguro" column="EmailPagSeguro" />
+    <property name="TokenPagSeguro" column="TokenPagSeguro" />
+    <property name="EmailPayPal" column="EmailPayPal" />
+    <property name="TokenPayPal" column="TokenPayPal" />
+    <many-to-one class="GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" name="Cliente" column="PessoaPortal_IdPessoaPortal" />
+
+  </class>
+
+</hibernate-mapping>
