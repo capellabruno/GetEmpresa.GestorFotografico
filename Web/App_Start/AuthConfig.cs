@@ -11,26 +11,24 @@ namespace Web
     {
         public static void RegisterAuth()
         {
-            // To let users of this site log in using their accounts from other sites such as Microsoft, Facebook, and Twitter,
-            // you must update this site. For more information visit http://go.microsoft.com/fwlink/?LinkID=252166
 
-            OAuthWebSecurity.RegisterMicrosoftClient(
-                clientId: "000000004C111967",
-                clientSecret: "jrqrJ33BmKtAlkN6mXe3-mwPRIeBXGv2");
+            //OAuthWebSecurity.RegisterMicrosoftClient(
+            //    clientId: "000000004C111967",
+            //    clientSecret: "jrqrJ33BmKtAlkN6mXe3-mwPRIeBXGv2");
 
-            OAuthWebSecurity.RegisterLinkedInClient(
-                    consumerKey: "770977ih4ut1iz",
-                    consumerSecret: "kNAAPNgFUbuHMZIx");
+            //OAuthWebSecurity.RegisterLinkedInClient(
+            //        consumerKey: "770977ih4ut1iz",
+            //        consumerSecret: "kNAAPNgFUbuHMZIx");
 
-            OAuthWebSecurity.RegisterTwitterClient(
-                consumerKey: "jDDA2lMRdVtGjcUKDlCgw",
-                consumerSecret: "HtnaGulcf6ErkGElGqF9ZLrgbJbUWDEx8WRFkf6W7jQ");
+            //OAuthWebSecurity.RegisterTwitterClient(
+            //    consumerKey: "jDDA2lMRdVtGjcUKDlCgw",
+            //    consumerSecret: "HtnaGulcf6ErkGElGqF9ZLrgbJbUWDEx8WRFkf6W7jQ");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "676957392363235",
+                appSecret: "cc8a84acd028c36284b18bb2cc3d53f1");
 
-            OAuthWebSecurity.RegisterGoogleClient();
+            //OAuthWebSecurity.RegisterGoogleClient();
         }
     }
 }

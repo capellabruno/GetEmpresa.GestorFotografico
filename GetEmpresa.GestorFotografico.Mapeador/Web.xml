@@ -7,5 +7,9 @@
   <object id="Home" type="Web.Controllers.HomeController, Web" singleton="false">
     <property name="ClienteNegoc" ref="ClienteNegoc" />
   </object>
+
+  <object id="Account" type="Web.Controllers.AccountController, Web" singleton="false">
+    <property name="ClienteNegoc" ref="ClienteNegoc" />
+  </object>
   
 </objects>

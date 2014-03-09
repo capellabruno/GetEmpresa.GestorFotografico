@@ -10,6 +10,8 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using Web.Filters;
 using Web.Models;
+using GetEmpresa.GestorFotografico.Domain.Gerencial;
+using GetEmpresa.Negoc;
 
 namespace Web.Controllers
 {
@@ -17,6 +19,21 @@ namespace Web.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+
+
+        #region "Dependency Injection"
+        private IClienteNegoc _clienteNegoc;
+
+        public IClienteNegoc ClienteNegoc
+        {
+            get { return _clienteNegoc; }
+            set { _clienteNegoc = value; }
+        }
+
+        #endregion
+
+
+
         //
         // GET: /Account/Login
 
@@ -72,20 +89,60 @@ namespace Web.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(RegisterModel model)
+        public ActionResult Register(FotografoModels model)
         {
             if (ModelState.IsValid)
             {
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
-                    WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    WebSecurity.CreateUserAndAccount(model.Email, model.Senha);
+                    WebSecurity.Login(model.Email, model.Senha);
+
+                    //Criar a Conta no Gestor
+                    ClientePortal _cliente = new ClientePortal();
+                    _cliente.Ativo = true;
+                    _cliente.Bairro = model.Bairro;
+                    _cliente.Cep = model.Cep;
+                    _cliente.Cidade = model.Cidade;
+                    _cliente.Complemento = model.Complemento;
+                    _cliente.DataProximatroca = DateTime.Now.AddMonths(6);
+                    _cliente.Documento = model.Documento;
+                    _cliente.Email = model.Email;
+                    _cliente.Endereco = model.Endereco;
+                    _cliente.Nome = model.Nome;
+                    _cliente.Pais = model.Pais;
+                    _cliente.Password = model.Senha;
+                    _cliente.Telefone = model.Telefone;
+                    _cliente.Uf = model.Uf;
+
+
+                    ///Create New Configuration
+                    ConfigurationSystem _configuration = new ConfigurationSystem();
+
+                    _configuration.FormaPagamento = EnumFormaPagamento.DepositoBancario;
+                    _configuration.Cliente = _cliente;
+
+                    _cliente.Configuration = _configuration;
+
+                    this.ClienteNegoc.IncluirClientePortal(ref _cliente);
+
+                    if (_cliente.Id > 0)
+                    {
+                        return RedirectToAction("Index", "Home");
+                        throw new MembershipCreateUserException("Não foi possível criar a conta");
+                    }
                 }
                 catch (MembershipCreateUserException e)
                 {
                     ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
+                }
+                catch (Exception ex)
+                {
+                    WebSecurity.Logout();
+                    ((SimpleMembershipProvider)Membership.Provider).DeleteAccount(model.Email);
+                    ((SimpleMembershipProvider)Membership.Provider).DeleteUser(model.Email, true);
+                    ModelState.AddModelError("", ex.Message);
                 }
             }
 

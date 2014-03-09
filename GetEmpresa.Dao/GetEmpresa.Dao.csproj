@@ -45,6 +45,7 @@
     <Compile Include="Developer\ClientePortalDao.cs" />
     <Compile Include="Developer\CobrancaDao.cs" />
     <Compile Include="Developer\ComentarioDao.cs" />
+    <Compile Include="Developer\ConfigurationSystemDao.cs" />
     <Compile Include="Developer\ContratoDao.cs" />
     <Compile Include="Developer\UsuarioDao.cs" />
     <Compile Include="Developer\ResponsavelFinanceiroDao.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Developer\DividaDao.cs" />
     <Compile Include="Interface\IClientePortalDao.cs" />
     <Compile Include="Interface\IClienteDao.cs" />
+    <Compile Include="Interface\IConfigurationSystemDao.cs" />
     <Compile Include="Interface\IContratoDao.cs" />
     <Compile Include="Interface\IUsuarioDao.cs" />
     <Compile Include="Interface\IGrupoUsuarioDao.cs" />

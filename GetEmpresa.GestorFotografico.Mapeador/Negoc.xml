@@ -5,6 +5,7 @@
   <object id="ClienteNegoc" type="GetEmpresa.Negoc.ClienteNegoc, GetEmpresa.Negoc">
     <property name="ClienteDao" ref="ClienteDao"/>
     <property name="ClientePortalDao" ref="ClientePortalDao"/>
+    <property name="ConfigurationSystemDao" ref="ConfigurationSystemDao"/>
   </object>
 
 </objects>

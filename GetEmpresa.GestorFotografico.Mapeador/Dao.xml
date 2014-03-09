@@ -57,4 +57,10 @@
   <object id="UsuarioDao" type="GetEmpresa.Dao.Developer.UsuarioDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
+
+  
+  <object id="ConfigurationSystemDao" type="GetEmpresa.Dao.Developer.ConfigurationSystemDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
 </objects>

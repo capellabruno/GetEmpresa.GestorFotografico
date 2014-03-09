@@ -17,7 +17,7 @@ namespace GetEmpresa.Negoc
 {
     public class ClienteNegoc : GetEmpresa.Negoc.IClienteNegoc
     {
-
+        #region "Classes Injetaveis"
         private Dao.Interface.IClienteDao _clienteDao;
 
         public Dao.Interface.IClienteDao ClienteDao
@@ -42,6 +42,17 @@ namespace GetEmpresa.Negoc
             set { _cacheControlDataSource = value; }
         }
 
+        private Dao.Interface.IConfigurationSystemDao _configurationSystemDao;
+
+        public Dao.Interface.IConfigurationSystemDao ConfigurationSystemDao
+        {
+            get { return _configurationSystemDao; }
+            set { _configurationSystemDao = value; }
+        }
+
+
+        #endregion
+
         private string _tableCache = "PessoaPortal";
 
         [Transaction(ReadOnly = false)]
@@ -56,10 +67,11 @@ namespace GetEmpresa.Negoc
 
         }
 
-        [Transaction(ReadOnly = false)]
+        [Transaction(Spring.Transaction.TransactionPropagation.Required)]
         public void IncluirClientePortal(ref GestorFotografico.Domain.Gerencial.ClientePortal _cliente)
         {
             GestorFotografico.Domain.Gerencial.ClientePortal _nCliente = _cliente;
+            GestorFotografico.Domain.Gerencial.ConfigurationSystem _config = _cliente.Configuration;
             if (_cliente == null)
             {
                 throw new Exception("Cliente não foi informado");
@@ -67,8 +79,12 @@ namespace GetEmpresa.Negoc
 
             this.ClientePortalDao.Incluir(ref _nCliente);
 
-            _cliente = _nCliente;
-            
+            this.ConfigurationSystemDao.Incluir(ref _config);
+
+            if (_nCliente.Id > 0 && _config.Id > 0)
+                _cliente = _nCliente;
+            else
+                throw new Exception("Não foi possivel incluir o cadastro");
         }
 
         public GestorFotografico.Domain.Cliente.Cliente BuscarClienteFotografoPorID(long _codigo) {

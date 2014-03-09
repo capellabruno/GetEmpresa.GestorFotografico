@@ -30,10 +30,6 @@
       <property name="Password" column="Password" />
       <property name="DataProximatroca" column="DataProximatroca" />
       <property name="UrlPessoal" column="UrlPessoal" />
-      <bag name="Configuration" cascade="all" lazy="true">
-        <key column="PessoaPortal_IdPessoaPortal" />
-        <one-to-many class="GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem, GetEmpresa.GestorFotografico.Domain" />        
-      </bag>
       
     </subclass>
 
