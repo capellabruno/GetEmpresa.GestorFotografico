@@ -9,5 +9,6 @@ namespace GetEmpresa.Negoc
         GetEmpresa.CacheDataSource.Fotografo.ICacheControlDataSource CacheControlDataSource { get; set; }
         void IncluirClienteFotografo(ref GetEmpresa.GestorFotografico.Domain.Cliente.Cliente _cliente);
         void IncluirClientePortal(ref GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal _cliente);
+        GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem GetConfigurarion(string _email);
     }
 }

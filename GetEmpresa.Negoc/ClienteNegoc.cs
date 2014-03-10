@@ -103,5 +103,47 @@ namespace GetEmpresa.Negoc
         public IList<GestorFotografico.Domain.Cliente.Cliente> BuscarTodosOsClientesPorClientePortal(GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal _clientePortal) {
             return null;
         }
+
+        public GestorFotografico.Domain.Gerencial.ConfigurationSystem GetConfigurarion(string _email)
+        {
+            DataRow[] _row;
+            GestorFotografico.Domain.Gerencial.ConfigurationSystem _return;
+            List<GestorFotografico.Domain.Gerencial.ConfigurationSystem> _configs;
+            GestorFotografico.Domain.Gerencial.ClientePortal _cliente;
+            List<GestorFotografico.Domain.Gerencial.ClientePortal> _clientes;
+
+            IList<CacheControlDomain> _listaSearch = new List<CacheControlDomain>();
+
+            _listaSearch.Add(new CacheControlDomain() { Column = "Email", Value = _email });
+
+            _row = this.CacheControlDataSource.BuscarPorLike(_listaSearch, "pessoaportal");
+
+            if (_row.Length > 0)
+            {
+                _clientes = new List<GestorFotografico.Domain.Gerencial.ClientePortal>();
+
+                Transcritor.Transcreve(_row, _clientes);
+                _cliente = _clientes.FirstOrDefault();
+
+                long codigoCliente = Convert.ToInt64(_cliente.Id);
+                
+                _listaSearch = new List<CacheControlDomain>();
+                
+                _listaSearch.Add(new CacheControlDomain() { Column = "PessoaPortal_IdPessoaPortal", Value = codigoCliente.ToString() });
+                
+                _row = null;
+
+                _row = this.CacheControlDataSource.BuscarPorLike(_listaSearch, "pessoaportal");
+
+                if (_row.Length > 0)
+                {
+                    _configs = new List<GestorFotografico.Domain.Gerencial.ConfigurationSystem>();
+                    Transcritor.Transcreve(_row, _configs);
+                    _return = _configs.FirstOrDefault();
+                }
+            }
+            return new GestorFotografico.Domain.Gerencial.ConfigurationSystem();
+        }
+
     }
 }

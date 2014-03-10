@@ -22,29 +22,30 @@
                 <section id="login">
                     <%: Html.Partial("_LoginPartial") %>
                 </section>
-                <nav>
-                    <ul id="menu">
-                        <% if (Request.IsAuthenticated){ %>
-                            <li><%: Html.ActionLink("Clientes", "System", "Cliente") %></li>
-                            <li><%: Html.ActionLink("Contrato", "System", "Contrato") %></li>
-                            <li><%: Html.ActionLink("Financeiro", "System", "Financeiro") %></li>
-                            <li><%: Html.ActionLink("Portifólio", "System", "Portifolio") %></li>
-                            <li><%: Html.ActionLink("Orçamentos", "System", "Orcamento") %></li>
-                        <% } else {%>
-
-                        <li><%: Html.ActionLink("Home", "Index", "Home") %></li>
-                        <li><%: Html.ActionLink("Sobre", "About", "Home") %></li>
-                       
-                         <% } %>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
     <div id="body">
         <asp:ContentPlaceHolder ID="FeaturedContent" runat="server" />
         <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <% if (Request.IsAuthenticated)
+               { %>
+            <navadm>
+                <h3 class="titleMenu">Administração</h3>
+                <ul>
+
+                <li><%: Html.ActionLink("Clientes", "Cliente", "System") %></li>
+                <li><%: Html.ActionLink("Contrato", "Contrato", "System") %></li>
+                <li><%: Html.ActionLink("Financeiro", "Financeiro", "System") %></li>
+                <li><%: Html.ActionLink("Portifólio", "Portifolio", "System") %></li>
+                <li><%: Html.ActionLink("Orçamentos", "Orcamento", "System") %></li>
+               
+                    </ul>
+            </navadm>
+            <% } %>
+            <div class="administrator">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
         </section>
     </div>
     <footer>

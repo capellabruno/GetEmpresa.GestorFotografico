@@ -87,6 +87,7 @@
     <Compile Include="ClienteNegoc.cs" />
     <Compile Include="IClienteNegoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transcritor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj">

@@ -3,16 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GetEmpresa.Negoc;
+using GetEmpresa.GestorFotografico.Domain.Gerencial;
 
 namespace Web.Controllers
 {
     public class SystemController : Controller
     {
+        #region "Dependency Injection"
+        private IClienteNegoc _clienteNegoc;
+
+        public IClienteNegoc ClienteNegoc
+        {
+            get { return _clienteNegoc; }
+            set { _clienteNegoc = value; }
+        }
+
+        #endregion
+
         //
         // GET: /System/
 
         public ActionResult Index()
         {
+            string _usuario = User.Identity.Name;
+
+            ConfigurationSystem _config;
+
+            _config = this.ClienteNegoc.GetConfigurarion(_usuario);
+
+            if (_config != null && _config.Id > 0)
+            {
+                Models.PortalConfigurationModels _view;
+                _view = new Models.PortalConfigurationModels();
+
+                Filters.Transcritor.TranscreveWeb(_config, _view);
+
+                ViewBag.TipoPagamentoSelecionado = _config.FormaPagamento;
+
+                return View(_view);
+            }
+
             return View();
         }
 
@@ -100,6 +131,11 @@ namespace Web.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Administrator()
+        {
+            return View();
         }
     }
 }
