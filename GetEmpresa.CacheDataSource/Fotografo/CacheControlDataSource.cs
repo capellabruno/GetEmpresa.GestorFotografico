@@ -140,9 +140,30 @@ namespace GetEmpresa.CacheDataSource.Fotografo
         {
             this.NecessaryUpdate();
 
-            IList<CacheControlDomain> _searchParams = new List<CacheControlDomain>();
-
-            return null;
+            
+            if (_paramSearch == null || _paramSearch.Count == 0)
+                throw new Exception("Parametro do consulta não foi informado");
+            
+            DataTable _dt = this.CacheApplicationDataSource.Tables[_tableName];
+            
+            DataRow[] _rows = null;
+            
+            string _expression = string.Empty;    
+            
+            if (_dt == null)
+                throw new Exception("Não foi possivel localizar o dado solicitado");
+            
+            foreach(CacheControlDomain item in _paramSearch){
+                if(String.IsNullOrEmpty(_expression)){
+                    _expression = item.Column  + " = '" + item.Value + "'";
+                }else{
+                    _expression = " and " + item.Column  + " = '" + item.Value + "'";
+                }
+            }
+            
+            _rows = _dt.Select(_expression, "id desc");
+            
+            return _rows;
         }
 
 
