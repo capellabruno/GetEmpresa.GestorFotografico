@@ -27,17 +27,16 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             set { _cacheConnection = value; }
         }
 
-        private DataSet _dataSource;
+        private static DataSet _dataSource;
 
-        public DataSet CacheApplicationDataSource
+        public static DataSet CacheApplicationDataSource
         {
             get {
-                if (HttpContext.Current != null && HttpContext.Current.Application["DataSourceBaseCurrentContext"] != null)
-                {
-                    _dataSource = (DataSet)HttpContext.Current.Application["DataSourceBaseCurrentContext"];
-                }
-
                 return _dataSource; 
+            }
+            set
+            {
+                _dataSource = value;
             }
         }
 
@@ -48,9 +47,9 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             DataTable[] _dts;
             if (HttpContext.Current != null)
             {
-                if (HttpContext.Current.Application["DataSourceBaseCurrentContext"] != null)
+                if (CacheApplicationDataSource != null)
                 {
-                    ds = (DataSet)HttpContext.Current.Application["DataSourceBaseCurrentContext"];
+                    ds = (DataSet)CacheApplicationDataSource;
                 }
                 else
                 {
@@ -59,13 +58,11 @@ namespace GetEmpresa.CacheDataSource.Fotografo
                     ds.Tables.AddRange(_dts);
                 }
 
-                this.UpdateCacheControl(ref ds);
-
-                HttpContext.Current.Application["DataSourceBaseCurrentContext"] = ds;
+               CacheApplicationDataSource = ds;
             }
         }
 
-        public void UpdateCacheControl(ref DataSet ds)
+        public void UpdateCacheControl()
         {
             List<string> _tablesNamesUpdate;
 
@@ -75,9 +72,9 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             {
                 foreach (string item in _tablesNamesUpdate)
                 {
-                    ds.Tables.Remove(item);
+                    CacheApplicationDataSource.Tables.Remove(item);
                     DataTable dt = this.CacheConnection.GetData(item);
-                    ds.Tables.Add(dt);
+                    CacheApplicationDataSource.Tables.Add(dt);
                     this.CacheConnection.SetUpdateDataOnUpdate(item);
                 }
             }
@@ -96,9 +93,7 @@ namespace GetEmpresa.CacheDataSource.Fotografo
 
         private void NecessaryUpdate()
         {
-            DataSet ds = this.CacheApplicationDataSource;
-            this.UpdateCacheControl(ref ds);
-            HttpContext.Current.Application["DataSourceBaseCurrentContext"] = ds;
+            UpdateCacheControl();
         }
 
         public DataRow BuscarPorCodigo(long _codigo, string _tableName)
