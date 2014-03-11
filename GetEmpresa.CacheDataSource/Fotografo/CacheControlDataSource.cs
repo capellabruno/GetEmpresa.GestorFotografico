@@ -161,7 +161,7 @@ namespace GetEmpresa.CacheDataSource.Fotografo
                 }
             }
             
-            _rows = _dt.Select(_expression, "id desc");
+            _rows = _dt.Select(_expression);
             
             return _rows;
         }

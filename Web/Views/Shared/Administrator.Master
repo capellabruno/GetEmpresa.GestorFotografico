@@ -16,7 +16,7 @@
     <header>
         <div class="content-wrapper">
             <div class="float-left">
-                <p class="site-title"><%: Html.ActionLink("Gestor Fotográfo", "Index", "Home") %></p>
+                <p class="site-title"><%: Html.ActionLink("Mercado da Foto - Administração", "Administrator", "System") %></p>
             </div>
             <div class="float-right">
                 <section id="login">

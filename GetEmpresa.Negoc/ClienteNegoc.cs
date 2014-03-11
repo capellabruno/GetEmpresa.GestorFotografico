@@ -107,7 +107,7 @@ namespace GetEmpresa.Negoc
         public GestorFotografico.Domain.Gerencial.ConfigurationSystem GetConfigurarion(string _email)
         {
             DataRow[] _row;
-            GestorFotografico.Domain.Gerencial.ConfigurationSystem _return;
+            GestorFotografico.Domain.Gerencial.ConfigurationSystem _return= null;
             List<GestorFotografico.Domain.Gerencial.ConfigurationSystem> _configs;
             GestorFotografico.Domain.Gerencial.ClientePortal _cliente;
             List<GestorFotografico.Domain.Gerencial.ClientePortal> _clientes;
@@ -122,7 +122,7 @@ namespace GetEmpresa.Negoc
             {
                 _clientes = new List<GestorFotografico.Domain.Gerencial.ClientePortal>();
 
-                Transcritor.Transcreve(_row, _clientes);
+                Transcritor.Transcreve(_row, ref _clientes);
                 _cliente = _clientes.FirstOrDefault();
 
                 long codigoCliente = Convert.ToInt64(_cliente.Id);
@@ -133,17 +133,30 @@ namespace GetEmpresa.Negoc
                 
                 _row = null;
 
-                _row = this.CacheControlDataSource.BuscarPorLike(_listaSearch, "pessoaportal");
+                _row = this.CacheControlDataSource.BuscarPorLike(_listaSearch, "portalconfiguration");
 
                 if (_row.Length > 0)
                 {
                     _configs = new List<GestorFotografico.Domain.Gerencial.ConfigurationSystem>();
-                    Transcritor.Transcreve(_row, _configs);
+                    Transcritor.Transcreve(_row, ref _configs);
                     _return = _configs.FirstOrDefault();
                 }
             }
-            return new GestorFotografico.Domain.Gerencial.ConfigurationSystem();
+            return _return;
         }
 
+
+
+        public void SetConfigurarion(ref GestorFotografico.Domain.Gerencial.ConfigurationSystem _obj)
+        {
+            //GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem _config;
+            GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal _cliente;
+
+           // _config = this.ConfigurationSystemDao.Capturar(Convert.ToInt64(_obj.Id));
+
+            _cliente = this.ClientePortalDao.Capturar(_obj.Cliente.Id);
+
+            this.ConfigurationSystemDao.Alterar(ref _obj);
+        }
     }
 }

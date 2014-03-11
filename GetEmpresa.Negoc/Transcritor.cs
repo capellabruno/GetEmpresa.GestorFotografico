@@ -11,7 +11,7 @@ namespace GetEmpresa.Negoc
 {
     public class Transcritor
     {
-        public static void Transcreve(DataRow[] _origem, List<ClientePortal> _destino)
+        public static void Transcreve(DataRow[] _origem, ref  List<ClientePortal> _destino)
         {
             if (_destino == null)
             {
@@ -23,13 +23,14 @@ namespace GetEmpresa.Negoc
                 foreach (DataRow item in _origem)
                 {
                     ClientePortal _cliente = new ClientePortal();
-                    Transcreve(item, _cliente);
+                    Transcreve(item, ref _cliente);
                     _destino.Add(_cliente);
                 }
             }
         }
 
-        public static void Transcreve(DataRow _origem, ClientePortal _destino) {
+        public static void Transcreve(DataRow _origem, ref  ClientePortal _destino)
+        {
             if (_destino == null)
                 _destino = new ClientePortal();
 
@@ -56,7 +57,7 @@ namespace GetEmpresa.Negoc
 
         }
 
-        public static void Transcreve(DataRow[] _origem, List<Cliente> _destino)
+        public static void Transcreve(DataRow[] _origem, ref  List<Cliente> _destino)
         {
             if (_destino == null)
             {
@@ -68,13 +69,13 @@ namespace GetEmpresa.Negoc
                 foreach (DataRow item in _origem)
                 {
                     Cliente _cliente = new Cliente();
-                    Transcreve(item, _cliente);
+                    Transcreve(item, ref _cliente);
                     _destino.Add(_cliente);
                 }
             }
         }
 
-        public static void Transcreve(DataRow _origem, Cliente _destino)
+        public static void Transcreve(DataRow _origem, ref  Cliente _destino)
         {
             if (_destino == null)
                 _destino = new Cliente();
@@ -95,7 +96,8 @@ namespace GetEmpresa.Negoc
 
         }
 
-        public static void Transcreve(DataRow[] _origem, List<ConfigurationSystem> _destino) {
+        public static void Transcreve(DataRow[] _origem, ref  List<ConfigurationSystem> _destino)
+        {
             if (_destino == null)
             {
                 _destino = new List<ConfigurationSystem>();
@@ -106,76 +108,92 @@ namespace GetEmpresa.Negoc
                 foreach (DataRow item in _origem)
                 {
                     ConfigurationSystem _config = new ConfigurationSystem();
-                    Transcreve(item, _config);
+                    Transcreve(item, ref _config);
                     _destino.Add(_config);
                 }
 
             }
         }
 
-        public static void Transcreve(DataRow _origem, ConfigurationSystem _destino) {
+        public static void Transcreve(DataRow _origem, ref  ConfigurationSystem _destino)
+        {
             if (_destino == null)
                 _destino = new ConfigurationSystem();
 
             _destino.Id = Convert.ToInt32(_origem["idPortalConfiguration"]);
 
-            if (_origem["Facebook"] != DBNull.Value) {
+            if (_origem["Facebook"] != DBNull.Value)
+            {
                 _destino.Facebook = _origem["Facebook"].ToString();
             }
 
-            if (_origem["Twiter"] != DBNull.Value) {
+            if (_origem["Twiter"] != DBNull.Value)
+            {
                 _destino.Twiter = _origem["Twiter"].ToString();
             }
 
-            if (_origem["GooglePlus"] != DBNull.Value) {
+            if (_origem["GooglePlus"] != DBNull.Value)
+            {
                 _destino.GooglePlus = _origem["GooglePlus"].ToString();
             }
 
-            if (_origem["FormaPagamento"] != DBNull.Value) { 
+            if (_origem["FormaPagamento"] != DBNull.Value)
+            {
                 _destino.FormaPagamento = ((EnumFormaPagamento)Convert.ToInt32(_origem["FormaPagamento"]));
             }
 
-            if (_origem["Banco"] != DBNull.Value) {
+            if (_origem["Banco"] != DBNull.Value)
+            {
                 _destino.CodigoBanco = Convert.ToInt32(_origem["Banco"]);
             }
 
-            if (_origem["BancoNome"] != DBNull.Value) {
+            if (_origem["BancoNome"] != DBNull.Value)
+            {
                 _destino.NomeBanco = _origem["BancoNome"].ToString();
             }
 
-            if (_origem["Agencia"] != DBNull.Value) {
+            if (_origem["Agencia"] != DBNull.Value)
+            {
                 _destino.Agencia = Convert.ToInt32(_origem["Agencia"]);
             }
 
-            if (_origem["AgenciaCodigo"] != DBNull.Value) {
+            if (_origem["AgenciaCodigo"] != DBNull.Value)
+            {
                 _destino.DigitoAgencia = Convert.ToInt32(_origem["AgenciaCodigo"]);
             }
 
-            if (_origem["Conta"] != DBNull.Value) {
+            if (_origem["Conta"] != DBNull.Value)
+            {
                 _destino.ContaBanco = Convert.ToInt32(_origem["Conta"]);
             }
 
-            if (_origem["ContaCodigo"] != DBNull.Value) {
+            if (_origem["ContaCodigo"] != DBNull.Value)
+            {
                 _destino.DigitoConta = Convert.ToInt32(_origem["ContaCodigo"]);
             }
 
-            if (_origem["PagSeguroEmail"] != DBNull.Value) { 
-                _destino.EmailPagSeguro=_origem["PagSeguroEmail"].ToString();
+            if (_origem["PagSeguroEmail"] != DBNull.Value)
+            {
+                _destino.EmailPagSeguro = _origem["PagSeguroEmail"].ToString();
             }
 
-            if (_origem["PagSeguroToken"] != DBNull.Value) {
+            if (_origem["PagSeguroToken"] != DBNull.Value)
+            {
                 _destino.TokenPagSeguro = _origem["PagSeguroToken"].ToString();
             }
 
-            if (_origem["PayPalEmail"] != DBNull.Value) {
+            if (_origem["PayPalEmail"] != DBNull.Value)
+            {
                 _destino.EmailPayPal = _origem["PayPalEmail"].ToString();
             }
 
-            if (_origem["PayPalToken"] != DBNull.Value) {
+            if (_origem["PayPalToken"] != DBNull.Value)
+            {
                 _destino.TokenPayPal = _origem["PayPalToken"].ToString();
             }
 
-            if (_origem["PessoaPortal_idPessoaPortal"] != DBNull.Value) {
+            if (_origem["PessoaPortal_idPessoaPortal"] != DBNull.Value)
+            {
                 _destino.Cliente = new ClientePortal() { Id = Convert.ToInt64(_origem["PessoaPortal_idPessoaPortal"]) };
             }
 

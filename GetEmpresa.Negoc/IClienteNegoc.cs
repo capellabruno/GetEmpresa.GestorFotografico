@@ -10,5 +10,6 @@ namespace GetEmpresa.Negoc
         void IncluirClienteFotografo(ref GetEmpresa.GestorFotografico.Domain.Cliente.Cliente _cliente);
         void IncluirClientePortal(ref GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal _cliente);
         GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem GetConfigurarion(string _email);
+        void SetConfigurarion(ref GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem _obj);
     }
 }

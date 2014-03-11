@@ -32,12 +32,14 @@ namespace Web.Controllers
 
             _config = this.ClienteNegoc.GetConfigurarion(_usuario);
 
+            ViewBag.TipoPagamentoSelecionado = GetEmpresa.GestorFotografico.Domain.Gerencial.EnumFormaPagamento.DepositoBancario;
+
             if (_config != null && _config.Id > 0)
             {
                 Models.PortalConfigurationModels _view;
                 _view = new Models.PortalConfigurationModels();
 
-                Filters.Transcritor.TranscreveWeb(_config, _view);
+                Filters.Transcritor.TranscreveWeb(_config,ref _view);
 
                 ViewBag.TipoPagamentoSelecionado = _config.FormaPagamento;
 
@@ -45,6 +47,22 @@ namespace Web.Controllers
             }
 
             return View();
+        }
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult Index(Models.PortalConfigurationModels _model)
+        {
+            ConfigurationSystem _config = new ConfigurationSystem();
+            Filters.Transcritor.TranscreveWeb(_model, ref _config);
+
+            this.ClienteNegoc.SetConfigurarion(ref _config);
+
+            Filters.Transcritor.TranscreveWeb(_config,ref _model);
+
+            ViewBag.TipoPagamentoSelecionado = _config.FormaPagamento;
+
+            return View(_model);
         }
 
         //
