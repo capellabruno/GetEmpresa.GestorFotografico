@@ -1,41 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="GetEmpresa.GestorFotografico.Domain.Gerencial.Pessoa, GetEmpresa.GestorFotografico.Domain" table="PessoaPortal" abstract="true">
+  <class name="GetEmpresa.GestorFotografico.Domain.Cliente, GetEmpresa.GestorFotografico.Domain" table="Cliente" abstract="false">
 
-    <id name="Id" column="IdPessoaPortal" unsaved-value="null">
+    <id name="Id" column="IdCliente" unsaved-value="null">
       <generator class="identity"/>
     </id>
 
-    <discriminator column="Discriminator" not-null="true"	type="System.String"/>
-
     <property name="Nome" column="Nome" />
     <property name="Email" column="Email" />
-    <property name="Endereco" column="Endereco" />
-    <property name="Cidade" column="Cidade" />
-    <property name="Uf" column="Uf" />
-    <property name="Pais" column="Pais" />
-    <property name="Bairro" column="Bairro" />
-    <property name="Complemento" column="Complemento" />
-    <property name="Cep" column="Cep" />
-    <property name="Documento" column="Documento" />
-    <property name="Telefone" column="Telefone" />
-    <property name="Ativo" column="Ativo" />
-
-    <subclass discriminator-value="ClienteFotografo" name="GetEmpresa.GestorFotografico.Domain.Cliente.Cliente, GetEmpresa.GestorFotografico.Domain">
-      <many-to-one class="GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain" name="ClientePai" column="PessoaPortal_IdPessoaPortal" />
-    </subclass>
-
-    <subclass discriminator-value="ClientePortal" name="GetEmpresa.GestorFotografico.Domain.Gerencial.ClientePortal, GetEmpresa.GestorFotografico.Domain">
-      <property name="Password" column="Password" />
-      <property name="DataProximatroca" column="DataProximatroca" />
-      <property name="UrlPessoal" column="UrlPessoal" />
-      
-    </subclass>
-
-    <subclass discriminator-value="ResponsavelFinanceiro" name="GetEmpresa.GestorFotografico.Domain.Financeiro.ResponsavelFinanceiro, GetEmpresa.GestorFotografico.Domain">
-    </subclass>
-
+    <property name="Senha" column="Senha" />
+    
+  <many-to-one name="Municipio" class="GetEmpresa.GestorFotografico.Domain.Cidade, GetEmpresa.GestorFotografico.Domain" column="Cidade_IdCidade" />
+  <many-to-one name="Perfil" class="GetEmpresa.GestorFotografico.Domain.TipoCliente, GetEmpresa.GestorFotografico.Domain" column="TipoCliente_IdTipoCliente" />
+  
   </class>
 
 </hibernate-mapping>
