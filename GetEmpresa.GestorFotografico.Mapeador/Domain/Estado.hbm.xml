@@ -3,7 +3,7 @@
 
   <class name="GetEmpresa.GestorFotografico.Domain.Estado, GetEmpresa.GestorFotografico.Domain" table="Estado" abstract="false">
 
-    <id name="Id" column="IdPais" unsaved-value="null">
+    <id name="Id" column="IdEstado" unsaved-value="null">
       <generator class="identity"/>
     </id>
 
