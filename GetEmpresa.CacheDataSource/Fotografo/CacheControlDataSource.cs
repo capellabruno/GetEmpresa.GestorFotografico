@@ -139,7 +139,7 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             if (_paramSearch == null || _paramSearch.Count == 0)
                 throw new Exception("Parametro do consulta não foi informado");
             
-            DataTable _dt = this.CacheApplicationDataSource.Tables[_tableName];
+            DataTable _dt = CacheApplicationDataSource.Tables[_tableName];
             
             DataRow[] _rows = null;
             
@@ -161,10 +161,5 @@ namespace GetEmpresa.CacheDataSource.Fotografo
             return _rows;
         }
 
-
-        public void InsertControlCacheUpdate(string _tableName)
-        {
-            this.CacheConnection.InsertControlDataOnUpdate(_tableName);
-        }
     }
 }

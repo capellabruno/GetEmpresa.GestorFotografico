@@ -41,32 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente\Cliente.cs" />
-    <Compile Include="Contrato\ContratoFotografo.cs" />
-    <Compile Include="Contrato\ItemContrato.cs" />
-    <Compile Include="Financeiro\Cobranca.cs" />
-    <Compile Include="Financeiro\Divida.cs" />
-    <Compile Include="Financeiro\Pagamento.cs" />
-    <Compile Include="Financeiro\ResponsavelFinanceiro.cs" />
-    <Compile Include="Gerencial\ConfigurationSystem.cs" />
-    <Compile Include="Gerencial\EnumFormaPagamento.cs" />
-    <Compile Include="Gerencial\Pessoa.cs" />
-    <Compile Include="Gerencial\ClientePortal.cs" />
-    <Compile Include="Gerencial\TipoContrato.cs" />
-    <Compile Include="Gerencial\TipoEnsaio.cs" />
-    <Compile Include="Gerencial\TipoItemContrato.cs" />
-    <Compile Include="Gerencial\TipoPessoa.cs" />
-    <Compile Include="Gerencial\TipoPlanoFinanceiro.cs" />
-    <Compile Include="Orcamento\Orcamento.cs" />
-    <Compile Include="Portifolio\Comentario.cs" />
-    <Compile Include="Portifolio\Imagem.cs" />
-    <Compile Include="Portifolio\Portifolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario\GrupoUsuario.cs" />
-    <Compile Include="Usuario\UsuarioSistema.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

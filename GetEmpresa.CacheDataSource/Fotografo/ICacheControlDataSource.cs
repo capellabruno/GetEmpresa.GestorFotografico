@@ -6,8 +6,6 @@ namespace GetEmpresa.CacheDataSource.Fotografo
     public interface ICacheControlDataSource
     {
         void CreateCacheDataSource();
-        void UpdateCacheControl(ref System.Data.DataSet ds);
-        void InsertControlCacheUpdate(string _tableName);
         DataTable GetTableCache(string _tableName);
         DataRow BuscarPorCodigo(long _codigo, string _tableName);
         DataRow BuscarPorCodigo(string _codigo, string _tableName);
