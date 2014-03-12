@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="GetEmpresa.GestorFotografico.Domain.Estado, GetEmpresa.GestorFotografico.Domain" table="Estado" abstract="false">
+
+    <id name="Id" column="IdPais" unsaved-value="null">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Nome" column="Nome" />
+    <property name="Sigla" column="Sigla" />
+    <many-to-one name="Pais" class="GetEmpresa.GestorFotografico.Domain.Pais, GetEmpresa.GestorFotografico.Domain" column="Pais_IdPais" />
+    
+  </class>
+
+</hibernate-mapping>
