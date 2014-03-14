@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer\CidadeDao.cs" />
+    <Compile Include="Developer\ClienteDao.cs" />
+    <Compile Include="Developer\EstadoDao.cs" />
+    <Compile Include="Developer\PaisDao.cs" />
+    <Compile Include="Developer\TipoClienteDao.cs" />
+    <Compile Include="Interface\ICidadeDao.cs" />
+    <Compile Include="Interface\IClienteDao.cs" />
+    <Compile Include="Interface\IEstadoDao.cs" />
+    <Compile Include="Interface\IPaisDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,9 +62,9 @@
       <Name>GetEmpresa.GestorFotografico.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Developer\" />
-    <Folder Include="Interface\" />
+    <Compile Include="Interface\ITipoClienteDao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

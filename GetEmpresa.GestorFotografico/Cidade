@@ -1,9 +1,0 @@
-using System;
-
-public class Cidade{
-  public virtual Long Id{get;set;}
-  
-  public virtual string Nome{get;set;}
-  
-  public virutal Estado Uf{get; set; }
-}
