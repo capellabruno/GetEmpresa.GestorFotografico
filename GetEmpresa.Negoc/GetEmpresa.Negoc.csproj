@@ -84,7 +84,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer\CidadeNegoc.cs" />
     <Compile Include="Developer\ClienteNegoc.cs" />
+    <Compile Include="Developer\EstadoNegoc.cs" />
+    <Compile Include="Developer\PaisNegoc.cs" />
+    <Compile Include="Developer\TipoClienteNegoc.cs" />
     <Compile Include="Interface\ICidadeNegoc.cs" />
     <Compile Include="Interface\IClienteNegoc.cs" />
     <Compile Include="Interface\IEstadoNegoc.cs" />
