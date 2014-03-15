@@ -2,10 +2,27 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClienteNegoc" type="GetEmpresa.Negoc.ClienteNegoc, GetEmpresa.Negoc">
+  <object id="ClienteNegoc" type="GetEmpresa.Negoc.Developer.ClienteNegoc, GetEmpresa.Negoc">
     <property name="ClienteDao" ref="ClienteDao"/>
-    <property name="ClientePortalDao" ref="ClientePortalDao"/>
-    <property name="ConfigurationSystemDao" ref="ConfigurationSystemDao"/>
   </object>
+
+  <object id="TipoClienteNegoc" type="GetEmpresa.Negoc.Developer.TipoClienteNegoc, GetEmpresa.Negoc">
+    <property name="TipoClienteDao" ref="TipoClienteDao"/>
+  </object>
+
+  <object id="CidadeNegoc" type="GetEmpresa.Negoc.Developer.CidadeNegoc, GetEmpresa.Negoc">
+    <property name="CidadeDao" ref="CidadeDao"/>
+  </object>
+
+  <object id="EstadoNegoc" type="GetEmpresa.Negoc.Developer.EstadoNegoc, GetEmpresa.Negoc">
+    <property name="EstadoDao" ref="EstadoDao"/>
+  </object>
+
+  <object id="PaisNegoc" type="GetEmpresa.Negoc.Developer.PaisNegoc, GetEmpresa.Negoc">
+    <property name="PaisDao" ref="PaisDao"/>
+  </object>
+
+
+
 
 </objects>

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using GetEmpresa.Negoc;
 using GetEmpresa.GestorFotografico;
+using GetEmpresa.Negoc.Interface;
 
 namespace Web.Controllers
 {

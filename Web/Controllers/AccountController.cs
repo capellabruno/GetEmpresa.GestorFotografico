@@ -12,6 +12,7 @@ using Web.Filters;
 using Web.Models;
 using GetEmpresa.GestorFotografico.Domain.Gerencial;
 using GetEmpresa.Negoc;
+using GetEmpresa.Negoc.Interface;
 
 namespace Web.Controllers
 {

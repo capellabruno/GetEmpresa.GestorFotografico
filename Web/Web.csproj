@@ -235,7 +235,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SystemController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\Transcritor.cs" />
     <Compile Include="Global.asax.cs">
@@ -243,9 +242,6 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\ClienteFotografo.cs" />
-    <Compile Include="Models\FotografoModels.cs" />
-    <Compile Include="Models\PessoaBaseModel.cs" />
-    <Compile Include="Models\PortalConfigurationModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

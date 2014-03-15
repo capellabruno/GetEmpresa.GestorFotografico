@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.ExecuteJobs", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Dominio", "MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj", "{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Web", "MundoDaFoto.Web\MundoDaFoto.Web.csproj", "{2D6A2700-7513-492B-849C-6554937031AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Web.Tests", "MundoDaFoto.Web.Tests\MundoDaFoto.Web.Tests.csproj", "{ADD53074-7CB6-4099-97B0-D78C7445E7E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6A2700-7513-492B-849C-6554937031AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6A2700-7513-492B-849C-6554937031AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6A2700-7513-492B-849C-6554937031AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6A2700-7513-492B-849C-6554937031AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
