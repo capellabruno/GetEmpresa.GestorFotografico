@@ -1,10 +1,13 @@
 using System;
 using GenericFrameworkNhibernate;
-using GetEmpresa.GestorFotografico.Domain;
+using MundoDaFoto.Dominio;
+
 
 
 namespace GetEmpresa.Dao.Interface{
-    public interface ITipoClienteDao : IGenericDao<TipoCliente>{
+  public interface ITipoClienteDao
+        :IGenericDao<TipoCliente>
+  {
   
-    }
+  }
 }

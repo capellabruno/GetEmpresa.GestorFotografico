@@ -84,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer\ClienteNegoc.cs" />
+    <Compile Include="Interface\ICidadeNegoc.cs" />
+    <Compile Include="Interface\IClienteNegoc.cs" />
+    <Compile Include="Interface\IEstadoNegoc.cs" />
+    <Compile Include="Interface\IPaisNegoc.cs" />
+    <Compile Include="Interface\ITipoClienteNegoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transcritor.cs" />
   </ItemGroup>
@@ -100,13 +106,13 @@
       <Project>{5a055459-9cbb-4104-9c31-72979aab8ce6}</Project>
       <Name>GetEmpresa.Dao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GetEmpresa.GestorFotografico\GetEmpresa.GestorFotografico.Domain.csproj">
-      <Project>{015a6a24-5f31-4479-80f1-7a3ae1f75429}</Project>
-      <Name>GetEmpresa.GestorFotografico.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GetEmpresa.Payment\GetEmpresa.Payment.csproj">
       <Project>{b220ee54-cfd8-4e60-a7b4-7e67f42d5c6f}</Project>
       <Name>GetEmpresa.Payment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
+      <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
+      <Name>MundoDaFoto.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

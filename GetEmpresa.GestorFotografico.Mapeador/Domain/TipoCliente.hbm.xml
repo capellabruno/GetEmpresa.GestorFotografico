@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="GetEmpresa.GestorFotografico.Domain.TipoCliente, GetEmpresa.GestorFotografico.Domain" table="TipoCliente" abstract="false">
+  <class name="MundoDaFoto.Dominio.TipoCliente, MundoDaFoto.Dominio" table="TipoCliente" abstract="false">
 
     <id name="Id" column="IdTipoCliente" unsaved-value="null">
       <generator class="identity"/>

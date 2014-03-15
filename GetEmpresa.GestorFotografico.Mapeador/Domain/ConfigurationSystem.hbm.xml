@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 <!--
-  <class name="GetEmpresa.GestorFotografico.Domain.Gerencial.ConfigurationSystem, GetEmpresa.GestorFotografico.Domain" table="PortalConfiguration" abstract="false">
+  <class name="MundoDaFoto.Dominio.ConfigurationSystem, MundoDaFoto.Dominio" table="PortalConfiguration" abstract="false">
 
     <id name="Id" column="IdPortalConfiguration" unsaved-value="null">
       <generator class="identity"/>

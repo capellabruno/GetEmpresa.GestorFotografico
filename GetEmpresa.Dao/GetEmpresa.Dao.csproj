@@ -33,6 +33,45 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data, Version=1.3.2.40943, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\lib\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +80,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Developer\CidadeDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Developer\ClienteDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Developer\EstadoDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Developer\PaisDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Developer\TipoClienteDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\ICidadeDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\IClienteDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\IEstadoDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\IPaisDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface\ITipoClienteDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Developer\CidadeDao.cs" />
     <Compile Include="Developer\ClienteDao.cs" />
     <Compile Include="Developer\EstadoDao.cs" />
@@ -57,9 +126,9 @@
       <Project>{989df017-3678-4e01-ab3c-437191a15bd5}</Project>
       <Name>GenericFrameworkNhibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GetEmpresa.GestorFotografico\GetEmpresa.GestorFotografico.Domain.csproj">
-      <Project>{015a6a24-5f31-4479-80f1-7a3ae1f75429}</Project>
-      <Name>GetEmpresa.GestorFotografico.Domain</Name>
+    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
+      <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
+      <Name>MundoDaFoto.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
