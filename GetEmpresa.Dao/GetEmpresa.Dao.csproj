@@ -110,15 +110,6 @@
     <Compile Include="Interface\ITipoClienteDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\CidadeDao.cs" />
-    <Compile Include="Developer\ClienteDao.cs" />
-    <Compile Include="Developer\EstadoDao.cs" />
-    <Compile Include="Developer\PaisDao.cs" />
-    <Compile Include="Developer\TipoClienteDao.cs" />
-    <Compile Include="Interface\ICidadeDao.cs" />
-    <Compile Include="Interface\IClienteDao.cs" />
-    <Compile Include="Interface\IEstadoDao.cs" />
-    <Compile Include="Interface\IPaisDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,9 +123,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Compile Include="Interface\ITipoClienteDao.cs" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

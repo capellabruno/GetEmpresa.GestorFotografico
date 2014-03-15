@@ -1,5 +1,4 @@
 using System;
-<<<<<<< HEAD
 using MundoDaFoto.Dominio;
 using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
@@ -44,14 +43,5 @@ namespace GetEmpresa.Dao.Developer{
           throw new NotImplementedException();
       }
 
-=======
-using GetEmpresa.Dao.Interface;
-using GenericFrameworkNhibernate;
-using GetEmpresa.GestorFotografico.Domain;
-
-namespace GetEmpresa.Dao.Developer{
-  public class ClienteDao : GenericDao<Cliente> , IClienteDao{
-  
->>>>>>> 6d700399914a5d645230e276fe123f1993b5c6bd
   }
 }
