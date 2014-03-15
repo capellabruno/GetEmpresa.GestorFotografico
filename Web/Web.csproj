@@ -392,10 +392,6 @@
       <Project>{f636dfae-e097-498b-bef4-b44eb42e2dbf}</Project>
       <Name>GetEmpresa.GestorFotografico.Mapeador</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GetEmpresa.GestorFotografico\GetEmpresa.GestorFotografico.Domain.csproj">
-      <Project>{015a6a24-5f31-4479-80f1-7a3ae1f75429}</Project>
-      <Name>GetEmpresa.GestorFotografico.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GetEmpresa.Negoc\GetEmpresa.Negoc.csproj">
       <Project>{decd4edc-c8f5-4dfb-97fb-adc4120a8e16}</Project>
       <Name>GetEmpresa.Negoc</Name>
