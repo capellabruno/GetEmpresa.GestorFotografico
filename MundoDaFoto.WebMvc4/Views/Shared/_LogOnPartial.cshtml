@@ -1,0 +1,8 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>Welcome <strong>@Html.ActionLink(@User.Identity.Name, "Edit", "Customer")</strong>!
+    [ @Html.ActionLink("LogOff", "LogOff", "Account") ]</text>
+} else { 
+    <text>[ @Html.ActionLink("Register", "Register", "Account") / @Html.ActionLink("LogOn", "LogOn", "Account") ]</text>
+    <br />
+} 
+

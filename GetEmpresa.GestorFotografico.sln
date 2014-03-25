@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.GestorFotografico.Mapeador", "GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapeador.csproj", "{F636DFAE-E097-498B-BEF4-B44EB42E2DBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericFrameworkNhibernate", "GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj", "{989DF017-3678-4E01-AB3C-437191A15BD5}"
@@ -23,8 +21,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.CacheDataSource"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste.Caching", "Teste.Caching\Teste.Caching.csproj", "{B9200D45-8DB5-43DF-8376-4793D74B85CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{A43D81AE-AF29-4C93-ACD4-6FB1783917DF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.ExecuteJobs", "GetEmpresa.ExecuteJobs\GetEmpresa.ExecuteJobs.csproj", "{FF6CE0FC-08D3-4D1D-965B-DB53F5CB0509}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Dominio", "MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj", "{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}"
@@ -32,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Web", "MundoDaFoto.Web\MundoDaFoto.Web.csproj", "{2D6A2700-7513-492B-849C-6554937031AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Web.Tests", "MundoDaFoto.Web.Tests\MundoDaFoto.Web.Tests.csproj", "{ADD53074-7CB6-4099-97B0-D78C7445E7E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.WebMvc4", "MundoDaFoto.WebMvc4\MundoDaFoto.WebMvc4.csproj", "{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +77,6 @@ Global
 		{B9200D45-8DB5-43DF-8376-4793D74B85CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9200D45-8DB5-43DF-8376-4793D74B85CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9200D45-8DB5-43DF-8376-4793D74B85CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A43D81AE-AF29-4C93-ACD4-6FB1783917DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A43D81AE-AF29-4C93-ACD4-6FB1783917DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A43D81AE-AF29-4C93-ACD4-6FB1783917DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A43D81AE-AF29-4C93-ACD4-6FB1783917DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF6CE0FC-08D3-4D1D-965B-DB53F5CB0509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF6CE0FC-08D3-4D1D-965B-DB53F5CB0509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF6CE0FC-08D3-4D1D-965B-DB53F5CB0509}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -99,6 +93,10 @@ Global
 		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADD53074-7CB6-4099-97B0-D78C7445E7E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
