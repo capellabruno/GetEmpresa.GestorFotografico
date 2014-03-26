@@ -3,8 +3,8 @@ Mundo da Foto
 
 #Fase 1
 
-  ##Site
-  ##Busca por Categoria
+  --Site
+  --Busca por Categoria
   ##Cliente
   ##Plano
   ##Tipo Plano
