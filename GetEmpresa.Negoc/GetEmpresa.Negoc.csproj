@@ -98,6 +98,10 @@
     <Compile Include="Transcritor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj">
+      <Project>{989df017-3678-4e01-ab3c-437191a15bd5}</Project>
+      <Name>GenericFrameworkNhibernate</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GetEmpresa.Dao\GetEmpresa.Dao.csproj">
       <Project>{5a055459-9cbb-4104-9c31-72979aab8ce6}</Project>
       <Name>GetEmpresa.Dao</Name>

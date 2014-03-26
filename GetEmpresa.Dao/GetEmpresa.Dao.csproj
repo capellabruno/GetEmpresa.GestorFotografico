@@ -113,6 +113,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj">
+      <Project>{989df017-3678-4e01-ab3c-437191a15bd5}</Project>
+      <Name>GenericFrameworkNhibernate</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
       <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
       <Name>MundoDaFoto.Dominio</Name>
