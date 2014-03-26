@@ -253,8 +253,39 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.svg" />
+    <Content Include="Content\theme_escape_velocity\css\ie8.css" />
+    <Content Include="Content\theme_escape_velocity\css\images\mobileUI-site-nav-opener-bg.svg" />
+    <Content Include="Content\theme_escape_velocity\css\images\overlay.png" />
+    <Content Include="Content\theme_escape_velocity\css\images\shadow.png" />
+    <Content Include="Content\theme_escape_velocity\css\skel-noscript.css" />
+    <Content Include="Content\theme_escape_velocity\css\style-1000px.css" />
+    <Content Include="Content\theme_escape_velocity\css\style-desktop.css" />
+    <Content Include="Content\theme_escape_velocity\css\style-mobile.css" />
+    <Content Include="Content\theme_escape_velocity\css\style.css" />
+    <Content Include="Content\theme_escape_velocity\images\banner.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic01.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic02.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic03.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic04.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic05.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic06.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic07.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic08.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic09.jpg" />
+    <Content Include="Content\theme_escape_velocity\images\pic10.jpg" />
+    <Content Include="Content\theme_escape_velocity\js\config.js" />
+    <Content Include="Content\theme_escape_velocity\js\html5shiv.js" />
+    <Content Include="Content\theme_escape_velocity\js\jquery.dropotron.min.js" />
+    <Content Include="Content\theme_escape_velocity\js\jquery.min.js" />
+    <Content Include="Content\theme_escape_velocity\js\skel-panels.min.js" />
+    <Content Include="Content\theme_escape_velocity\js\skel.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.eot" />
+    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.woff" />
+    <Content Include="Content\theme_escape_velocity\css\font\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -295,7 +326,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
+    <None Include="Views\Home\Index.cshtml_" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
@@ -304,6 +336,7 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\theme_escape_velocity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
