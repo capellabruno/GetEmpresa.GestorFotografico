@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>i18n.ResourceProvider</id>
+    <version>1.1</version>
+    <title>.NET Internationalization Resource Provider</title>
+    <authors>Nadeem Afana</authors>
+    <owners>Nadeem Afana</owners>
+    <projectUrl>http://afana.me/post/aspnet-mvc-internationalization-store-strings-in-database-or-xml.aspx</projectUrl>
+    <iconUrl>http://afana.me/images/globo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides classes to store localization strings in a database, XML file, or any other source.</description>
+    <releaseNotes>Added XML resource provider</releaseNotes>
+    <copyright>Copyright � 2013 Nadeem Afana</copyright>
+    <tags>Internationalization Globalization Localization i18n g11n l11n Resources Xml Database</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Configuration" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
