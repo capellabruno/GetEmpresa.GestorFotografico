@@ -14,5 +14,7 @@ namespace MundoDaFoto.Dominio
         public virtual string Nome { get; set; }
 
         public virtual Estado Uf { get; set; }
+
+        public virtual bool Ativo { get; set; }
     }
 }

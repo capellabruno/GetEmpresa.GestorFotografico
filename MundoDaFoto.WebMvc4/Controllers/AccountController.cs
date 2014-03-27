@@ -9,9 +9,49 @@ using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using MundoDaFoto.WebMvc4.Models;
+using GetEmpresa.Negoc.Interface;
+using MundoDaFoto.Dominio;
 
 namespace MundoDaFoto.WebMvc4.Controllers {
-    public class AccountController : Controller {
+    public class AccountController : Controller
+    {
+
+        #region "Classes Injetaveis"
+        private IClienteNegoc _clienteNegoc;
+
+        public IClienteNegoc ClienteNegoc
+        {
+            get { return _clienteNegoc; }
+            set { _clienteNegoc = value; }
+        }
+
+        private IPaisNegoc _PaisNegoc;
+
+        public IPaisNegoc PaisNegoc
+        {
+            get { return _PaisNegoc; }
+            set { _PaisNegoc = value; }
+        }
+
+        private IEstadoNegoc _estadoNegoc;
+
+        public IEstadoNegoc EstadoNegoc
+        {
+            get { return _estadoNegoc; }
+            set { _estadoNegoc = value; }
+        }
+
+        private ICidadeNegoc _cidadeNegoc;
+
+        public ICidadeNegoc CidadeNegoc
+        {
+            get { return _cidadeNegoc; }
+            set { _cidadeNegoc = value; }
+        }
+
+        #endregion
+
+
         // GET: /Account/LogOn
         public ActionResult LogOn() {
             return View();
@@ -52,7 +92,34 @@ namespace MundoDaFoto.WebMvc4.Controllers {
         // GET: /Account/Register
 
         public ActionResult Register() {
+            //Create Bags
+            DataBindViewBagPaises();        
+            /*********************/
+
             return View();
+
+        }
+
+        private void DataBindViewBagPaises()
+        {
+            IList<Pais> _listaPais = null;
+            IList<SelectListItem> _listaBag = new List<SelectListItem>();
+
+            _listaPais = this.PaisNegoc.BuscarTodos();
+
+            if (_listaPais != null && _listaPais.Count > 0)
+
+                foreach (Pais item in _listaPais)
+                {
+                    SelectListItem _sItem = new SelectListItem();
+                    _sItem.Value = item.Id.ToString();
+                    _sItem.Text = item.Code + " - " + item.Sigla + " - " + item.Nome;
+
+                    _listaBag.Add(_sItem);
+                }
+
+            ViewBag.Paises = (from a in _listaBag select a);
+
         }
 
         //
@@ -63,10 +130,10 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             if (ModelState.IsValid) {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.UserName, model.Password, model.Email, null, null, false, null, out createStatus);
+                Membership.CreateUser(model.Name, model.Password, model.Email, null, null, false, null, out createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success) {
-                    FormsAuthentication.SetAuthCookie(model.UserName, false /* createPersistentCookie */);
+                    FormsAuthentication.SetAuthCookie(model.Name, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 } else {
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));

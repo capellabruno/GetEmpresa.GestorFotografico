@@ -40,9 +40,10 @@ namespace MundoDaFoto.WebMvc4.Models {
     }
 
     public class RegisterModel {
+       
         [Required]
-        [Display(Name = "User name")]
-        public string UserName { get; set; }
+        [Display(Name = "Name")]
+        public string Name { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
@@ -50,7 +51,7 @@ namespace MundoDaFoto.WebMvc4.Models {
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(20, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -59,5 +60,10 @@ namespace MundoDaFoto.WebMvc4.Models {
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name="City")]
+        public int cidadeSelecionada { get; set; }
+
     }
 }

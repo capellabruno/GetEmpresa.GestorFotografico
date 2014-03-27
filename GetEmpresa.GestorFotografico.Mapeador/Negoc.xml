@@ -22,7 +22,4 @@
     <property name="PaisDao" ref="PaisDao"/>
   </object>
 
-
-
-
 </objects>

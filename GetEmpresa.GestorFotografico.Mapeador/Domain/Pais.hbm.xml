@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="MundoDaFoto.Dominio.Pais, MundoDaFoto.Dominio" table="Pais" abstract="false">
+  <class name="MundoDaFoto.Dominio.Pais, MundoDaFoto.Dominio" table="pais" abstract="false">
 
     <id name="Id" column="IdPais" unsaved-value="null">
       <generator class="identity"/>

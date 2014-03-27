@@ -4,16 +4,9 @@
          xsi:schemaLocation="http://www.springframework.net http://www.springframework.net/xsd/spring-objects.xsd"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="Home" type="Web.Controllers.HomeController, Web" singleton="false">
+  <object id="Account" type="MundoDaFoto.WebMvc4.Controllers.AccountController, MundoDaFoto.WebMvc4" singleton="false">
     <property name="ClienteNegoc" ref="ClienteNegoc" />
+    <property name="PaisNegoc" ref="PaisNegoc" />
   </object>
 
-  <object id="Account" type="Web.Controllers.AccountController, Web" singleton="false">
-    <property name="ClienteNegoc" ref="ClienteNegoc" />
-  </object>
-
-  <object id="SystemControl" type="Web.Controllers.SystemController, Web" singleton="false">
-    <property name="ClienteNegoc" ref="ClienteNegoc" />
-  </object>
-  
 </objects>
