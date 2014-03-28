@@ -42,8 +42,8 @@ namespace MundoDaFoto.WebMvc4.Models {
     public class RegisterModel {
        
         [Required]
-        [Display(Name = "Name")]
-        public string Name { get; set; }
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
@@ -60,10 +60,5 @@ namespace MundoDaFoto.WebMvc4.Models {
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Required]
-        [Display(Name="City")]
-        public int cidadeSelecionada { get; set; }
-
     }
 }

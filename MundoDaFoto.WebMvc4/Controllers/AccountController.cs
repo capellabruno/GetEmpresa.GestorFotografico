@@ -13,44 +13,18 @@ using GetEmpresa.Negoc.Interface;
 using MundoDaFoto.Dominio;
 
 namespace MundoDaFoto.WebMvc4.Controllers {
-    public class AccountController : Controller
-    {
-
-        #region "Classes Injetaveis"
+    public class AccountController : Controller{
         private IClienteNegoc _clienteNegoc;
-
-        public IClienteNegoc ClienteNegoc
-        {
-            get { return _clienteNegoc; }
-            set { _clienteNegoc = value; }
-        }
-
-        private IPaisNegoc _PaisNegoc;
-
-        public IPaisNegoc PaisNegoc
-        {
-            get { return _PaisNegoc; }
-            set { _PaisNegoc = value; }
-        }
-
+        private IPaisNegoc _paisNegoc;
         private IEstadoNegoc _estadoNegoc;
-
-        public IEstadoNegoc EstadoNegoc
-        {
-            get { return _estadoNegoc; }
-            set { _estadoNegoc = value; }
-        }
-
         private ICidadeNegoc _cidadeNegoc;
 
-        public ICidadeNegoc CidadeNegoc
-        {
-            get { return _cidadeNegoc; }
-            set { _cidadeNegoc = value; }
+        public AccountController(IClienteNegoc clienteNegoc, IPaisNegoc paisNegoc, IEstadoNegoc estadoNegoc, ICidadeNegoc cidadeNegoc) {
+            _clienteNegoc = clienteNegoc;
+            _paisNegoc = paisNegoc;
+            _estadoNegoc = estadoNegoc;
+            _cidadeNegoc = cidadeNegoc;
         }
-
-        #endregion
-
 
         // GET: /Account/LogOn
         public ActionResult LogOn() {
@@ -105,7 +79,7 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             IList<Pais> _listaPais = null;
             IList<SelectListItem> _listaBag = new List<SelectListItem>();
 
-            _listaPais = this.PaisNegoc.BuscarTodos();
+            _listaPais = _paisNegoc.BuscarTodos();
 
             if (_listaPais != null && _listaPais.Count > 0)
 
@@ -130,10 +104,10 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             if (ModelState.IsValid) {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.Name, model.Password, model.Email, null, null, false, null, out createStatus);
+                Membership.CreateUser(model.Username, model.Password, model.Email, null, null, false, null, out createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success) {
-                    FormsAuthentication.SetAuthCookie(model.Name, false /* createPersistentCookie */);
+                    FormsAuthentication.SetAuthCookie(model.Username, false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 } else {
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));
