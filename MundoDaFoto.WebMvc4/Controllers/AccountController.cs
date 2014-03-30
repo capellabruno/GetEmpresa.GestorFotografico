@@ -54,6 +54,27 @@ namespace MundoDaFoto.WebMvc4.Controllers {
         }
 
         //
+        // POST: /Account/LogOn
+        [HttpPost]
+        public ActionResult AjaxLogOn(LogOnModel model, string returnUrl) {
+            var provider = Membership.Provider;
+            string name = provider.ApplicationName; // Get the application name here
+            if (Membership.ValidateUser(model.UserName, model.Password)) {
+                FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                    && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\")) {
+                    return Redirect(returnUrl);
+                } else {
+                    return RedirectToAction("Index", "Home");
+                }
+            } else {
+                ModelState.AddModelError("", "The user name or password provided is incorrect.");                
+                // If we got this far, something failed, redisplay form
+                return View("LogOn", model);
+            }            
+        }
+
+        //
         // GET: /Account/LogOff
 
         public ActionResult LogOff() {
@@ -104,7 +125,7 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             if (ModelState.IsValid) {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.Username, model.Password, model.Email, null, null, false, null, out createStatus);
+                Membership.CreateUser(model.Username, model.Password, model.Email, null, null, true, null, out createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success) {
                     FormsAuthentication.SetAuthCookie(model.Username, false /* createPersistentCookie */);

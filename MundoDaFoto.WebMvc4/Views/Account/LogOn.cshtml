@@ -4,7 +4,6 @@
     ViewBag.Title = "Log On";
 }
 
-<h2>Log On</h2>
 <p>
     Please enter your user name and password. @Html.ActionLink("Register", "Register") if you don't have an account.
 </p>
@@ -14,35 +13,16 @@
 
 @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
 
-@using (Html.BeginForm()) {
-    <div>
-        <fieldset>
-            <legend>Account Information</legend>
+@using (Html.BeginForm("LogOn", "Account", FormMethod.Post, new { @class = "form-signin", role = "form" })) {
+    <h2 class="form-signin-heading">Please sign in</h2>
+    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control",  Placeholder = "Username", autofocus = "", required = "" })
+    @Html.ValidationMessageFor(m => m.UserName)
 
-            <div class="editor-label">
-                @Html.LabelFor(m => m.UserName)
-            </div>
-            <div class="editor-field">
-                @Html.TextBoxFor(m => m.UserName)
-                @Html.ValidationMessageFor(m => m.UserName)
-            </div>
+    @Html.PasswordFor(m => m.Password, new { @class = "form-control", Placeholder = "Password", required = "" })
+    @Html.ValidationMessageFor(m => m.Password)
+    <br />
+    @Html.CheckBoxFor(m => m.RememberMe)
+    @Html.LabelFor(m => m.RememberMe)
 
-            <div class="editor-label">
-                @Html.LabelFor(m => m.Password)
-            </div>
-            <div class="editor-field">
-                @Html.PasswordFor(m => m.Password)
-                @Html.ValidationMessageFor(m => m.Password)
-            </div>
-
-            <div class="editor-label">
-                @Html.CheckBoxFor(m => m.RememberMe)
-                @Html.LabelFor(m => m.RememberMe)
-            </div>
-
-            <p>
-                <input type="submit" value="Log On" />
-            </p>
-        </fieldset>
-    </div>
+    <button class="btn btn-lg btn-success btn-block" type="submit">Log On</button>
 }

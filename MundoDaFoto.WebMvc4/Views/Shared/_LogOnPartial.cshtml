@@ -1,8 +1,20 @@
-﻿@if (Request.IsAuthenticated) {
+﻿@*@if (Request.IsAuthenticated) {
     <text>Welcome <strong>@Html.ActionLink(@User.Identity.Name, "Edit", "Customer")</strong>!
     [ @Html.ActionLink("LogOff", "LogOff", "Account") ]</text>
 } else { 
     <text>[ @Html.ActionLink("Register", "Register", "Account") / @Html.ActionLink("LogOn", "LogOn", "Account") ]</text>
     <br />
-} 
+} *@
+
+
+ @using (Html.BeginForm("AjaxLogOn", "Account", FormMethod.Post, new { @class = "navbar-form navbar-right", role = "form" })) { 
+    <div class="form-group">
+        @Html.TextBox("Username", null, new { @class = "form-control", placeholder = "Email", required = "" })
+    </div>
+    <div class="form-group">
+        @Html.Password("Password", null , new { @class = "form-control", placeholder = "Password", required = "" })
+    </div>
+    <button type="submit" class="btn btn-success">Sign in</button>
+    @Html.ActionLink("Registrar", "Register", "Account", null, new { @class = "btn btn-success" })
+}
 

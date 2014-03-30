@@ -9,17 +9,19 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container">
                     
-    
-    @Html.Partial("_HeaderPartial")
+                    @Html.Partial("_HeaderPartial")
 
-    <div class="fix-fixed-bar">
-        @RenderSection("featured", required: false)
-        @RenderBody()
+                    @RenderSection("featured", required: false)
+                    @RenderBody()
 
-        @Html.Partial("_FooterPartial")
-    </div>
-    
+                    @Html.Partial("_FooterPartial")
+                </div>
+            </div>
+        </div>
 
 
 

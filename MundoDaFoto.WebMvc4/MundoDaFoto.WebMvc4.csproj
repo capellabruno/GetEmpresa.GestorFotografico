@@ -259,6 +259,11 @@
     <Compile Include="Utility\ResourceBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\authentication_forms.css" />
     <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.svg" />
     <Content Include="Content\theme_escape_velocity\css\ie8.css" />
     <Content Include="Content\theme_escape_velocity\css\images\mobileUI-site-nav-opener-bg.svg" />
@@ -286,15 +291,26 @@
     <Content Include="Content\theme_escape_velocity\js\jquery.min.js" />
     <Content Include="Content\theme_escape_velocity\js\skel-panels.min.js" />
     <Content Include="Content\theme_escape_velocity\js\skel.min.js" />
+    <Content Include="Content\typography.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.eot" />
     <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.ttf" />
     <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.woff" />
     <Content Include="Content\theme_escape_velocity\css\font\FontAwesome.otf" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\MundoDaFoto.pubxml" />
+    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
@@ -326,8 +342,6 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Views\Home\index.cshtml__" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
@@ -339,6 +353,10 @@
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\theme_escape_velocity.cshtml" />
+    <Content Include="Views\Shared\_HeaderPartial.cshtml" />
+    <Content Include="Views\Shared\_FooterPartial.cshtml" />
+    <Content Include="Views\Shared\FrontPage\_LayoutFrontPage.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
