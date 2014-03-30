@@ -246,6 +246,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Photographer\PhotographerAreaRegistration.cs" />
     <Compile Include="Concrete\DbResourceProvider.cs" />
     <Compile Include="Concrete\XmlResourceProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -304,6 +305,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\Photographer\Views\Web.config" />
     <None Include="Properties\PublishProfiles\MundoDaFoto.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -360,6 +362,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Photographer\Controllers\" />
+    <Folder Include="Areas\Photographer\Models\" />
+    <Folder Include="Areas\Photographer\Views\Shared\" />
     <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
