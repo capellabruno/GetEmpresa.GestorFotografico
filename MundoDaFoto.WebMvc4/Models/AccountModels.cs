@@ -10,7 +10,7 @@ namespace MundoDaFoto.WebMvc4.Models {
     public class ChangePasswordModel {
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Current password")]
+        [Display(Name = "Password")]
         public string OldPassword { get; set; }
 
         [Required]
@@ -39,11 +39,11 @@ namespace MundoDaFoto.WebMvc4.Models {
         public bool RememberMe { get; set; }
     }
 
-    public class RegisterModel {
+    public class RegisterModel : ModelLocalidade {
        
         [Required]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+        [Display(Name = "Nome")]
+        public string Name { get; set; }
 
         [Required]
         [DataType(DataType.EmailAddress)]
@@ -60,5 +60,7 @@ namespace MundoDaFoto.WebMvc4.Models {
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+
     }
 }

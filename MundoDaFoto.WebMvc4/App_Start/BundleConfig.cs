@@ -27,6 +27,8 @@ namespace MundoDaFoto.WebMvc4 {
                                             "~/Content/typography.css",
                                             "~/Content/authentication_forms.css"
                                         ));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js", "~/Scripts/bootstrap.min.js"));
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.GestorFotografico.Mapeador", "GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapeador.csproj", "{F636DFAE-E097-498B-BEF4-B44EB42E2DBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Dao", "GetEmpresa.Dao\GetEmpresa.Dao.csproj", "{5A055459-9CBB-4104-9C31-72979AAB8CE6}"
@@ -12,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.WebMvc4", "MundoDaFoto.WebMvc4\MundoDaFoto.WebMvc4.csproj", "{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericFrameworkNhibernate", "GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj", "{989DF017-3678-4E01-AB3C-437191A15BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Helpers", "MundoDaFoto.Helpers\MundoDaFoto.Helpers.csproj", "{F3A892C0-8086-41E3-8640-552B916B9032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +47,10 @@ Global
 		{989DF017-3678-4E01-AB3C-437191A15BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989DF017-3678-4E01-AB3C-437191A15BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{989DF017-3678-4E01-AB3C-437191A15BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A892C0-8086-41E3-8640-552B916B9032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A892C0-8086-41E3-8640-552B916B9032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A892C0-8086-41E3-8640-552B916B9032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A892C0-8086-41E3-8640-552B916B9032}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

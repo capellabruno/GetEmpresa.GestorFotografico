@@ -125,10 +125,20 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             if (ModelState.IsValid) {
                 // Attempt to register the user
                 MembershipCreateStatus createStatus;
-                Membership.CreateUser(model.Username, model.Password, model.Email, null, null, true, null, out createStatus);
+                Membership.CreateUser(model.Email, model.Password, model.Email, null, null, true, null, out createStatus);
 
                 if (createStatus == MembershipCreateStatus.Success) {
-                    FormsAuthentication.SetAuthCookie(model.Username, false /* createPersistentCookie */);
+                    FormsAuthentication.SetAuthCookie(model.Email, false /* createPersistentCookie */);
+
+                    //create account client on database mundo da foto
+                    Cliente c = new Cliente();
+                    c.Ativo = true;
+                    c.Email = model.Email;
+                    c.Nome = model.Name;
+                    c.Senha = "not password in table";
+
+                    this._clienteNegoc.Incluir(ref c);
+
                     return RedirectToAction("Index", "Home");
                 } else {
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));

@@ -251,6 +251,7 @@
     <Compile Include="Concrete\XmlResourceProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\ModelLocalidade.cs" />
     <Compile Include="Entities\ResourceEntry.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -306,6 +307,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Photographer\Views\Web.config" />
+    <Content Include="Helpers\CustomHelper.cshtml" />
     <None Include="Properties\PublishProfiles\MundoDaFoto.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -390,6 +392,10 @@
     <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
       <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
       <Name>MundoDaFoto.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MundoDaFoto.Helpers\MundoDaFoto.Helpers.csproj">
+      <Project>{f3a892c0-8086-41e3-8640-552b916b9032}</Project>
+      <Name>MundoDaFoto.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
