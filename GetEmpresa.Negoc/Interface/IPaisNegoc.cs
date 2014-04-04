@@ -7,9 +7,9 @@ using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Negoc.Interface
 {
-    public interface IPaisNegoc
+    public interface ICountryNegoc
     {
-        IList<Pais> BuscarTodos();
-        Pais BuscarPorId(long Pais);
+        IList<Country> BuscarTodos();
+        Country BuscarPorId(long Country);
     }
 }

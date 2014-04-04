@@ -364,6 +364,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Client\" />
     <Folder Include="Areas\Photographer\Controllers\" />
     <Folder Include="Areas\Photographer\Models\" />
     <Folder Include="Areas\Photographer\Views\Shared\" />

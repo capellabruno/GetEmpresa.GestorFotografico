@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace MundoDaFoto.Dominio
 {
-    public class Cidade
+    public class City
     {
 
         public virtual long Id { get; set; }
 
-        public virtual string Nome { get; set; }
+        public virtual string Name { get; set; }
 
-        public virtual Estado Uf { get; set; }
+        public virtual State Uf { get; set; }
 
-        public virtual bool Ativo { get; set; }
+        public virtual bool Active { get; set; }
     }
 }

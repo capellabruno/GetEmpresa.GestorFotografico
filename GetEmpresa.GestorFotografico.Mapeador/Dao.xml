@@ -2,23 +2,23 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClienteDao" type="GetEmpresa.Dao.Developer.ClienteDao, GetEmpresa.Dao">
+  <object id="ClientDao" type="GetEmpresa.Dao.Developer.ClientDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="TipoClienteDao" type="GetEmpresa.Dao.Developer.TipoClienteDao, GetEmpresa.Dao">
+  <object id="TipoClientDao" type="GetEmpresa.Dao.Developer.TipoClientDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="CidadeDao" type="GetEmpresa.Dao.Developer.CidadeDao, GetEmpresa.Dao">
+  <object id="CityDao" type="GetEmpresa.Dao.Developer.CityDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="EstadoDao" type="GetEmpresa.Dao.Developer.EstadoDao, GetEmpresa.Dao">
+  <object id="StateDao" type="GetEmpresa.Dao.Developer.StateDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="PaisDao" type="GetEmpresa.Dao.Developer.PaisDao, GetEmpresa.Dao">
+  <object id="CountryDao" type="GetEmpresa.Dao.Developer.CountryDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 

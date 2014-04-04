@@ -6,39 +6,39 @@ using NHibernate;
 using NHibernate.Criterion;
 
 namespace GetEmpresa.Dao.Developer{
-  public class ClienteDao
-        :GenericDao<Cliente> , IClienteDao
+  public class ClientDao
+        :GenericDao<Client> , IClientDao
   {
 
-      public Cliente BuscarClientePorEmail(string _email)
+      public Client BuscarClientPorEmail(string _email)
       {          
           ICriteria _criteria;
-          _criteria = base.CurrentSession.CreateCriteria(typeof(Cliente));
+          _criteria = base.CurrentSession.CreateCriteria(typeof(Client));
           _criteria.Add(Restrictions.Eq("Email", _email));
 
-          return _criteria.UniqueResult<Cliente>();   
+          return _criteria.UniqueResult<Client>();   
       }
 
-      public Cliente BuscarClientePorNome(string _nome)
+      public Client BuscarClientPorNome(string _nome)
       {
           ICriteria _criteria;
-          _criteria = base.CurrentSession.CreateCriteria(typeof(Cliente));
+          _criteria = base.CurrentSession.CreateCriteria(typeof(Client));
           _criteria.Add(Restrictions.Eq("Nome", _nome));
 
-          return _criteria.UniqueResult<Cliente>();   
+          return _criteria.UniqueResult<Client>();   
       }
 
-      public Cliente BuscarClientePorUrlPersonalizada(string UrlPersonal)
+      public Client BuscarClientPorUrlPersonalizada(string UrlPersonal)
       {
           throw new NotImplementedException();
       }
 
-      public Cliente BuscarClientePorCpf(string _cpf)
+      public Client BuscarClientPorCpf(string _cpf)
       {
           throw new NotImplementedException();
       }
 
-      public Cliente BuscarClientePorCnpj(string _cnpj)
+      public Client BuscarClientPorCnpj(string _cnpj)
       {
           throw new NotImplementedException();
       }

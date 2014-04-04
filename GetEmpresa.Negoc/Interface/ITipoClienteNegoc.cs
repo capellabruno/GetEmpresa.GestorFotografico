@@ -7,9 +7,9 @@ using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Negoc.Interface
 {
-    public interface ITipoClienteNegoc
+    public interface ITipoClientNegoc
     {
-        IList<TipoCliente> BuscarTodos();
-        TipoCliente BuscarPorId(long id);
+        IList<TipoClient> BuscarTodos();
+        TipoClient BuscarPorId(long id);
     }
 }

@@ -4,8 +4,8 @@ using GenericFrameworkNhibernate;
 using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Dao.Developer{
-  public class TipoClienteDao
-        : GenericDao<TipoCliente> , ITipoClienteDao
+  public class TipoClientDao
+        : GenericDao<TipoClient> , ITipoClientDao
   {
   
   }

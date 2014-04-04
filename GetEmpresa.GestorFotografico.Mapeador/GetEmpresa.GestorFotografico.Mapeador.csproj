@@ -77,7 +77,7 @@
     <EmbeddedResource Include="Web.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Cidade.hbm.xml" />
+    <EmbeddedResource Include="Domain\City.hbm.xml" />
     <EmbeddedResource Include="Domain\Estado.hbm.xml" />
     <EmbeddedResource Include="Domain\Pais.hbm.xml" />
     <EmbeddedResource Include="Domain\TipoCliente.hbm.xml" />

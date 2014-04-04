@@ -2,24 +2,24 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClienteNegoc" type="GetEmpresa.Negoc.Developer.ClienteNegoc, GetEmpresa.Negoc">
-    <property name="ClienteDao" ref="ClienteDao"/>
+  <object id="ClientNegoc" type="GetEmpresa.Negoc.Developer.ClientNegoc, GetEmpresa.Negoc">
+    <property name="ClientDao" ref="ClientDao"/>
   </object>
 
-  <object id="TipoClienteNegoc" type="GetEmpresa.Negoc.Developer.TipoClienteNegoc, GetEmpresa.Negoc">
-    <property name="TipoClienteDao" ref="TipoClienteDao"/>
+  <object id="TipoClientNegoc" type="GetEmpresa.Negoc.Developer.TipoClientNegoc, GetEmpresa.Negoc">
+    <property name="TipoClientDao" ref="TipoClientDao"/>
   </object>
 
-  <object id="CidadeNegoc" type="GetEmpresa.Negoc.Developer.CidadeNegoc, GetEmpresa.Negoc">
-    <property name="CidadeDao" ref="CidadeDao"/>
+  <object id="CityNegoc" type="GetEmpresa.Negoc.Developer.CityNegoc, GetEmpresa.Negoc">
+    <property name="CityDao" ref="CityDao"/>
   </object>
 
-  <object id="EstadoNegoc" type="GetEmpresa.Negoc.Developer.EstadoNegoc, GetEmpresa.Negoc">
-    <property name="EstadoDao" ref="EstadoDao"/>
+  <object id="StateNegoc" type="GetEmpresa.Negoc.Developer.StateNegoc, GetEmpresa.Negoc">
+    <property name="StateDao" ref="StateDao"/>
   </object>
 
-  <object id="PaisNegoc" type="GetEmpresa.Negoc.Developer.PaisNegoc, GetEmpresa.Negoc">
-    <property name="PaisDao" ref="PaisDao"/>
+  <object id="CountryNegoc" type="GetEmpresa.Negoc.Developer.CountryNegoc, GetEmpresa.Negoc">
+    <property name="CountryDao" ref="CountryDao"/>
   </object>
 
 </objects>

@@ -4,13 +4,13 @@ using MundoDaFoto.Dominio;
 
 
 namespace GetEmpresa.Dao.Interface{
-  public interface IClienteDao
-        :IGenericDao<Cliente>
+  public interface IClientDao
+        :IGenericDao<Client>
   {
-      Cliente BuscarClientePorEmail(string _email);
-      Cliente BuscarClientePorNome(string _nome);
-      Cliente BuscarClientePorUrlPersonalizada(string UrlPersonal);
-      Cliente BuscarClientePorCpf(string _cpf);
-      Cliente BuscarClientePorCnpj(string _cnpj);
+      Client BuscarClientPorEmail(string _email);
+      Client BuscarClientPorNome(string _nome);
+      Client BuscarClientPorUrlPersonalizada(string UrlPersonal);
+      Client BuscarClientPorCpf(string _cpf);
+      Client BuscarClientPorCnpj(string _cnpj);
   }
 }

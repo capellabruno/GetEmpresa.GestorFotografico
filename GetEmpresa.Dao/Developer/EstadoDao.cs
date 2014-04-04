@@ -4,7 +4,7 @@ using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
 
 namespace GetEmpresa.Dao.Developer{
-    public class EstadoDao : GenericDao<Estado> , IEstadoDao{
+    public class StateDao : GenericDao<State> , IStateDao{
   
     }
 }

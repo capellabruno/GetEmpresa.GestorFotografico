@@ -10,81 +10,81 @@ using Spring.Transaction.Interceptor;
 
 namespace GetEmpresa.Negoc.Developer
 {
-    public class ClienteNegoc : IClienteNegoc
+    public class ClientNegoc : IClientNegoc
     {
 
-        private IClienteDao _clienteDao;
-        public IClienteDao ClienteDao
+        private IClientDao _ClientDao;
+        public IClientDao ClientDao
         {
-            get { return _clienteDao; }
-            set { _clienteDao = value; }
+            get { return _ClientDao; }
+            set { _ClientDao = value; }
         }
 
         /*****************************************************************************************************/
 
         [Transaction(ReadOnly=true)]
-        public IList<Cliente> BuscarTodos()
+        public IList<Client> BuscarTodos()
         {
-            return this.ClienteDao.BuscarTodos();
+            return this.ClientDao.BuscarTodos();
         }
 
         [Transaction(ReadOnly = true)]
-        public Cliente BuscarPorId(long id)
+        public Client BuscarPorId(long id)
         {
             if (id == 0)
-                throw new Exception("Codigo do CLiente não foi informado");
+                throw new Exception("Codigo do Client não foi informado");
 
-            return this.ClienteDao.Capturar(id);
+            return this.ClientDao.Capturar(id);
 
         }
 
         [Transaction(Spring.Transaction.TransactionPropagation.Required)]
-        public void Incluir(ref Cliente _cliente)
+        public void Incluir(ref Client _Client)
         {
-            if (_cliente == null)
-                throw new Exception("Cliente não informado");
+            if (_Client == null)
+                throw new Exception("Client não informado");
 
-            this.VerificarSeClienteExiste(_cliente);
+            this.VerificarSeClientExiste(_Client);
 
-            this.ClienteDao.Incluir(ref _cliente);
+            this.ClientDao.Incluir(ref _Client);
         }
 
         [Transaction(ReadOnly = true)]
-        private void VerificarSeClienteExiste(Cliente _cliente)
+        private void VerificarSeClientExiste(Client _Client)
         {
-            if (this.ClienteDao.BuscarClientePorEmail(_cliente.Email) != null)
+            if (this.ClientDao.BuscarClientPorEmail(_Client.Email) != null)
                 throw new Exception("E-mail informado para cadastro já existe");
 
-            if (this.ClienteDao.BuscarClientePorNome(_cliente.Nome) != null)
-                throw new Exception("Já existe um cadastro de cliente com este Nome");
+            if (this.ClientDao.BuscarClientPorNome(_Client.Name) != null)
+                throw new Exception("Já existe um cadastro de Client com este Nome");
 
         }
 
         [Transaction(Spring.Transaction.TransactionPropagation.Required)]
-        public void Alterar(ref Cliente _cliente)
+        public void Alterar(ref Client _Client)
         {
-            if (_cliente == null)
-                throw new Exception("Cliente não foi informado");
+            if (_Client == null)
+                throw new Exception("Client não foi informado");
 
-            if (_cliente.Id == 0)
-                throw new Exception("Não é possivel alterar um cliente não Serializavel");
+            if (_Client.Id == 0)
+                throw new Exception("Não é possivel alterar um Client não Serializavel");
 
-            this.ClienteDao.Alterar(ref _cliente);
+            this.ClientDao.Alterar(ref _Client);
 
         }
 
         [Transaction(Spring.Transaction.TransactionPropagation.Required)]
-        public void Excluir(ref Cliente _cliente)
+        public void Excluir(ref Client _Client)
         {
-            if (_cliente == null)
-                throw new Exception("Cliente não foi informado");
+            if (_Client == null)
+                throw new Exception("Client não foi informado");
 
-            if (_cliente.Id == 0)
-                throw new Exception("Não é possivel localizar o cliente");
+            if (_Client.Id == 0)
+                throw new Exception("Não é possivel localizar o Client");
 
-            _cliente.Ativo = false;
+            _Client.Active = false;
 
-            this.ClienteDao.Alterar(ref _cliente);
+            this.ClientDao.Alterar(ref _Client);
         }
 
     }

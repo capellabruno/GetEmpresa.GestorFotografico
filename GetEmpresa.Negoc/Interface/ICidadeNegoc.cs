@@ -7,10 +7,10 @@ using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Negoc.Interface
 {
-    public interface ICidadeNegoc
+    public interface ICityNegoc
     {
-        IList<Cidade> BuscarTodos(long idEstado);
-        Cidade BuscarPorId(long idCidade);
+        IList<City> BuscarTodos(long idState);
+        City BuscarPorId(long idCity);
 
     }
 }

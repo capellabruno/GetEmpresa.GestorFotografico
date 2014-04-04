@@ -7,12 +7,12 @@ using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Negoc.Interface
 {
-    public interface IClienteNegoc
+    public interface IClientNegoc
     {
-        IList<Cliente> BuscarTodos();
-        Cliente BuscarPorId(long id);
-        void Incluir(ref Cliente _cliente);
-        void Alterar(ref Cliente _cliente);
-        void Excluir(ref Cliente _cliente);
+        IList<Client> BuscarTodos();
+        Client BuscarPorId(long id);
+        void Incluir(ref Client _Client);
+        void Alterar(ref Client _Client);
+        void Excluir(ref Client _Client);
     }
 }
