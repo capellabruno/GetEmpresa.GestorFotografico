@@ -84,18 +84,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Developer\CidadeNegoc.cs" />
-    <Compile Include="Developer\ClienteNegoc.cs" />
-    <Compile Include="Developer\EstadoNegoc.cs" />
-    <Compile Include="Developer\PaisNegoc.cs" />
-    <Compile Include="Developer\TipoClienteNegoc.cs" />
+    <Compile Include="Implementation\CidadeNegoc.cs" />
+    <Compile Include="Implementation\ClienteNegoc.cs" />
+    <Compile Include="Implementation\EstadoNegoc.cs" />
+    <Compile Include="Implementation\PaisNegoc.cs" />
+    <Compile Include="Implementation\PhotographerService.cs" />
+    <Compile Include="Implementation\TipoClienteNegoc.cs" />
     <Compile Include="Interface\ICidadeNegoc.cs" />
     <Compile Include="Interface\IClienteNegoc.cs" />
     <Compile Include="Interface\IEstadoNegoc.cs" />
     <Compile Include="Interface\IPaisNegoc.cs" />
+    <Compile Include="Interface\IPhotographerService.cs" />
     <Compile Include="Interface\ITipoClienteNegoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transcritor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GenericFrameworkNhibernate\GenericFrameworkNhibernate.csproj">

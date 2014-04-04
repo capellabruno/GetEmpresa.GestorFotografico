@@ -34,6 +34,7 @@
         <entry key="connection.driver_class" value="NHibernate.Driver.MySqlDataDriver"/>
         <entry key="show_sql" value="true"/>
         <entry key="max_fetch_depth" value="2" />
+        <entry key="hbm2ddl.auto" value="update" />
         <!--<entry key="hbm2ddl.auto" value="create-drop" />-->
       </dictionary>
     </property>

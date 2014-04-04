@@ -246,6 +246,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Photographer\Controllers\BasePhotographerController.cs" />
+    <Compile Include="Areas\Photographer\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Photographer\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Photographer\PhotographerAreaRegistration.cs" />
     <Compile Include="Concrete\DbResourceProvider.cs" />
     <Compile Include="Concrete\XmlResourceProvider.cs" />
@@ -308,6 +311,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Photographer\Views\Web.config" />
     <Content Include="Helpers\CustomHelper.cshtml" />
+    <Content Include="Areas\Photographer\Views\Home\NoProfile.cshtml" />
+    <Content Include="Areas\Photographer\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Photographer\Views\Profile\Create.cshtml" />
+    <Content Include="Areas\Photographer\Views\_ViewStart.cshtml" />
     <None Include="Properties\PublishProfiles\MundoDaFoto.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -364,7 +371,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Photographer\Controllers\" />
     <Folder Include="Areas\Photographer\Models\" />
     <Folder Include="Areas\Photographer\Views\Shared\" />
     <Folder Include="Filters\" />

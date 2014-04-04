@@ -22,5 +22,7 @@
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-
+  <object id="PhotographerProfileDao" type="GetEmpresa.Dao.Developer.PhotographerProfileDao, GetEmpresa.Dao">
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
 </objects>

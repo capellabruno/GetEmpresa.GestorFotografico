@@ -5,5 +5,7 @@
          xmlns:db="http://www.springframework.net/database">
 
   <object id="Account" type="MundoDaFoto.WebMvc4.Controllers.AccountController, MundoDaFoto.WebMvc4" singleton="false" autowire="constructor" />
-
+  <object id="PhotographerHome" type="MundoDaFoto.WebMvc4.Areas.Photographer.Controllers.HomeController, MundoDaFoto.WebMvc4" singleton="false" autowire="constructor" />
+  <object id="PhotographerProfileController" type="MundoDaFoto.WebMvc4.Areas.Photographer.Controllers.ProfileController, MundoDaFoto.WebMvc4" singleton="false" autowire="constructor" />
+  
 </objects>

@@ -7,7 +7,6 @@
 }
 
 <div class="inner cover">
-    @*<h1 class="cover-heading">Bem vindo ao Mundo da Foto.</h1>*@
     <div class="jumbotron basecolor">
         <h2>Quero achar um Fotógrafo!</h2>
         <p class="lead">Procure por centenas de fotógrafos e veja seus porfólios Escolha o que mais se adapta ao trabalho e deixe que cuidamos do resto!</p>
@@ -22,7 +21,7 @@
         <h2>Sou um fotógrafo!</h2>
         <p class="lead">Cadastre seu perfil e mostre seu trabalho para milhares de clientes todos os dias.</p>
         <p class="lead">
-            <a href="#" class="btn btn-lg btn-default">Sou um fotógrafo e quero cadastrar meu perfil</a>
+            @Html.ActionLink("Sou um fotógrafo e quero cadastrar meu perfil", "Index", "Home", new { Area = "Photographer" }, htmlAttributes: new { @class = "btn btn-lg btn-default" })
         </p>
     </div>
     

@@ -86,6 +86,7 @@
     <Compile Include="Developer\ClienteDao.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Developer\PhotographerProfileDao.cs" />
     <Compile Include="Developer\EstadoDao.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -107,6 +108,7 @@
     <Compile Include="Interface\IPaisDao.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Interface\IPhotographerProfileDao.cs" />
     <Compile Include="Interface\ITipoClienteDao.cs">
       <SubType>Code</SubType>
     </Compile>

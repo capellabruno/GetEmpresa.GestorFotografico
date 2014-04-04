@@ -82,6 +82,9 @@
     <EmbeddedResource Include="Domain\Pais.hbm.xml" />
     <EmbeddedResource Include="Domain\TipoCliente.hbm.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\Photographer\PhotographerProfile.hbm.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

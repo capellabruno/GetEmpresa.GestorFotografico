@@ -2,24 +2,25 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClienteNegoc" type="GetEmpresa.Negoc.Developer.ClienteNegoc, GetEmpresa.Negoc">
+  <object id="ClienteNegoc" type="GetEmpresa.Negoc.Implementation.ClienteNegoc, GetEmpresa.Negoc">
     <property name="ClienteDao" ref="ClienteDao"/>
   </object>
 
-  <object id="TipoClienteNegoc" type="GetEmpresa.Negoc.Developer.TipoClienteNegoc, GetEmpresa.Negoc">
+  <object id="TipoClienteNegoc" type="GetEmpresa.Negoc.Implementation.TipoClienteNegoc, GetEmpresa.Negoc">
     <property name="TipoClienteDao" ref="TipoClienteDao"/>
   </object>
 
-  <object id="CidadeNegoc" type="GetEmpresa.Negoc.Developer.CidadeNegoc, GetEmpresa.Negoc">
+  <object id="CidadeNegoc" type="GetEmpresa.Negoc.Implementation.CidadeNegoc, GetEmpresa.Negoc">
     <property name="CidadeDao" ref="CidadeDao"/>
   </object>
 
-  <object id="EstadoNegoc" type="GetEmpresa.Negoc.Developer.EstadoNegoc, GetEmpresa.Negoc">
+  <object id="EstadoNegoc" type="GetEmpresa.Negoc.Implementation.EstadoNegoc, GetEmpresa.Negoc">
     <property name="EstadoDao" ref="EstadoDao"/>
   </object>
 
-  <object id="PaisNegoc" type="GetEmpresa.Negoc.Developer.PaisNegoc, GetEmpresa.Negoc">
+  <object id="PaisNegoc" type="GetEmpresa.Negoc.Implementation.PaisNegoc, GetEmpresa.Negoc">
     <property name="PaisDao" ref="PaisDao"/>
   </object>
 
+  <object id="PhotographerService" type="GetEmpresa.Negoc.Implementation.PhotographerService, GetEmpresa.Negoc" autowire="constructor" />
 </objects>

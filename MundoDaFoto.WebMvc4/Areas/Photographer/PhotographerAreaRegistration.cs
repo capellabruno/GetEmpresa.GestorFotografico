@@ -12,7 +12,8 @@ namespace MundoDaFoto.WebMvc4.Areas.Photographer {
             context.MapRoute(
                 "Photographer_default",
                 "Photographer/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                new string[] { "MundoDaFoto.WebMvc4.Areas.Photographer.Controllers" } 
             );
         }
     }

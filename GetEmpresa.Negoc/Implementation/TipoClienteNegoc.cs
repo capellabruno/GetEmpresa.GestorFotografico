@@ -10,7 +10,7 @@ using MundoDaFoto.Dominio;
 using Spring.Transaction.Interceptor;
 
 
-namespace GetEmpresa.Negoc.Developer
+namespace GetEmpresa.Negoc.Implementation
 {
     public class TipoClienteNegoc : ITipoClienteNegoc
     {

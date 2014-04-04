@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron">
+    <h2>Abra um mundo de possibilidades profissionais!</h2>
+    <p>
+        Você ainda não cadastrou um perfil de fotógrafo conosco! Para começar a tirar proveito de tudo que o Mundo Da Foto pode te oferecer, siga os passos abaixo.
+    </p>
+    <p>@Html.ActionLink("Criar seu Perfil!", "Create", "Profile", null, new { @class = "btn btn-default-inverse", role = "button" })</p>
+    <p>Caso deseje deixar para depois <a href="#">Clique aqui</a>.</p>
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <h2 class="text-center">1</h2>
+        <p>Cadastre seu perfil de fotógrafo. Dentro do seu perfil você pode incluir um resumo das suas atividades, de onde você atua, seu portfólio e seus contatos! Quanto mais informações você preencher mais fácil ficará para seus clientes te encontrar.</p>
+        <p>
+            @Html.ActionLink("Criar um Perfil!", "Create", "Profile", null, new { @class = "btn btn-default-inverse", role = "button" })
+        </p>
+    </div>
+    <div class="col-lg-4">
+        <h2 class="text-center">2</h2>
+        <p>Exponha seus trabalhos e seja visto! Uma vez cadastrado seu perfil, você pode optar por torna-lo público no site tendo assim seus trabalhos vistos por milhares de pessoas todos os dias.</p>
+        <p><a class="btn btn-default-inverse" href="#" role="button">Meu Porfólio</a></p>
+    </div>
+    <div class="col-lg-4">
+        <h2 class="text-center">3</h2>
+        <p>Gerencie seu fluxo de trabalho. Veja na sua timeline todos os seus compromissos. Recebe avisos por email sempre que estiver chegando o dia de pagar seus fornecedores, receber seu pagamento ou realizar uma sessão de fotos.</p>
+        <p><a class="btn btn-default-inverse" href="#" role="button">Minha Agenda</a></p>
+    </div>
+</div>

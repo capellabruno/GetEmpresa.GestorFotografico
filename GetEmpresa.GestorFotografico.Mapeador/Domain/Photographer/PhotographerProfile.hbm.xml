@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MundoDaFoto.Dominio"
+                   namespace="MundoDaFoto.Dominio.Photographer">
+
+  <class name="PhotographerProfile" table="photographer_profile">
+
+    <id name="Id" column="PhotographerProfileId" unsaved-value="null" type="System.Int64" access="field.camelcase-underscore">
+      <generator class="identity"/>
+    </id>
+
+    <property name="ProfileCreationDate" not-null="true" access="field.camelcase-underscore" />
+    <property name="LastModificationDate" not-null="true" access="field.camelcase-underscore" />
+    <property name="Gender" length="3" access="field.camelcase-underscore" />
+    <property name="WhoAmI" length="512" access="field.camelcase-underscore" />
+    <property name="Email" length="60" not-null="true" access="field.camelcase-underscore" />
+    <property name="AlternateEmail" length="50" access="field.camelcase-underscore" />
+    <property name="WebSite" length="50" access="field.camelcase-underscore" />
+    <property name="ContactPhone1" length="50" access="field.camelcase-underscore" />
+    <property name="ContactPhone2" length="50" access="field.camelcase-underscore" />
+    <property name="IWantToBeContacted" length="50" access="field.camelcase-underscore" />
+    <property name="PublicProfile" access="field.camelcase-underscore" />
+    <property name="Address" length="128" access="field.camelcase-underscore" />
+
+    <!--<many-to-one name="City" class="MundoDaFoto.Dominio.Cidade, MundoDaFoto.Dominio" column="CityId" access="field.camelcase-underscore" />-->
+  </class>
+
+</hibernate-mapping>
