@@ -1,0 +1,50 @@
+#Site Passos
+ ##Fechado
+
+1. Passo 1 --> Cadastro
+2. Passo 2 --> Perfil (Tipo de Acesso "Cliente ou Profissional")
+3. Passo 3 --> Plano (Plano de utilização -Free para Clientes)
+4. Passo 4 --> Send Confirmation Mail
+
+	##Área de Conteúdo
+
+##Cadastro eu preciso:
+	Nome, Email (Usuario), Pais, Estado, Cidade e Senha
+
+##Perfil Cliente eu Preciso:
+	End Completo, Documento, Telefone.
+
+##Perfil Profissional eu preciso:
+	End Completo, Documento, Telefone, Mini Curriculo, Tipo Plano Utilizado, Tipo Cobrança Utilizada (Interno).
+
+
+##Fase 1
+	Site
+	Cadastro Cliente (Basico e Prof)
+	Cadastro complementar
+	Orçamento ( Comunicação por E-mail )
+	Contrato
+	Financeiro (Basico - Atividades Sites - Entrada Saída)
+	Fluxo de Trabalho (Identificar todos o fluxo de trabalho do profissional, "agenda e financeiro (pagamento a fornecedores e recebimentos)".
+
+##Fase 2
+	Equipe
+	Pacote de Serviços
+	Melhora no Orçamento (Implementação de Serviços por Profissional) 
+	Melhor no Financeiro ( Criação de Plano Financeiro por Serviço Contratado)
+	Portifolio (Web Entry)	
+	Portifólio (Envio e criação de Albuns nas Redes "Facebook")
+	
+##Fase 3
+	Cliente Servidor para Gerenciamento de Portifólio
+	Portifolio (GooglePlus, Instagram)
+	E-Commerce
+
+##Fase 4
+	Portifolio (Flirck, 500px)
+	Impressão Fine-Art
+	Foto-Emprego (Classificados)
+	Boa Dica Foto
+
+##Fase 5 
+	Fluxo Workflow ???????????????????
