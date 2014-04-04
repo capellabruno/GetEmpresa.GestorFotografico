@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MundoDaFoto.Dominio
 {
-    public class Estado
+    public class State
     {
         public virtual long Id { get; set; }
-        public virtual string Nome { get; set; }
-        public virtual string Sigla { get; set; }
-        public virtual Pais Pais { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Acronym { get; set; }
+        public virtual Country Country { get; set; }
     }
 }

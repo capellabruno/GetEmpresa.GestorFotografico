@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+
+  <class name="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" table="City" abstract="false">
+
+    <id name="Id" column="IdCity" unsaved-value="null">
+      <generator class="identity"/>
+    </id>
+
+    <property name="Name" column="Name" />
+    <property name="Active" column="Active" />
+    <many-to-one name="Uf" class="MundoDaFoto.Dominio.State, MundoDaFoto.Dominio" column="State_IdState" />
+    
+  </class>
+
+</hibernate-mapping>

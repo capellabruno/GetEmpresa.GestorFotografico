@@ -11,37 +11,37 @@ namespace MundoDaFoto.WebMvc4.Models
 {
     public class ModelLocalidade
     {
-        private int _cidadeSelecionada;
+        private int _CitySelecionada;
 
         [Required()]
         [DataType(DataType.Text)]
         [Display(Name = "City")]
-        public int CidadeSelecionada
+        public int CitySelecionada
         {
-            get { return _cidadeSelecionada; }
-            set { _cidadeSelecionada = value; }
+            get { return _CitySelecionada; }
+            set { _CitySelecionada = value; }
         }
 
-        private int _estadoSelecionado;
+        private int _StateSelecionado;
 
         [Required()]
         [DataType(DataType.Text)]
         [Display(Name = "State")]
-        public int EstadoSelecionado
+        public int StateSelecionado
         {
-            get { return _estadoSelecionado; }
-            set { _estadoSelecionado = value; }
+            get { return _StateSelecionado; }
+            set { _StateSelecionado = value; }
         }
 
-        private int _paisSelecionado;
+        private int _CountrySelecionado;
 
         [Required()]
         [DataType(DataType.Text)]
         [Display(Name="Country")]
-        public int PaisSelecionado
+        public int CountrySelecionado
         {
-            get { return _paisSelecionado; }
-            set { _paisSelecionado = value; }
+            get { return _CountrySelecionado; }
+            set { _CountrySelecionado = value; }
         }
 
 

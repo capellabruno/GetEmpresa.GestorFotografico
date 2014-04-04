@@ -10,33 +10,33 @@ using Spring.Transaction.Interceptor;
 
 namespace GetEmpresa.Negoc.Implementation
 {
-    public class EstadoNegoc : IEstadoNegoc
+    public class StateNegoc : IStateNegoc
     {
-        private IEstadoDao _estadoDao;
+        private IStateDao _StateDao;
 
-        public IEstadoDao EstadoDao
+        public IStateDao StateDao
         {
-            get { return _estadoDao; }
-            set { _estadoDao = value; }
+            get { return _StateDao; }
+            set { _StateDao = value; }
         }
 
         /*****************************************************************************************************/
         [Transaction(ReadOnly = true)]
-        public IList<Estado> BuscarTodos(long _idPais)
+        public IList<State> BuscarTodos(long _idCountry)
         {
-            IList<Estado> _lista;
+            IList<State> _lista;
 
-            _lista = this.EstadoDao.BuscarTodos();
+            _lista = this.StateDao.BuscarTodos();
 
-            _lista = (from a in _lista where a.Pais.Id == _idPais select a).ToList();
+            _lista = (from a in _lista where a.Country.Id == _idCountry select a).ToList();
 
             return _lista;
         }
 
         [Transaction(ReadOnly = true)]
-        public Estado BuscarPorId(long idEstado)
+        public State BuscarPorId(long idState)
         {
-            return this.EstadoDao.Capturar(idEstado);
+            return this.StateDao.Capturar(idState);
         }
     }
 }

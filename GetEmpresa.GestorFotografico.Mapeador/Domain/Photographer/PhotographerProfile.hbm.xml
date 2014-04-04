@@ -22,7 +22,7 @@
     <property name="PublicProfile" access="field.camelcase-underscore" />
     <property name="Address" length="128" access="field.camelcase-underscore" />
 
-    <!--<many-to-one name="City" class="MundoDaFoto.Dominio.Cidade, MundoDaFoto.Dominio" column="CityId" access="field.camelcase-underscore" />-->
+    <!--<many-to-one name="City" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="CityId" access="field.camelcase-underscore" />-->
   </class>
 
 </hibernate-mapping>

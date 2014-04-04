@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MundoDaFoto.Dominio
 {
-    public class TipoCliente
+    public class TipoClient
     {
         public virtual int Id { get; set; }
 

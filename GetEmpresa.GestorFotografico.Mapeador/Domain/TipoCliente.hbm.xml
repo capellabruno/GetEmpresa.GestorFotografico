@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="MundoDaFoto.Dominio.TipoCliente, MundoDaFoto.Dominio" table="tipocliente" abstract="false">
+  <class name="MundoDaFoto.Dominio.TipoClient, MundoDaFoto.Dominio" table="tipoClient" abstract="false">
 
-    <id name="Id" column="IdTipoCliente" unsaved-value="null">
+    <id name="Id" column="IdTipoClient" unsaved-value="null">
       <generator class="identity"/>
     </id>
 

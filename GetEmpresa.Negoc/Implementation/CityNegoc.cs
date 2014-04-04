@@ -10,35 +10,35 @@ using Spring.Transaction.Interceptor;
 
 namespace GetEmpresa.Negoc.Implementation
 {
-    public class CidadeNegoc : ICidadeNegoc
+    public class CityNegoc : ICityNegoc
     {
 
-        private ICidadeDao _cidadeDao;
+        private ICityDao _CityDao;
 
-        public ICidadeDao CidadeDao
+        public ICityDao CityDao
         {
-            get { return _cidadeDao; }
-            set { _cidadeDao = value; }
+            get { return _CityDao; }
+            set { _CityDao = value; }
         }
 
 
         /*************************************************************************************************************/
         [Transaction(ReadOnly = true)]
-        public IList<Cidade> BuscarTodos(long idEstado)
+        public IList<City> BuscarTodos(long idState)
         {
-            IList<Cidade> _todas;
+            IList<City> _todas;
 
-            _todas = this.CidadeDao.BuscarTodos();
+            _todas = this.CityDao.BuscarTodos();
 
-            _todas = (from a in _todas where a.Uf.Id == idEstado select a).ToList();
+            _todas = (from a in _todas where a.Uf.Id == idState select a).ToList();
 
             return _todas;
         }
 
         [Transaction(ReadOnly = true)]
-        public Cidade BuscarPorId(long idCidade)
+        public City BuscarPorId(long idCity)
         {
-            return this.CidadeDao.Capturar(idCidade);
+            return this.CityDao.Capturar(idCity);
         }
     }
 }

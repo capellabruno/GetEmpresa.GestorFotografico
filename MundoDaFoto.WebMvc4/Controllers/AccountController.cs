@@ -14,16 +14,16 @@ using MundoDaFoto.Dominio;
 
 namespace MundoDaFoto.WebMvc4.Controllers {
     public class AccountController : Controller{
-        private IClienteNegoc _clienteNegoc;
-        private IPaisNegoc _paisNegoc;
-        private IEstadoNegoc _estadoNegoc;
-        private ICidadeNegoc _cidadeNegoc;
+        private IClientNegoc _ClientNegoc;
+        private ICountryNegoc _CountryNegoc;
+        private IStateNegoc _StateNegoc;
+        private ICityNegoc _CityNegoc;
 
-        public AccountController(IClienteNegoc clienteNegoc, IPaisNegoc paisNegoc, IEstadoNegoc estadoNegoc, ICidadeNegoc cidadeNegoc) {
-            _clienteNegoc = clienteNegoc;
-            _paisNegoc = paisNegoc;
-            _estadoNegoc = estadoNegoc;
-            _cidadeNegoc = cidadeNegoc;
+        public AccountController(IClientNegoc ClientNegoc, ICountryNegoc CountryNegoc, IStateNegoc StateNegoc, ICityNegoc CityNegoc) {
+            _ClientNegoc = ClientNegoc;
+            _CountryNegoc = CountryNegoc;
+            _StateNegoc = StateNegoc;
+            _CityNegoc = CityNegoc;
         }
 
         // GET: /Account/LogOn
@@ -88,32 +88,32 @@ namespace MundoDaFoto.WebMvc4.Controllers {
 
         public ActionResult Register() {
             //Create Bags
-            DataBindViewBagPaises();        
+            DataBindViewBagCountryes();        
             /*********************/
 
             return View();
 
         }
 
-        private void DataBindViewBagPaises()
+        private void DataBindViewBagCountryes()
         {
-            IList<Pais> _listaPais = null;
+            IList<Country> _listaCountry = null;
             IList<SelectListItem> _listaBag = new List<SelectListItem>();
 
-            _listaPais = _paisNegoc.BuscarTodos();
+            _listaCountry = _CountryNegoc.BuscarTodos();
 
-            if (_listaPais != null && _listaPais.Count > 0)
+            if (_listaCountry != null && _listaCountry.Count > 0)
 
-                foreach (Pais item in _listaPais)
+                foreach (Country item in _listaCountry)
                 {
                     SelectListItem _sItem = new SelectListItem();
                     _sItem.Value = item.Id.ToString();
-                    _sItem.Text = item.Code + " - " + item.Sigla + " - " + item.Nome;
+                    _sItem.Text = item.Name;
 
                     _listaBag.Add(_sItem);
                 }
 
-            ViewBag.Paises = (from a in _listaBag select a);
+            ViewBag.Countryes = (from a in _listaBag select a);
 
         }
 
@@ -131,13 +131,13 @@ namespace MundoDaFoto.WebMvc4.Controllers {
                     FormsAuthentication.SetAuthCookie(model.Email, false /* createPersistentCookie */);
 
                     //create account client on database mundo da foto
-                    Cliente c = new Cliente();
-                    c.Ativo = true;
+                    Client c = new Client();
+                    c.Active = true;
                     c.Email = model.Email;
-                    c.Nome = model.Name;
-                    c.Senha = "not password in table";
+                    c.Name = model.Name;
+                    c.Password = "not password in table";
 
-                    this._clienteNegoc.Incluir(ref c);
+                    this._ClientNegoc.Incluir(ref c);
 
                     return RedirectToAction("Index", "Home");
                 } else {

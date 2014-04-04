@@ -84,18 +84,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\CidadeNegoc.cs" />
-    <Compile Include="Implementation\ClienteNegoc.cs" />
-    <Compile Include="Implementation\EstadoNegoc.cs" />
-    <Compile Include="Implementation\PaisNegoc.cs" />
+    <Compile Include="Implementation\CityNegoc.cs" />
+    <Compile Include="Implementation\ClientNegoc.cs" />
+    <Compile Include="Implementation\StateNegoc.cs" />
+    <Compile Include="Implementation\CountryNegoc.cs" />
     <Compile Include="Implementation\PhotographerService.cs" />
-    <Compile Include="Implementation\TipoClienteNegoc.cs" />
-    <Compile Include="Interface\ICidadeNegoc.cs" />
-    <Compile Include="Interface\IClienteNegoc.cs" />
-    <Compile Include="Interface\IEstadoNegoc.cs" />
-    <Compile Include="Interface\IPaisNegoc.cs" />
+    <Compile Include="Implementation\TipoClientNegoc.cs" />
+    <Compile Include="Interface\ICityNegoc.cs" />
+    <Compile Include="Interface\IClientNegoc.cs" />
+    <Compile Include="Interface\IStateNegoc.cs" />
+    <Compile Include="Interface\ICountryNegoc.cs" />
     <Compile Include="Interface\IPhotographerService.cs" />
-    <Compile Include="Interface\ITipoClienteNegoc.cs" />
+    <Compile Include="Interface\ITipoClientNegoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,28 +10,28 @@ using Spring.Transaction.Interceptor;
 
 namespace GetEmpresa.Negoc.Implementation
 {
-    public class PaisNegoc: IPaisNegoc
+    public class CountryNegoc: ICountryNegoc
     {
 
-        private IPaisDao _paisDao;
-        public IPaisDao PaisDao
+        private ICountryDao _CountryDao;
+        public ICountryDao CountryDao
         {
-            get { return _paisDao; }
-            set { _paisDao = value; }
+            get { return _CountryDao; }
+            set { _CountryDao = value; }
         }
 
 
          /*****************************************************************************************************/
         [Transaction(ReadOnly = true)]
-        public IList<Pais> BuscarTodos()
+        public IList<Country> BuscarTodos()
         {
-            return this.PaisDao.BuscarTodos();
+            return this.CountryDao.BuscarTodos();
         }
 
         [Transaction(ReadOnly = true)]
-        public Pais BuscarPorId(long Pais)
+        public Country BuscarPorId(long Country)
         {
-            return this.PaisDao.Capturar(Pais);
+            return this.CountryDao.Capturar(Country);
         }
     }
 }

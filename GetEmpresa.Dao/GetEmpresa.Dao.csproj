@@ -80,36 +80,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Developer\CidadeDao.cs">
+    <Compile Include="Developer\CityDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\ClienteDao.cs">
+    <Compile Include="Developer\ClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Developer\PhotographerProfileDao.cs" />
-    <Compile Include="Developer\EstadoDao.cs">
+    <Compile Include="Developer\StateDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\PaisDao.cs">
+    <Compile Include="Developer\CountryDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\TipoClienteDao.cs">
+    <Compile Include="Developer\TipoClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\ICidadeDao.cs">
+    <Compile Include="Interface\ICityDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\IClienteDao.cs">
+    <Compile Include="Interface\IClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\IEstadoDao.cs">
+    <Compile Include="Interface\IStateDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\IPaisDao.cs">
+    <Compile Include="Interface\ICountryDao.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interface\IPhotographerProfileDao.cs" />
-    <Compile Include="Interface\ITipoClienteDao.cs">
+    <Compile Include="Interface\ITipoClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,10 +1,10 @@
 using System;
-using MundoDaFoto.Dominio;
 using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
+using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Dao.Developer{
-  public class CidadeDao : GenericDao<Cidade> , ICidadeDao{
+    public class CountryDao :GenericDao<Country> , ICountryDao{
   
-  }
+    }
 }

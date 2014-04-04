@@ -56,8 +56,8 @@ namespace MundoDaFoto.Dominio.Photographer {
             get { return _contactPhone2; }
         }
 
-        private Cidade _city;
-        public virtual Cidade City {
+        private City _city;
+        public virtual City City {
             get { return _city; }
         }
 
