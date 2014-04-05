@@ -136,6 +136,7 @@ namespace MundoDaFoto.WebMvc4.Controllers {
                     c.Email = model.Email;
                     c.Name = model.Name;
                     c.Password = "not password in table";
+                    c.Perfil = null;
 
                     this._ClientNegoc.Incluir(ref c);
 
