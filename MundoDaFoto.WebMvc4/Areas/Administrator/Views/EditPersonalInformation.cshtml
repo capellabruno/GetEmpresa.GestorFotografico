@@ -1,0 +1,93 @@
+﻿@model MundoDaFoto.WebMvc4.Areas.Administrator.Models.PersonalInformationModel
+
+@{
+    ViewBag.Title = "Edit Personal Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>View1</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>PersonalInformationModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ZipCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ZipCode)
+            @Html.ValidationMessageFor(model => model.ZipCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Number)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Number)
+            @Html.ValidationMessageFor(model => model.Number)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Complement)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Complement)
+            @Html.ValidationMessageFor(model => model.Complement)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedCountry)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedCountry)
+            @Html.ValidationMessageFor(model => model.SelectedCountry)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedState)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedState)
+            @Html.ValidationMessageFor(model => model.SelectedState)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedCity)
+            @Html.ValidationMessageFor(model => model.SelectedCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Bairro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Bairro)
+            @Html.ValidationMessageFor(model => model.Bairro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Document)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Document)
+            @Html.ValidationMessageFor(model => model.Document)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -18,7 +18,7 @@ namespace MundoDaFoto.Dominio
 
         public virtual City Municipio { get; set; }
 
-        public virtual TipoClient Perfil { get; set; }
+        public virtual TypeClient Perfil { get; set; }
 
         public virtual bool Active { get; set; }
 

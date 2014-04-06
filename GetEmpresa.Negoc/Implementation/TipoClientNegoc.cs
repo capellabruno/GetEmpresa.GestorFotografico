@@ -27,13 +27,13 @@ namespace GetEmpresa.Negoc.Implementation
         /*****************************************************************************************************/
 
         [Transaction(ReadOnly = true)]
-        public IList<MundoDaFoto.Dominio.TipoClient> BuscarTodos()
+        public IList<MundoDaFoto.Dominio.TypeClient> BuscarTodos()
         {
             return this.TipoClientDao.BuscarTodos();
         }
 
         [Transaction(ReadOnly = true)]
-        public MundoDaFoto.Dominio.TipoClient BuscarPorId(long id)
+        public MundoDaFoto.Dominio.TypeClient BuscarPorId(long id)
         {
             return this.TipoClientDao.Capturar(id);
         }

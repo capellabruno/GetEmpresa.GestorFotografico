@@ -9,7 +9,7 @@ namespace GetEmpresa.Negoc.Interface
 {
     public interface ITipoClientNegoc
     {
-        IList<TipoClient> BuscarTodos();
-        TipoClient BuscarPorId(long id);
+        IList<TypeClient> BuscarTodos();
+        TypeClient BuscarPorId(long id);
     }
 }

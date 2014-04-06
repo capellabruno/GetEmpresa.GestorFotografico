@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PersonalInformation.cs" />
     <Compile Include="Photographer\NullPhotographerProfile.cs" />
     <Compile Include="Photographer\PhotographerProfile.cs" />
     <Compile Include="City.cs" />
@@ -46,7 +47,7 @@
     <Compile Include="State.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoClient.cs" />
+    <Compile Include="TypeClient.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
