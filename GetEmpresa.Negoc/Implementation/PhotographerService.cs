@@ -7,13 +7,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Negoc.Implementation {
     public class PhotographerService : IPhotographerService{
 
         private IPhotographerProfileDao _photographerProfileDao;
-        public PhotographerService(IPhotographerProfileDao photographerProfileDao) {
+        private ICountryDao _countryDao;
+        private IPhotographerProfileDao _fotografoDao;
+        public PhotographerService(IPhotographerProfileDao photographerProfileDao, ICountryDao countryDao, IPhotographerProfileDao fotografoDao) {
             _photographerProfileDao = photographerProfileDao;
+            _countryDao = countryDao;
+            _fotografoDao = fotografoDao;
         }
 
         [Transaction(ReadOnly = true)]
@@ -24,7 +29,15 @@ namespace GetEmpresa.Negoc.Implementation {
         [Transaction(ReadOnly = true)]
         public PhotographerProfile GetProfile(string _email) {
             var photographerProfile = _photographerProfileDao.Get(_email);
+
             return photographerProfile ?? new NullPhotographerProfile();
+        }
+
+        [Transaction]
+        public void CreateNewProfile(PhotographerProfile profile) {
+            if (!profile.IsValid())
+                throw new Exception();
+            _photographerProfileDao.Incluir(profile);
         }
     }// class
 }

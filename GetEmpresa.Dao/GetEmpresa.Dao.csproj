@@ -102,13 +102,13 @@
     <Compile Include="Interface\IClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Interface\IPhotographerProfileDao.cs" />
     <Compile Include="Interface\IStateDao.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interface\ICountryDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\IPhotographerProfileDao.cs" />
     <Compile Include="Interface\ITipoClientDao.cs">
       <SubType>Code</SubType>
     </Compile>

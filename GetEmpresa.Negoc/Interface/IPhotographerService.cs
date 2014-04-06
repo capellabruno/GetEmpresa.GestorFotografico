@@ -9,5 +9,6 @@ namespace GetEmpresa.Negoc.Interface {
     public interface IPhotographerService {
         bool HasProfile(string _email);
         PhotographerProfile GetProfile(string _email);
+        void CreateNewProfile(PhotographerProfile profile);
     }// class
 }

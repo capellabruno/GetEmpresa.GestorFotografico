@@ -12,10 +12,10 @@ namespace GenericFrameworkNhibernate
 
         IList<TEntity> BuscarTodos();
 
-        void Incluir(ref TEntity entity);
+        void Incluir(TEntity entity);
 
-        void Alterar(ref TEntity entity);
+        void Alterar(TEntity entity);
 
-        void Deletar(ref TEntity entity);
+        void Deletar(TEntity entity);
     }
 }

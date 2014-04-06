@@ -46,7 +46,7 @@ namespace GetEmpresa.Negoc.Implementation
 
             this.VerificarSeClientExiste(_Client);
 
-            this.ClientDao.Incluir(ref _Client);
+            this.ClientDao.Incluir(_Client);
         }
 
         [Transaction(ReadOnly = true)]
@@ -69,7 +69,7 @@ namespace GetEmpresa.Negoc.Implementation
             if (_Client.Id == 0)
                 throw new Exception("Não é possivel alterar um Client não Serializavel");
 
-            this.ClientDao.Alterar(ref _Client);
+            this.ClientDao.Alterar(_Client);
 
         }
 
@@ -84,7 +84,7 @@ namespace GetEmpresa.Negoc.Implementation
 
             _Client.Active = false;
 
-            this.ClientDao.Alterar(ref _Client);
+            this.ClientDao.Alterar(_Client);
         }
 
     }

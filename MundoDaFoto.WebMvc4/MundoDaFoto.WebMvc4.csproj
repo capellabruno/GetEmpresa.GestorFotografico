@@ -249,6 +249,7 @@
     <Compile Include="Areas\Photographer\Controllers\BasePhotographerController.cs" />
     <Compile Include="Areas\Photographer\Controllers\HomeController.cs" />
     <Compile Include="Areas\Photographer\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Photographer\Models\PhotographerRegisterModel.cs" />
     <Compile Include="Areas\Photographer\PhotographerAreaRegistration.cs" />
     <Compile Include="Concrete\DbResourceProvider.cs" />
     <Compile Include="Concrete\XmlResourceProvider.cs" />
@@ -269,6 +270,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\authentication_forms.css" />
+    <Content Include="Content\font-awesome-4.0.3\css\font-awesome.css" />
+    <Content Include="Content\font-awesome-4.0.3\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome-4.0.3\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.svg" />
     <Content Include="Content\theme_escape_velocity\css\ie8.css" />
     <Content Include="Content\theme_escape_velocity\css\images\mobileUI-site-nav-opener-bg.svg" />
@@ -315,6 +319,10 @@
     <Content Include="Areas\Photographer\Views\Home\Index.cshtml" />
     <Content Include="Areas\Photographer\Views\Profile\Create.cshtml" />
     <Content Include="Areas\Photographer\Views\_ViewStart.cshtml" />
+    <Content Include="Content\font-awesome-4.0.3\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-4.0.3\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-4.0.3\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-4.0.3\fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\MundoDaFoto.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -330,7 +338,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -372,8 +382,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Client\" />
-    <Folder Include="Areas\Photographer\Controllers\" />
-    <Folder Include="Areas\Photographer\Models\" />
     <Folder Include="Areas\Photographer\Views\Shared\" />
     <Folder Include="Filters\" />
   </ItemGroup>

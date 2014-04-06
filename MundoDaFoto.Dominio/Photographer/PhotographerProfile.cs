@@ -6,19 +6,33 @@ using System.Threading.Tasks;
 
 namespace MundoDaFoto.Dominio.Photographer {
     public class PhotographerProfile {
+        protected PhotographerProfile() {
+        }
+
+        public PhotographerProfile(string email) {
+            _lastModificationDate = DateTime.Now;
+            _creationDate = DateTime.Now;
+            _email = email;
+        }
+
         private long _id;
         public virtual long Id {
             get { return _id; }
         }
 
-        private DateTime _profileCreationDate;
-        public virtual DateTime ProfileCreationDate {
-            get { return _profileCreationDate; }
+        private string _name;
+        public virtual string Name {
+            get { return _name; }
         }
 
-        private DateTime _lastModificationDate;
-        public virtual DateTime LastModificationDate {
-            get { return _lastModificationDate; }
+        private string _email;
+        public virtual string Email {
+            get { return _email; } 
+        }
+
+        private DateTime? _birthDate;
+        public virtual DateTime? BirthDate {
+            get { return _birthDate; }
         }
 
         private string _gender;
@@ -31,53 +45,49 @@ namespace MundoDaFoto.Dominio.Photographer {
             get { return _whoAmI; }
         }
 
-        private string _email;
-        public virtual string Email {
-            get { return _email; }
+        private DateTime? _creationDate;
+        public virtual DateTime? CreationDate {
+            get { return _creationDate; }
         }
 
-        private string _alternateEmail;
-        public virtual string AlternateEmail {
-            get { return _alternateEmail; }
+        private DateTime? _lastModificationDate;
+        public virtual DateTime? LastModificationDate {
+            get { return _lastModificationDate; }
         }
 
-        private string _webSite;
-        public virtual string WebSite {
-            get { return _webSite; }
+        private ContactInfo _contactInfo;
+        public virtual ContactInfo ContactInfo {
+            get { return _contactInfo; }
         }
 
-        private string _contactPhone1;
-        public virtual string ContactPhone1 {
-            get { return _contactPhone1; }
+        private bool _public;
+        public virtual bool Public {
+            get { return _public; }
         }
 
-        private string _contactPhone2;
-        public virtual string ContactPhone2 {
-            get { return _contactPhone2; }
-        }
+        public virtual bool IsValid() {
+            if (string.IsNullOrEmpty(_email))
+                return false;
+            if (!_creationDate.HasValue)
+                return false;
+            if (!_lastModificationDate.HasValue)
+                return false;
 
-        private City _city;
-        public virtual City City {
-            get { return _city; }
-        }
-
-        private String _address;
-        public virtual String Address {
-            get { return _address; }
-        }
-
-        private bool _publicProfile;
-        public virtual bool PublicProfile {
-            get { return _publicProfile; }
-        }
-
-        private bool _iWantToBeContacted;
-        public virtual bool IWantToBeContacted {
-            get { return _iWantToBeContacted; }
+            return true;
         }
 
         public virtual bool IsNull() {
             return false;
         }
-    }// class
+
+        public virtual void AddBasicInfo(string name, DateTime? birthDate, string gender) {
+            _name = name;
+            _birthDate = birthDate;
+            _gender = gender;
+        }
+
+        public virtual void AddContactInfo(ContactInfo contactInfo){
+            _contactInfo = contactInfo;
+        }
+    } //class
 }

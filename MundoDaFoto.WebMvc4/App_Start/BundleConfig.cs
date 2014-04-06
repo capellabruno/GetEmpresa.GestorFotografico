@@ -25,7 +25,8 @@ namespace MundoDaFoto.WebMvc4 {
                                             "~/Content/bootstrap-theme",
                                             "~/Content/Site.css",
                                             "~/Content/typography.css",
-                                            "~/Content/authentication_forms.css"
+                                            "~/Content/authentication_forms.css",
+                                            "~/Content/font-awesome-4.0.3/css/font-awesome.css"
                                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js", "~/Scripts/bootstrap.min.js"));

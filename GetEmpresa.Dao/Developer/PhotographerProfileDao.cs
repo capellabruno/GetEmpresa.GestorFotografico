@@ -5,6 +5,7 @@ using GenericFrameworkNhibernate;
 using MundoDaFoto.Dominio.Photographer;
 using NHibernate;
 using NHibernate.Criterion;
+using System.Collections.Generic;
 
 namespace GetEmpresa.Dao.Developer{
     public class PhotographerProfileDao : GenericDao<PhotographerProfile>, IPhotographerProfileDao {
@@ -28,5 +29,6 @@ namespace GetEmpresa.Dao.Developer{
 
             return criteria.UniqueResult<PhotographerProfile>();
         }
+
     }// class
 }

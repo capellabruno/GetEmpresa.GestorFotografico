@@ -1,224 +1,233 @@
-﻿@model MundoDaFoto.Dominio.Photographer.PhotographerProfile
+﻿@model MundoDaFoto.WebMvc4.Areas.Photographer.Models.PhotographerRegisterModel
 
 @{
     ViewBag.Title = "Criar Perfil";
 }
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+<div class="container">
+    @using (Html.BeginForm("Create", "Profile", FormMethod.Post, new { area = "Photographer" })) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
-    <div class="row">
-		<div class="col-xs-12">
+        <div class="row">
+		    <div class="col-xs-12">
 
-            <div id="user-profile-3" class="user-profile row">
-		        <div class="col-sm-offset-1 col-sm-10">
-                    <br />
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                            40% Completo
-                        </div>
-                        <span class="pull-right">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        </span>
-                    </div>
-
-			        <div class="space"></div>
-
-                    <div class="tabbable">
-                        <ul class="nav nav-tabs padding-16">
-                            <li class="active">
-                                <a data-toggle="tab" href="#edit-basic">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                    Básico
-                                </a>
-                            </li>
-
-                            <li>
-                                <a data-toggle="tab" href="#edit-settings">
-                                    <span class="glyphicon glyphicon-cog"></span>                                    
-                                    Configurações
-                                </a>
-                            </li>
-
-                            <li>
-                                <a data-toggle="tab" href="#edit-portfolio">
-                                    <span class="glyphicon glyphicon-th"></span>
-                                    Portfólio
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content profile-edit-tab-content">
-                            <div id="edit-basic" class="tab-pane in active">
-                                <h3 class="text-left">Geral</h3>
-                                <hr />
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-4">
-                                         <div class="form-group">
-                                            <label for="exampleInputFile">Escolha sua foto de perfil</label>
-                                            <input type="file" id="exampleInputFile">
-                                            <p class="help-block">Sua foto de apresentação conta muito. Capriche</p>
-                                          </div>
-                                    </div>
-
-                                    <div class="vspace-xs"></div>
-
-                                    <div class="col-xs-12 col-sm-8">
-                                        <div class="form-group">
-                                            <label for="FullName" class="col-sm-4 control-label no-padding-right">Nome completo</label>
-                                            <div class="col-sm-8">
-                                                @Html.TextBox("FullName", "", new { @class = "form-control col-xs-12 col-sm-10" })
-                                            </div>                                            
-                                        </div>
-
-                                        <div class="space-4"></div>
-
-                                        <div class="form-group">
-                                            <label for="BirthDate" class="col-sm-4 control-label no-padding-right">Data de nascimento</label>
-                                            <div class="col-sm-8">
-                                                @Html.TextBox("BirthDate", "", new { @class = "form-control col-xs-12 col-sm-10 datepicker" })
-                                            </div>                                            
-                                        </div>
-
-                                        <div class="space-4"></div>
-
-                                        <div class="form-group">
-                                            <label for="Gender" class="col-sm-4 control-label no-padding-right">Sexo</label>
-                                            <div class="col-sm-8">
-                                                <label class="radio-inline">
-                                                    @Html.RadioButton("Gender", "male")
-                                                    @Html.Label("male", "Masculino")
-                                                </label>
-                                                <label class="radio-inline">
-                                                    @Html.RadioButton("Gender", "female")
-                                                    @Html.Label("female", "Feminino")
-                                                </label>                                                
-                                            </div>                                      
-                                        </div> <!-- form-group -->
-                                    </div>
-
-                                </div> <!-- end row -->
-
-
-                                <h3 class="text-left">Contato</h3>
-                                <hr />
-
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <label for="Email" class="col-sm-3 control-label no-padding-right">Email</label>
-                                        <div class="col-sm-9">
-                                            @Html.TextBox("Email", HttpContext.Current.User.Identity.Name, new { @class = "form-control", disabled="" })                             
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="Website" class="col-sm-3 control-label no-padding-right">Website</label>
-                                        <div class="col-sm-9">
-                                            @Html.TextBox("Wesite", null, new { @class = "form-control" })                             
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="Phone1" class="col-sm-3 control-label no-padding-right">Telefone</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group">
-                                                @Html.TextBox("Phone1", null, new { @class = "form-control input-mask-phone" })                             
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-earphone"></span>    
-                                                </span>
-                                            </div>                                            
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="Phone2" class="col-sm-3 control-label no-padding-right">Telefone Alternativo</label>
-                                        <div class="col-sm-9">
-                                            <div class="input-group">
-                                                @Html.TextBox("Phone2", null, new { @class = "form-control input-mask-phone" })
-                                                <span class="input-group-addon">
-                                                    <span class="glyphicon glyphicon-earphone"></span>    
-                                                </span>
-                                            </div>                                        
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <h3 class="text-left">Social</h3>
-                                <hr />
-
-                                <div class="col-xs-9">
-                                    <div class="form-group">
-                                        <label for="Facebook" class="col-sm-4 control-label no-padding-right">Facebook</label>
-                                        <div class="col-sm-5">
-                                            @Html.TextBox("Facebook", null, new { @class = "form-control" })
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="Twitter" class="col-sm-4 control-label no-padding-right">Twitter</label>
-                                        <div class="col-sm-5">
-                                            @Html.TextBox("Twitter", null, new { @class = "form-control" })                             
-                                        </div>
-                                    </div>
-                                
-                                    <div class="form-group">
-                                        <label for="GooglePlus" class="col-sm-4 control-label no-padding-right">Google+</label>
-                                        <div class="col-sm-5">
-                                            @Html.TextBox("GooglePlus", null, new { @class = "form-control" })                             
-                                        </div>
-                                    </div>
-                                </div>
+                <div id="user-profile-3" class="user-profile row">
+		            <div class="col-sm-offset-1 col-sm-10">
+                        <br />
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                40% Completo
                             </div>
+                            <span class="pull-right">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            </span>
+                        </div>
 
-                            <div id="edit-settings" class="tab-pane">
-                                <div>
-                                    <label class="inline">
-                                        <label class="checkbox-inline">
-                                            @Html.CheckBox("PublicProfile", null)
-                                            @Html.Label("PublicProfileLabel", "Tornar o perfil público")
+			            <div class="space"></div>
+
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs padding-16">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#edit-basic">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        Básico
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="tab" href="#edit-settings">
+                                        <span class="glyphicon glyphicon-cog"></span>
+                                        Configurações
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="tab" href="#edit-portfolio">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                        Portfólio
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content profile-edit-tab-content">
+                                <div id="edit-basic" class="tab-pane in active">
+                                    <h3 class="text-left">Geral</h3>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4">
+                                            <div class="form-group">
+                                                <label for="exampleInputFile">Escolha sua foto de perfil</label>
+                                                <input type="file" id="exampleInputFile">
+                                                <p class="help-block">Sua foto de apresentação conta muito. Capriche</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="vspace-xs"></div>
+
+                                        <div class="col-xs-12 col-sm-8">
+                                            <div class="form-group">
+                                                <label for="Name" class="col-sm-4 control-label no-padding-right">Nome completo</label>
+                                                <div class="col-sm-8">
+                                                    @Html.TextBoxFor(x => x.Name, null, new { @class = "form-control col-xs-12 col-sm-10" })
+                                                </div>
+                                            </div>
+
+                                            <div class="space-4"></div>
+
+                                            <div class="form-group">
+                                                <label for="BirthDate" class="col-sm-4 control-label no-padding-right">Data de nascimento</label>
+                                                <div class="col-sm-8">
+                                                    @Html.TextBoxFor(x => x.BirthDate, "", new { @class = "form-control col-xs-12 col-sm-6 datepicker" })
+                                                </div>
+                                            </div>
+
+                                            <div class="space-4"></div>
+
+                                            <div class="form-group">
+                                                <label for="Gender" class="col-sm-4 control-label no-padding-right">Sexo</label>
+                                                <div class="col-sm-8">
+                                                    <label class="radio-inline">
+                                                        @Html.RadioButtonFor(x => x.Gender, "male")
+                                                        @Html.Label("male", "Masculino")
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        @Html.RadioButtonFor(x => x.Gender, "female")
+                                                        @Html.Label("female", "Feminino")
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- form-group -->
+                                        </div>
+
+                                    </div>
+                                    <!-- end row -->
+
+                                    <h3 class="text-left">Contato</h3>
+                                    <hr />
+
+                                    <div class="row">                                        
+                                        <div class="form-group">
+                                            <label for="Email" class="col-sm-3 control-label no-padding-right">Email</label>
+                                            <div class="col-sm-7">
+                                                @Html.TextBox("Email", HttpContext.Current.User.Identity.Name, new { @class = "form-control", disabled = "" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="AlternateEmail" class="col-sm-3 control-label no-padding-right">Email Alternativo</label>
+                                            <div class="col-sm-7">
+                                                @Html.TextBoxFor(x => x.AlternateEmail, null, new { @class = "form-control", })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Website" class="col-sm-3 control-label no-padding-right">Website</label>
+                                            <div class="col-sm-7">
+                                                @Html.TextBoxFor(x => x.WebSite, null, new { @class = "form-control" })
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ContactPhone1" class="col-sm-3 control-label no-padding-right">Telefone</label>
+                                            <div class="col-sm-7">
+                                                <div class="input-group col-sm-5">
+                                                    @Html.TextBoxFor(x => x.ContactPhone1, null, new { @class = "form-control input-mask-phone" })
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-earphone"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ContactPhone2" class="col-sm-3 control-label no-padding-right">Telefone Alternativo</label>
+                                            <div class="col-sm-7">
+                                                <div class="input-group col-sm-5">
+                                                    @Html.TextBoxFor(x => x.ContactPhone2, null, new { @class = "form-control input-mask-phone" })
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-earphone"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+
+                                    <h3 class="text-left">Social</h3>
+                                    <hr />
+
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label for="Facebook" class="col-sm-3 control-label no-padding-right">Facebook</label>
+                                            <div class="col-sm-7">
+                                                <div class="col-sm-6">
+                                                    @Html.TextBox("Facebook", null, new { @class = "form-control" })
+                                                </div>                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Twitter" class="col-sm-3 control-label no-padding-right">Twitter</label>
+                                            <div class="col-sm-7">
+                                                <div class="col-sm-6">
+                                                    @Html.TextBox("Twitter", null, new { @class = "form-control" })
+                                                </div>                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="GooglePlus" class="col-sm-3 control-label no-padding-right">Google+</label>
+                                            <div class="col-sm-7">
+                                                <div class="col-sm-6">
+                                                    @Html.TextBox("GooglePlus", null, new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="edit-settings" class="tab-pane">
+                                    <div>
+                                        <label class="inline">
+                                            <label class="checkbox-inline">
+                                                @Html.CheckBoxFor(x => x.Public, null)
+                                                @Html.Label("Public", "Tornar o perfil público")
+                                            </label>
                                         </label>
-                                    </label>
-                                </div>
+                                    </div>
 
-                                <div>
-                                    <label class="inline">
-                                        <label class="checkbox-inline">
-                                            @Html.CheckBox("IWantReceiveEmail", null)
-                                            @Html.Label("IWantReceiveEmailLabel", "Aceito receber emails.")
+                                    <div>
+                                        <label class="inline">
+                                            <label class="checkbox-inline">
+                                                @Html.CheckBoxFor(x => x.IWantToBeContacted, null)
+                                                @Html.Label("IWantToBeContacted", "Aceito receber convites e emails de clientes ou outros usuários.")
+                                            </label>
                                         </label>
-                                    </label>
+                                    </div>
+                                </div>
+
+                                <div id="edit-portfolio" class="tab-pane">
                                 </div>
                             </div>
-
-                            <div id="edit-portfolio" class="tab-pane">
-
-                                
-                            </div>
                         </div>
-                    </div>
-
-                    <p>dsdd</p>
-                    <div class="clearfix form-actions">
-                        <div class="col-md-offset-3 col-md-9">
-                            <button class="btn btn-lg btn-primary" type="submit">
-                                Salvar
-                            </button>
-
-                            &nbsp; &nbsp;
-						    <button class="btn btn-lg" type="reset">
-                                Reset
-                            </button>
-                        </div>
-                    </div>
                     
-		        </div><!-- /span -->
-	        </div><!-- /user-profile -->
+		            </div><!-- /span -->
+	            </div><!-- /user-profile -->
+                <br />
+                <div>
+                    <input type="submit" class="btn btn-lg btn-primary" name="Create" value="Salvar" />
+                    <input type="submit" value="Create" />
+                    &nbsp; &nbsp;
+					<button class="btn btn-lg" type="reset">
+                        Reset
+                    </button>
+                </div>
 
-        </div>
-    </div> 
-}
+            </div>
+        </div> 
+    }
+
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

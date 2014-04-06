@@ -3,26 +3,29 @@
                    assembly="MundoDaFoto.Dominio"
                    namespace="MundoDaFoto.Dominio.Photographer">
 
-  <class name="PhotographerProfile" table="photographer_profile">
+     <class name="MundoDaFoto.Dominio.Photographer.PhotographerProfile, MundoDaFoto.Dominio" table="photographer_profile" abstract="false">
 
-    <id name="Id" column="PhotographerProfileId" unsaved-value="null" type="System.Int64" access="field.camelcase-underscore">
-      <generator class="identity"/>
-    </id>
+        <id name="Id" column="IdFotografo" unsaved-value="null" access="field.camelcase-underscore">
+            <generator class="identity"/>
+        </id>
 
-    <property name="ProfileCreationDate" not-null="true" access="field.camelcase-underscore" />
-    <property name="LastModificationDate" not-null="true" access="field.camelcase-underscore" />
-    <property name="Gender" length="3" access="field.camelcase-underscore" />
-    <property name="WhoAmI" length="512" access="field.camelcase-underscore" />
-    <property name="Email" length="60" not-null="true" access="field.camelcase-underscore" />
-    <property name="AlternateEmail" length="50" access="field.camelcase-underscore" />
-    <property name="WebSite" length="50" access="field.camelcase-underscore" />
-    <property name="ContactPhone1" length="50" access="field.camelcase-underscore" />
-    <property name="ContactPhone2" length="50" access="field.camelcase-underscore" />
-    <property name="IWantToBeContacted" length="50" access="field.camelcase-underscore" />
-    <property name="PublicProfile" access="field.camelcase-underscore" />
-    <property name="Address" length="128" access="field.camelcase-underscore" />
+        <property name="Name" access="field.camelcase-underscore" />
+        <property name="Email" access="field.camelcase-underscore" />
+        <property name="BirthDate" access="field.camelcase-underscore" />
+        <property name="Gender" length="3" access="field.camelcase-underscore" />
+        <property name="WhoAmI" length="512" access="field.camelcase-underscore" />
+        <property name="CreationDate" not-null="true" access="field.camelcase-underscore" />
+        <property name="LastModificationDate" not-null="true" access="field.camelcase-underscore" />
+        <component name="ContactInfo" access="field.camelcase-underscore">
+            <property name="AlternateEmail" length="50" access="field.camelcase-underscore" />
+            <property name="WebSite" length="50" access="field.camelcase-underscore" />
+            <property name="ContactPhone1" length="50" access="field.camelcase-underscore" />
+            <property name="ContactPhone2" length="50" access="field.camelcase-underscore" />
+            <property name="IWantToBeContacted" length="50" access="field.camelcase-underscore" />
+            <property name="Address" length="128" access="field.camelcase-underscore" />
+        </component>
+        <property name="Public" access="field.camelcase-underscore" />
 
-    <!--<many-to-one name="City" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="CityId" access="field.camelcase-underscore" />-->
-  </class>
+     </class>
 
 </hibernate-mapping>

@@ -22,20 +22,20 @@ namespace GenericFrameworkNhibernate
         }
 
         [Transaction(ReadOnly = false)]
-        public void Incluir(ref T entity)
+        public void Incluir(T entity)
         {
             if (!base.SessionFactory.IsClosed)
                 base.CurrentSession.Save(entity);
         }
 
         [Transaction(ReadOnly = false)]
-        public void Alterar(ref T entity)
+        public void Alterar(T entity)
         {
             base.CurrentSession.SaveOrUpdate(entity);
         }
 
         [Transaction(ReadOnly = false)]
-        public void Deletar(ref T entity)
+        public void Deletar(T entity)
         {
             base.CurrentSession.Delete(entity);
         }

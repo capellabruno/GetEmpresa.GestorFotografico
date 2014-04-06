@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MundoDaFoto.WebMvc4.Areas.Photographer.Models;
+using MundoDaFoto.Dominio.Photographer;
 
 namespace MundoDaFoto.WebMvc4.Areas.Photographer.Controllers{
     [Authorize]
     public class ProfileController : BasePhotographerController{
+
         private IPhotographerService _photographerService;
         public ProfileController(IPhotographerService photographerService) {
             _photographerService = photographerService;
@@ -30,6 +33,7 @@ namespace MundoDaFoto.WebMvc4.Areas.Photographer.Controllers{
         // GET: /Photographer/Profile/Create
 
         public ActionResult Create(){
+            var email = HttpContext.User.Identity.Name;
             return View();
         }
 
@@ -37,11 +41,17 @@ namespace MundoDaFoto.WebMvc4.Areas.Photographer.Controllers{
         // POST: /Photographer/Profile/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection){
+        public ActionResult Create(PhotographerRegisterModel photographerRegisterModel){
             try{
-                // TODO: Add insert logic here
+                var email = HttpContext.User.Identity.Name;
 
-                return RedirectToAction("Index");
+                PhotographerProfile profile = new PhotographerProfileBuilder(email)
+                                                                .AddBasicInfo(photographerRegisterModel.Name, photographerRegisterModel.BirthDate, photographerRegisterModel.Gender)
+                                                                .AddContactInfo(photographerRegisterModel.AlternateEmail, photographerRegisterModel.WebSite, photographerRegisterModel.ContactPhone1, photographerRegisterModel.ContactPhone2, photographerRegisterModel.IWantToBeContacted, photographerRegisterModel.Address)
+                                                                .Build();
+
+                _photographerService.CreateNewProfile(profile);
+                return RedirectToAction("Index", "Home");
             }catch{
                 return View();
             }
