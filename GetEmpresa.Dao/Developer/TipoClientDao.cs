@@ -5,7 +5,7 @@ using MundoDaFoto.Dominio;
 
 namespace GetEmpresa.Dao.Developer{
   public class TipoClientDao
-        : GenericDao<TipoClient> , ITipoClientDao
+        : GenericDao<TypeClient> , ITipoClientDao
   {
   
   }
