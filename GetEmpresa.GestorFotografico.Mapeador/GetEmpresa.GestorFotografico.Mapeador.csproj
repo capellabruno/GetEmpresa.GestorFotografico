@@ -71,7 +71,7 @@
     <EmbeddedResource Include="InjectionTest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\Cliente.hbm.xml" />
+    <Content Include="Domain\Cliente.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Web.xml" />
@@ -80,13 +80,13 @@
     <EmbeddedResource Include="Domain\City.hbm.xml" />
     <EmbeddedResource Include="Domain\Estado.hbm.xml" />
     <EmbeddedResource Include="Domain\Pais.hbm.xml" />
-    <EmbeddedResource Include="Domain\TypeClient.hbm.xml" />
+    <Content Include="Domain\TypeClient.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Domain\Photographer\PhotographerProfile.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Domain\PersonalInformation.hbm.xml" />
+    <Content Include="Domain\PersonalInformation.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

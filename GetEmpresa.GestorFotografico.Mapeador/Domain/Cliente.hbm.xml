@@ -10,8 +10,8 @@
     <property name="Name" column="Name" />
     <property name="Email" column="Email" />
         
-  <many-to-one name="Municipio" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="City_IdCity" />
-  <many-to-one name="Perfil" class="MundoDaFoto.Dominio.TypeClient, MundoDaFoto.Dominio" column="TypeClient_Id" />
+  <many-to-one name="Municipio" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="CityId" />
+  <many-to-one name="Perfil" class="MundoDaFoto.Dominio.TypeClient, MundoDaFoto.Dominio" column="TypeClientId" />
   
   </class>
 

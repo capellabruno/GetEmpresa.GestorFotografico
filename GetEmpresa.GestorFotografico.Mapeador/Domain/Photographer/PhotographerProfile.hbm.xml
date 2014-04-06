@@ -5,7 +5,7 @@
 
      <class name="MundoDaFoto.Dominio.Photographer.PhotographerProfile, MundoDaFoto.Dominio" table="photographer_profile" abstract="false">
 
-        <id name="Id" column="IdFotografo" unsaved-value="null" access="field.camelcase-underscore">
+        <id name="Id" column="PhotographerId" unsaved-value="null" access="field.camelcase-underscore">
             <generator class="identity"/>
         </id>
 

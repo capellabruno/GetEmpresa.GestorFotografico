@@ -9,5 +9,5 @@ namespace MundoDaFoto.Dominio.Photographer {
         public override bool IsNull() {
             return true;
         }
-    }// class
+    } //class
 }

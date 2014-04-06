@@ -23,7 +23,7 @@ namespace GetEmpresa.Dao.Developer{
       {
           ICriteria _criteria;
           _criteria = base.CurrentSession.CreateCriteria(typeof(Client));
-          _criteria.Add(Restrictions.Eq("Nome", _nome));
+          _criteria.Add(Restrictions.Eq("Name", _nome));
 
           return _criteria.UniqueResult<Client>();   
       }

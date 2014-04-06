@@ -87,34 +87,7 @@ namespace MundoDaFoto.WebMvc4.Controllers {
         // GET: /Account/Register
 
         public ActionResult Register() {
-            //Create Bags
-            DataBindViewBagCountryes();        
-            /*********************/
-
             return View();
-
-        }
-
-        private void DataBindViewBagCountryes()
-        {
-            IList<Country> _listaCountry = null;
-            IList<SelectListItem> _listaBag = new List<SelectListItem>();
-
-            _listaCountry = _CountryNegoc.BuscarTodos();
-
-            if (_listaCountry != null && _listaCountry.Count > 0)
-
-                foreach (Country item in _listaCountry)
-                {
-                    SelectListItem _sItem = new SelectListItem();
-                    _sItem.Value = item.Id.ToString();
-                    _sItem.Text = item.Name;
-
-                    _listaBag.Add(_sItem);
-                }
-
-            ViewBag.Countryes = (from a in _listaBag select a);
-
         }
 
         //
@@ -129,17 +102,6 @@ namespace MundoDaFoto.WebMvc4.Controllers {
 
                 if (createStatus == MembershipCreateStatus.Success) {
                     FormsAuthentication.SetAuthCookie(model.Email, false /* createPersistentCookie */);
-
-                    //create account client on database mundo da foto
-                    Client c = new Client();
-                    c.Active = true;
-                    c.Email = model.Email;
-                    c.Name = model.Name;
-                    c.Password = "not password in table";
-                    c.Perfil = null;
-
-                    this._ClientNegoc.Incluir(ref c);
-
                     return RedirectToAction("Index", "Home");
                 } else {
                     ModelState.AddModelError("", ErrorCodeToString(createStatus));
