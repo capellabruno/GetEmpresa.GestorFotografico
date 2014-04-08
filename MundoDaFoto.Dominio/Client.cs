@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MundoDaFoto.Dominio
-{
-    public class Client
-    {
+namespace MundoDaFoto.Domain{
+    public class Client{
         public virtual long Id { get; set; }
 
         public virtual string Name { get; set; }
@@ -18,9 +16,9 @@ namespace MundoDaFoto.Dominio
 
         public virtual City Municipio { get; set; }
 
-        public virtual TypeClient Perfil { get; set; }
+        //TODO: Definir no futuro com bruninho como ficará o perfil. Será um discrminator? Será um role? Será uma Classe?
+        public virtual string Perfil { get; set; }
 
         public virtual bool Active { get; set; }
-
-    }
+    }// class
 }

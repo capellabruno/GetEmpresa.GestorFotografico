@@ -24,7 +24,7 @@
     <property name="ExposeTransactionAwareSessionFactory" value="true" />
     <property name="MappingAssemblies">
       <list>
-        <value>GetEmpresa.GestorFotografico.Mapeador</value>
+        <value>GetEmpresa.GestorFotografico.Mapper</value>
       </list>
     </property>
     <property name="HibernateProperties">
@@ -34,7 +34,7 @@
         <entry key="connection.driver_class" value="NHibernate.Driver.MySqlDataDriver"/>
         <entry key="show_sql" value="true"/>
         <entry key="max_fetch_depth" value="2" />
-        <entry key="hbm2ddl.auto" value="create" />
+        <entry key="hbm2ddl.auto" value="update" />
         <!--<entry key="hbm2ddl.auto" value="create-drop" />-->
       </dictionary>
     </property>

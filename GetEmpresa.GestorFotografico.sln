@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.GestorFotografico.Mapeador", "GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapeador.csproj", "{F636DFAE-E097-498B-BEF4-B44EB42E2DBF}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.GestorFotografico.Mapper", "GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapper.csproj", "{F636DFAE-E097-498B-BEF4-B44EB42E2DBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Dao", "GetEmpresa.Dao\GetEmpresa.Dao.csproj", "{5A055459-9CBB-4104-9C31-72979AAB8CE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetEmpresa.Negoc", "GetEmpresa.Negoc\GetEmpresa.Negoc.csproj", "{DECD4EDC-C8F5-4DFB-97FB-ADC4120A8E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Dominio", "MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj", "{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.Domain", "MundoDaFoto.Dominio\MundoDaFoto.Domain.csproj", "{A13DA329-E174-4CCD-B9F6-D9C13C6C46C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MundoDaFoto.WebMvc4", "MundoDaFoto.WebMvc4\MundoDaFoto.WebMvc4.csproj", "{3C46EAE0-B89F-47AF-8BCC-D47C99717AA9}"
 EndProject

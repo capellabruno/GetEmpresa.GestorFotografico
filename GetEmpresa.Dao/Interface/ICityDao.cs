@@ -1,6 +1,6 @@
 using System;
 using GenericFrameworkNhibernate;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 
 namespace GetEmpresa.Dao.Interface{
 

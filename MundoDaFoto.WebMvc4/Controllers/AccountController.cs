@@ -10,20 +10,16 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using MundoDaFoto.WebMvc4.Models;
 using GetEmpresa.Negoc.Interface;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 
 namespace MundoDaFoto.WebMvc4.Controllers {
     public class AccountController : Controller{
-        private IClientNegoc _ClientNegoc;
-        private ICountryNegoc _CountryNegoc;
-        private IStateNegoc _StateNegoc;
-        private ICityNegoc _CityNegoc;
+        private IClientService _ClientNegoc;
+        private ILocalizationService _localizationService;
 
-        public AccountController(IClientNegoc ClientNegoc, ICountryNegoc CountryNegoc, IStateNegoc StateNegoc, ICityNegoc CityNegoc) {
+        public AccountController(IClientService ClientNegoc, ILocalizationService localizationService) {
             _ClientNegoc = ClientNegoc;
-            _CountryNegoc = CountryNegoc;
-            _StateNegoc = StateNegoc;
-            _CityNegoc = CityNegoc;
+            _localizationService = localizationService;
         }
 
         // GET: /Account/LogOn
@@ -151,7 +147,6 @@ namespace MundoDaFoto.WebMvc4.Controllers {
 
         //
         // GET: /Account/ChangePasswordSuccess
-
         public ActionResult ChangePasswordSuccess() {
             return View();
         }
@@ -193,5 +188,24 @@ namespace MundoDaFoto.WebMvc4.Controllers {
             }
         }
         #endregion
-    }
+
+        private void DataBindViewBagCountries() {
+            IList<Country> _listaPais = null;
+            IList<SelectListItem> _listaBag = new List<SelectListItem>();
+            
+            _listaPais = _localizationService.GetCountries();
+
+            if (_listaPais != null && _listaPais.Count > 0)
+
+                foreach (Country item in _listaPais) {
+                    SelectListItem _sItem = new SelectListItem();
+                    _sItem.Value = item.Id.ToString();
+                    _sItem.Text = item.FullDescription();
+                    _listaBag.Add(_sItem);
+                }
+
+            ViewBag.Paises = (from a in _listaBag select a);
+
+        }
+    } // class
 }

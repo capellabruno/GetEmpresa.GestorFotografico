@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="MundoDaFoto.Dominio.Client, MundoDaFoto.Dominio" table="Client" abstract="false">
+  <class name="MundoDaFoto.Domain.Client, MundoDaFoto.Domain" table="Client" abstract="false">
 
     <id name="Id" column="IdClient" unsaved-value="null">
       <generator class="identity"/>
@@ -10,8 +10,8 @@
     <property name="Name" column="Name" />
     <property name="Email" column="Email" />
         
-  <many-to-one name="Municipio" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="CityId" />
-  <many-to-one name="Perfil" class="MundoDaFoto.Dominio.TypeClient, MundoDaFoto.Dominio" column="TypeClientId" />
+  <many-to-one name="Municipio" class="MundoDaFoto.Domain.City, MundoDaFoto.Domain" column="CityId" />
+  <many-to-one name="Perfil" class="MundoDaFoto.Domain.TypeClient, MundoDaFoto.Domain" column="TypeClientId" />
   
   </class>
 

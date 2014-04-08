@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="MundoDaFoto.Dominio.PersonalInformation, MundoDaFoto.Dominio" table="PersonalInformation" abstract="false">
+  <class name="MundoDaFoto.Domain.PersonalInformation, MundoDaFoto.Domain" table="PersonalInformation" abstract="false">
 
     <id name="Id" column="Id" unsaved-value="null">
       <generator class="identity"/>
@@ -16,8 +16,8 @@
       <column name="Cnpj" length="20" sql-type="varchar" not-null="false"/>
     </property>
     <property name="TypeClient" column="TypeClient" />
-    <many-to-one name="City" class="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" column="City_IdCity" />
-    <many-to-one name="Client" class="MundoDaFoto.Dominio.Client, MundoDaFoto.Dominio" column="Client_IdClient" />
+    <many-to-one name="City" class="MundoDaFoto.Domain.City, MundoDaFoto.Domain" column="City_IdCity" />
+    <many-to-one name="Client" class="MundoDaFoto.Domain.Client, MundoDaFoto.Domain" column="Client_IdClient" />
     
   </class>
 

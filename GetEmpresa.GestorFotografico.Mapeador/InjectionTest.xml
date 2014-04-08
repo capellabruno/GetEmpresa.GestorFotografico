@@ -48,7 +48,7 @@
       <property name="CacheQueries" value="true" />
     </object>
   <!-- Data Access Objects -->
-  <import resource="assembly:GetEmpresa.GestorFotografico.Mapeador/GetEmpresa.GestorFotografico.Mapeador/Dao.xml"/>
+  <import resource="assembly:GetEmpresa.GestorFotografico.Mapper/GetEmpresa.GestorFotografico.Mapper/Dao.xml"/>
 
   
 </objects>

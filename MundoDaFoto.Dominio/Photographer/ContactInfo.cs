@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MundoDaFoto.Dominio.Photographer {
+namespace MundoDaFoto.Domain.Photographer {
     public class ContactInfo {
         protected ContactInfo() { }
         public ContactInfo(string alternateEmail, string webSite, string contactPhone1, string contactPhone2, bool iWantToBeContacted, string address) {

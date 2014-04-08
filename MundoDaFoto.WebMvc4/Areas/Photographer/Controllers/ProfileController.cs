@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MundoDaFoto.WebMvc4.Areas.Photographer.Models;
-using MundoDaFoto.Dominio.Photographer;
+using MundoDaFoto.Domain.Photographer;
 
 namespace MundoDaFoto.WebMvc4.Areas.Photographer.Controllers{
     [Authorize]

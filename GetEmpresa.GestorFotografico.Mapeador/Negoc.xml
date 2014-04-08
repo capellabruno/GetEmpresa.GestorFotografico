@@ -2,26 +2,8 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClientNegoc" type="GetEmpresa.Negoc.Implementation.ClientNegoc, GetEmpresa.Negoc">
-    <property name="ClientDao" ref="ClientDao"/>
-  </object>
-
-  <object id="TipoClientNegoc" type="GetEmpresa.Negoc.Implementation.TipoClientNegoc, GetEmpresa.Negoc">
-    <property name="TipoClientDao" ref="TipoClientDao"/>
-  </object>
-
-  <object id="CityNegoc" type="GetEmpresa.Negoc.Implementation.CityNegoc, GetEmpresa.Negoc">
-    <property name="CityDao" ref="CityDao"/>
-  </object>
-
-  <object id="StateNegoc" type="GetEmpresa.Negoc.Implementation.StateNegoc, GetEmpresa.Negoc">
-    <property name="StateDao" ref="StateDao"/>
-  </object>
-
-  <object id="CountryNegoc" type="GetEmpresa.Negoc.Implementation.CountryNegoc, GetEmpresa.Negoc">
-    <property name="CountryDao" ref="CountryDao"/>
-  </object>
-
+  <object id="ClientService" type="GetEmpresa.Negoc.Implementation.ClientService, GetEmpresa.Negoc" autowire="constructor"/>
+  <object id="LocalizationService" type="GetEmpresa.Negoc.Implementation.LocalizationService, GetEmpresa.Negoc" autowire="constructor" />
   <object id="PhotographerService" type="GetEmpresa.Negoc.Implementation.PhotographerService, GetEmpresa.Negoc" autowire="constructor" />
 
 </objects>

@@ -276,48 +276,12 @@
     <Content Include="Content\font-awesome-4.0.3\css\font-awesome.css" />
     <Content Include="Content\font-awesome-4.0.3\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome-4.0.3\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.svg" />
-    <Content Include="Content\theme_escape_velocity\css\ie8.css" />
-    <Content Include="Content\theme_escape_velocity\css\images\mobileUI-site-nav-opener-bg.svg" />
-    <Content Include="Content\theme_escape_velocity\css\images\overlay.png" />
-    <Content Include="Content\theme_escape_velocity\css\images\shadow.png" />
-    <Content Include="Content\theme_escape_velocity\css\skel-noscript.css" />
-    <Content Include="Content\theme_escape_velocity\css\style-1000px.css" />
-    <Content Include="Content\theme_escape_velocity\css\style-desktop.css" />
-    <Content Include="Content\theme_escape_velocity\css\style-mobile.css" />
-    <Content Include="Content\theme_escape_velocity\css\style.css" />
-    <Content Include="Content\theme_escape_velocity\images\banner.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic01.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic02.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic03.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic04.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic05.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic06.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic07.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic08.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic09.jpg" />
-    <Content Include="Content\theme_escape_velocity\images\pic10.jpg" />
-    <Content Include="Content\theme_escape_velocity\js\config.js" />
-    <Content Include="Content\theme_escape_velocity\js\html5shiv.js" />
-    <Content Include="Content\theme_escape_velocity\js\jquery.dropotron.min.js" />
-    <Content Include="Content\theme_escape_velocity\js\jquery.min.js" />
-    <Content Include="Content\theme_escape_velocity\js\skel-panels.min.js" />
-    <Content Include="Content\theme_escape_velocity\js\skel.min.js" />
     <Content Include="Content\typography.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.eot" />
-    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.ttf" />
-    <Content Include="Content\theme_escape_velocity\css\font\fontawesome-webfont.woff" />
-    <Content Include="Content\theme_escape_velocity\css\font\FontAwesome.otf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Areas\Photographer\Views\Web.config" />
-    <Content Include="Helpers\CustomHelper.cshtml" />
     <Content Include="Areas\Photographer\Views\Home\NoProfile.cshtml" />
     <Content Include="Areas\Photographer\Views\Home\Index.cshtml" />
     <Content Include="Areas\Photographer\Views\Profile\Create.cshtml" />
@@ -368,7 +332,6 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <None Include="Views\Home\index.cshtml__" />
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -378,7 +341,6 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Shared\theme_escape_velocity.cshtml" />
     <Content Include="Views\Shared\_HeaderPartial.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
     <Content Include="Views\Shared\FrontPage\_LayoutFrontPage.cshtml" />
@@ -386,9 +348,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Client\" />
     <Folder Include="Areas\Administrator\Controllers\" />
-    <Folder Include="Areas\Photographer\Models\" />
+    <Folder Include="Areas\Client\" />
     <Folder Include="Areas\Photographer\Views\Shared\" />
     <Folder Include="Filters\" />
   </ItemGroup>
@@ -404,17 +365,17 @@
       <Project>{5a055459-9cbb-4104-9c31-72979aab8ce6}</Project>
       <Name>GetEmpresa.Dao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapeador.csproj">
+    <ProjectReference Include="..\GetEmpresa.GestorFotografico.Mapeador\GetEmpresa.GestorFotografico.Mapper.csproj">
       <Project>{f636dfae-e097-498b-bef4-b44eb42e2dbf}</Project>
-      <Name>GetEmpresa.GestorFotografico.Mapeador</Name>
+      <Name>GetEmpresa.GestorFotografico.Mapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\GetEmpresa.Negoc\GetEmpresa.Negoc.csproj">
       <Project>{decd4edc-c8f5-4dfb-97fb-adc4120a8e16}</Project>
       <Name>GetEmpresa.Negoc</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
+    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Domain.csproj">
       <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
-      <Name>MundoDaFoto.Dominio</Name>
+      <Name>MundoDaFoto.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\MundoDaFoto.Helpers\MundoDaFoto.Helpers.csproj">
       <Project>{f3a892c0-8086-41e3-8640-552b916b9032}</Project>

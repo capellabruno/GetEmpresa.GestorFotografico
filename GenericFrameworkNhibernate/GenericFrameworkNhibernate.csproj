@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericDao.cs" />
-    <Compile Include="IDao.cs" />
     <Compile Include="IGenericDao.cs" />
     <Compile Include="NHbernateDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 
 namespace MundoDaFoto.WebMvc4.Areas.Photographer.Models {
     public class PhotographerRegisterModel {

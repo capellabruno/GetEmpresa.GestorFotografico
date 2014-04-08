@@ -1,13 +1,13 @@
 ﻿using GetEmpresa.Dao.Interface;
 using GetEmpresa.Negoc.Interface;
-using MundoDaFoto.Dominio.Photographer;
+using MundoDaFoto.Domain.Photographer;
 using Spring.Transaction.Interceptor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 
 namespace GetEmpresa.Negoc.Implementation {
     public class PhotographerService : IPhotographerService{
@@ -37,7 +37,7 @@ namespace GetEmpresa.Negoc.Implementation {
         public void CreateNewProfile(PhotographerProfile profile) {
             if (!profile.IsValid())
                 throw new Exception();
-            _photographerProfileDao.Incluir(profile);
+            _photographerProfileDao.Add(profile);
         }
     }// class
 }

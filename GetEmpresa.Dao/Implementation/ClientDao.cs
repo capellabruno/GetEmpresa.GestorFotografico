@@ -1,11 +1,11 @@
 using System;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
 using NHibernate;
 using NHibernate.Criterion;
 
-namespace GetEmpresa.Dao.Developer{
+namespace GetEmpresa.Dao.Implementation{
   public class ClientDao
         :GenericDao<Client> , IClientDao
   {

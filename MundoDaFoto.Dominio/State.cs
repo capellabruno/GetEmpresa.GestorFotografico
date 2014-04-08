@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MundoDaFoto.Dominio
+namespace MundoDaFoto.Domain
 {
     public class State
     {

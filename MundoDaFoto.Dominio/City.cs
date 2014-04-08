@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MundoDaFoto.Dominio
-{
-    public class City
-    {
+namespace MundoDaFoto.Domain{
+    public class City{
 
         public virtual long Id { get; set; }
 
@@ -16,5 +14,5 @@ namespace MundoDaFoto.Dominio
         public virtual State Uf { get; set; }
 
         public virtual bool Active { get; set; }
-    }
+    } // class
 }

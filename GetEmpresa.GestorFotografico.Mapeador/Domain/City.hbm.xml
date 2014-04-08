@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
 
-  <class name="MundoDaFoto.Dominio.City, MundoDaFoto.Dominio" table="City" abstract="false">
+  <class name="MundoDaFoto.Domain.City, MundoDaFoto.Domain" table="City" abstract="false">
 
     <id name="Id" column="IdCity" unsaved-value="null">
       <generator class="identity"/>
@@ -9,7 +9,7 @@
 
     <property name="Name" column="Name" />
     <property name="Active" column="Active" />
-    <many-to-one name="Uf" class="MundoDaFoto.Dominio.State, MundoDaFoto.Dominio" column="State_IdState" />
+    <many-to-one name="Uf" class="MundoDaFoto.Domain.State, MundoDaFoto.Domain" column="State_IdState" />
     
   </class>
 

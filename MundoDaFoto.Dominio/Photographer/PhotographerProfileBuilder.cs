@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MundoDaFoto.Dominio.Photographer {
+namespace MundoDaFoto.Domain.Photographer {
     public class PhotographerProfileBuilder {
         private ContactInfo _contactInfo;
         private PhotographerProfile profile;

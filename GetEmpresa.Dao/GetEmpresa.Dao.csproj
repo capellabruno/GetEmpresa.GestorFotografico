@@ -80,20 +80,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Developer\CityDao.cs">
+    <Compile Include="Implementation\CityDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\ClientDao.cs">
+    <Compile Include="Implementation\ClientDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\PhotographerProfileDao.cs" />
-    <Compile Include="Developer\StateDao.cs">
+    <Compile Include="Implementation\PhotographerProfileDao.cs" />
+    <Compile Include="Implementation\StateDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Developer\CountryDao.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Developer\TipoClientDao.cs">
+    <Compile Include="Implementation\CountryDao.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interface\ICityDao.cs">
@@ -109,9 +106,6 @@
     <Compile Include="Interface\ICountryDao.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interface\ITipoClientDao.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,9 +113,9 @@
       <Project>{989df017-3678-4e01-ab3c-437191a15bd5}</Project>
       <Name>GenericFrameworkNhibernate</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
+    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Domain.csproj">
       <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
-      <Name>MundoDaFoto.Dominio</Name>
+      <Name>MundoDaFoto.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

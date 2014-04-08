@@ -84,18 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\CityNegoc.cs" />
-    <Compile Include="Implementation\ClientNegoc.cs" />
-    <Compile Include="Implementation\StateNegoc.cs" />
-    <Compile Include="Implementation\CountryNegoc.cs" />
+    <Compile Include="Implementation\ClientService.cs" />
+    <Compile Include="Implementation\LocalizationService.cs" />
     <Compile Include="Implementation\PhotographerService.cs" />
-    <Compile Include="Implementation\TipoClientNegoc.cs" />
-    <Compile Include="Interface\ICityNegoc.cs" />
-    <Compile Include="Interface\IClientNegoc.cs" />
-    <Compile Include="Interface\IStateNegoc.cs" />
-    <Compile Include="Interface\ICountryNegoc.cs" />
+    <Compile Include="Interface\IClientService.cs" />
+    <Compile Include="Interface\ILocalizationService.cs" />
     <Compile Include="Interface\IPhotographerService.cs" />
-    <Compile Include="Interface\ITipoClientNegoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,9 +101,9 @@
       <Project>{5a055459-9cbb-4104-9c31-72979aab8ce6}</Project>
       <Name>GetEmpresa.Dao</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Dominio.csproj">
+    <ProjectReference Include="..\MundoDaFoto.Dominio\MundoDaFoto.Domain.csproj">
       <Project>{a13da329-e174-4ccd-b9f6-d9c13c6c46c4}</Project>
-      <Name>MundoDaFoto.Dominio</Name>
+      <Name>MundoDaFoto.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

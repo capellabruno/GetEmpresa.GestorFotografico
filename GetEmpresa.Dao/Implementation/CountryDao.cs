@@ -1,11 +1,11 @@
 using System;
 using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 using NHibernate.Criterion;
 using NHibernate;
 
-namespace GetEmpresa.Dao.Developer{
+namespace GetEmpresa.Dao.Implementation{
     public class CountryDao :GenericDao<Country> , ICountryDao{
         public Country Get(string nome) {
             ICriteria criteria = base.CurrentSession

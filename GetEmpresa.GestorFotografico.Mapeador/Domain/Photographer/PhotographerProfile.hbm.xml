@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-                   assembly="MundoDaFoto.Dominio"
-                   namespace="MundoDaFoto.Dominio.Photographer">
+                   assembly="MundoDaFoto.Domain"
+                   namespace="MundoDaFoto.Domain.Photographer">
 
-     <class name="MundoDaFoto.Dominio.Photographer.PhotographerProfile, MundoDaFoto.Dominio" table="photographer_profile" abstract="false">
+     <class name="MundoDaFoto.Domain.Photographer.PhotographerProfile, MundoDaFoto.Domain" table="photographer_profile" abstract="false">
 
         <id name="Id" column="PhotographerId" unsaved-value="null" access="field.camelcase-underscore">
             <generator class="identity"/>

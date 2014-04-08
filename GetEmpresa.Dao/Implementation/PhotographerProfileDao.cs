@@ -1,13 +1,13 @@
 using System;
-using MundoDaFoto.Dominio;
+using MundoDaFoto.Domain;
 using GetEmpresa.Dao.Interface;
 using GenericFrameworkNhibernate;
-using MundoDaFoto.Dominio.Photographer;
+using MundoDaFoto.Domain.Photographer;
 using NHibernate;
 using NHibernate.Criterion;
 using System.Collections.Generic;
 
-namespace GetEmpresa.Dao.Developer{
+namespace GetEmpresa.Dao.Implementation{
     public class PhotographerProfileDao : GenericDao<PhotographerProfile>, IPhotographerProfileDao {
 
         public long RowCount(string _email) {

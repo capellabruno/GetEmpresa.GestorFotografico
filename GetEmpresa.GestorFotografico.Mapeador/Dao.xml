@@ -2,27 +2,23 @@
 <objects xmlns="http://www.springframework.net"
          xmlns:db="http://www.springframework.net/database">
 
-  <object id="ClientDao" type="GetEmpresa.Dao.Developer.ClientDao, GetEmpresa.Dao">
+  <object id="ClientDao" type="GetEmpresa.Dao.Implementation.ClientDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="TipoClientDao" type="GetEmpresa.Dao.Developer.TipoClientDao, GetEmpresa.Dao">
+  <object id="CityDao" type="GetEmpresa.Dao.Implementation.CityDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="CityDao" type="GetEmpresa.Dao.Developer.CityDao, GetEmpresa.Dao">
+  <object id="StateDao" type="GetEmpresa.Dao.Implementation.StateDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="StateDao" type="GetEmpresa.Dao.Developer.StateDao, GetEmpresa.Dao">
+  <object id="CountryDao" type="GetEmpresa.Dao.Implementation.CountryDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 
-  <object id="CountryDao" type="GetEmpresa.Dao.Developer.CountryDao, GetEmpresa.Dao">
-    <property name="SessionFactory" ref="SessionFactory"/>
-  </object>
-
-  <object id="PhotographerProfileDao" type="GetEmpresa.Dao.Developer.PhotographerProfileDao, GetEmpresa.Dao">
+  <object id="PhotographerProfileDao" type="GetEmpresa.Dao.Implementation.PhotographerProfileDao, GetEmpresa.Dao">
     <property name="SessionFactory" ref="SessionFactory"/>
   </object>
 </objects>

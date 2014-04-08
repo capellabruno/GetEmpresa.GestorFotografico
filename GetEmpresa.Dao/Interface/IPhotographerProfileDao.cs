@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenericFrameworkNhibernate;
-using MundoDaFoto.Dominio.Photographer;
+using MundoDaFoto.Domain.Photographer;
 
 namespace GetEmpresa.Dao.Interface {
     public interface IPhotographerProfileDao : IGenericDao<PhotographerProfile>{

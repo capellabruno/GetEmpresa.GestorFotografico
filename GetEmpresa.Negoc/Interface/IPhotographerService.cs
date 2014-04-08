@@ -1,4 +1,4 @@
-﻿using MundoDaFoto.Dominio.Photographer;
+﻿using MundoDaFoto.Domain.Photographer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
